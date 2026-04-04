@@ -1,0 +1,172 @@
+{
+  "LocalAssetBrowser.History": {
+    "Value": "[\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022@recents\u0022,\u0022@everything\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\editor\\\\ActionGraph\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\tools\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\base\u0022,\u0022@everything\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\base\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\editor\\\\ActionGraph\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\tools\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\ProjectSettings\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Localization\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Editor\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Code\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\citizen\\\\assets\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\editor\\\\ShaderGraph\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\editor\\\\MovieMaker\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\editor\\\\Hammer\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\base\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\tools\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\editor\\\\ActionGraph\u0022]",
+    "Timeout": 1777927562,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.HistoryIdx": {
+    "Value": "23",
+    "Timeout": 1777927562,
+    "DeleteAt": 0
+  },
+  "SceneView.Viewport0.Settings": {
+    "Value": "{\u0022CameraPosition\u0022:\u0022-521.0164,100.5636,71.12756\u0022,\u0022CameraRotation\u0022:\u00220.02686442,0.02743522,-0.699119,0.7139735\u0022,\u0022View\u0022:0,\u0022RenderMode\u0022:1,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022EnablePrefabLighting\u0022:true,\u0022ShowSkyIn2D\u0022:true,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:0,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1777928324,
+    "DeleteAt": 0
+  },
+  "Window.SboxSceneEditor.Dock": {
+    "Value": "{\u0022floatingWindows\u0022:[],\u0022mainWrapper\u0022:{\u0022geometry\u0022:\u0022AdnQywADAAAAAAAAAAAAAAAAB3cAAAPIAAAAAAAAAAAAAAd3AAADyAAAAAAAAAAAB4AAAAAAAAAAAAAAB3cAAAPI\u0022,\u0022splitter\u0022:{\u0022items\u0022:[{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022SceneTreeWidget\u0022,\u0022name\u0022:\u0022Hierarchy\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022PanelInspectorWidget\u0022,\u0022name\u0022:\u0022UI Panels\u0022}],\u0022type\u0022:\u0022area\u0022},{\u0022items\u0022:[{\u0022items\u0022:[{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022SceneDock\u0022,\u0022name\u0022:\u0022SceneDock:goated zombies.scene\u0022}],\u0022type\u0022:\u0022area\u0022},{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022MainAssetBrowser\u0022,\u0022name\u0022:\u0022Asset Browser\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022ConsoleWidget\u0022,\u0022name\u0022:\u0022Console\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022MixerDock\u0022,\u0022name\u0022:\u0022Mixer\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022LibraryManagerDock\u0022,\u0022name\u0022:\u0022Library Manager\u0022}],\u0022type\u0022:\u0022area\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAACAAADpQAAAh0A/////wEAAAACAA==\u0022,\u0022type\u0022:\u0022splitter\u0022},{\u0022items\u0022:[{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022Inspector\u0022,\u0022name\u0022:\u0022Inspector\u0022}],\u0022type\u0022:\u0022area\u0022},{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022PerformanceDock\u0022,\u0022name\u0022:\u0022Performance\u0022}],\u0022type\u0022:\u0022area\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAACAAAEuQAAAVEA/////wEAAAACAA==\u0022,\u0022type\u0022:\u0022splitter\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAACAAAGuwAAAdsA/////wEAAAABAA==\u0022,\u0022type\u0022:\u0022splitter\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAACAAABmwAACjQA/////wEAAAABAA==\u0022,\u0022type\u0022:\u0022splitter\u0022}},\u0022toolWindowManagerStateFormat\u0022:1}",
+    "Timeout": 1777927746,
+    "DeleteAt": 0
+  },
+  "goated zombies.scene.Viewport0": {
+    "Value": "{\u0022CameraPosition\u0022:\u0022-521.0164,100.5636,71.12756\u0022,\u0022CameraRotation\u0022:\u00220.02686442,0.02743522,-0.699119,0.7139735\u0022,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1777928324,
+    "DeleteAt": 0
+  },
+  ".Viewport0": {
+    "Value": "{\u0022CameraPosition\u0022:\u0022972.6992,1388.139,433.4641\u0022,\u0022CameraRotation\u0022:\u00220.07648028,0.02106649,-0.9610561,0.2647229\u0022,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1777880898,
+    "DeleteAt": 0
+  },
+  "gizmo.settings": {
+    "Value": "{\u0022EditMode\u0022:\u0022position\u0022,\u0022Selection\u0022:true,\u0022ViewMode\u0022:\u00223d\u0022,\u0022GizmosEnabled\u0022:true,\u0022GizmoScale\u0022:1,\u0022GridSpacing\u0022:32,\u0022SnapToGrid\u0022:false,\u0022SnapToAngles\u0022:true,\u0022AngleSpacing\u0022:15,\u0022GlobalSpace\u0022:false,\u0022DebugActionGraphs\u0022:false,\u0022DisabledGizmos\u0022:{}}",
+    "Timeout": 1777927321,
+    "DeleteAt": 0
+  },
+  "SceneView.Layout": {
+    "Value": "{\u0022Layout\u0022:0,\u0022SplitterState\u0022:[]}",
+    "Timeout": 1777927323,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.Texture.History": {
+    "Value": "[\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022]",
+    "Timeout": 1777921641,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.Texture.HistoryIdx": {
+    "Value": "1",
+    "Timeout": 1777921641,
+    "DeleteAt": 0
+  },
+  "expand.b8d2da88-711b-42d6-99d1-e607253e8521.SpotLight": {
+    "Value": "false",
+    "Timeout": 1777922146,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.Surface Description.History": {
+    "Value": "[\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022]",
+    "Timeout": 1777927645,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.Surface Description.HistoryIdx": {
+    "Value": "1",
+    "Timeout": 1777927645,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.Model.History": {
+    "Value": "[\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022@everything\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\editor\\\\ActionGraph\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\editor\\\\Hammer\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\base\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\base\\\\Assets\u0022,\u0022@everything\u0022]",
+    "Timeout": 1777923156,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.Model.HistoryIdx": {
+    "Value": "8",
+    "Timeout": 1777923156,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.Model.ViewMode": {
+    "Value": "0",
+    "Timeout": 1777923161,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.Model.ShowJunkFiles": {
+    "Value": "false",
+    "Timeout": 1777923161,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.Model.HideNonAssets": {
+    "Value": "false",
+    "Timeout": 1777923161,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.Model.ShowRecursiveFiles": {
+    "Value": "false",
+    "Timeout": 1777923161,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.Sound Event.History": {
+    "Value": "[\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022]",
+    "Timeout": 1777923963,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.Sound Event.HistoryIdx": {
+    "Value": "1",
+    "Timeout": 1777923963,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.Prefab.History": {
+    "Value": "[\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022]",
+    "Timeout": 1777928188,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.Prefab.HistoryIdx": {
+    "Value": "1",
+    "Timeout": 1777928188,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.Material.History": {
+    "Value": "[\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022]",
+    "Timeout": 1777927112,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.Material.HistoryIdx": {
+    "Value": "1",
+    "Timeout": 1777927112,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.Animation Graph.History": {
+    "Value": "[\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022]",
+    "Timeout": 1777927115,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.Animation Graph.HistoryIdx": {
+    "Value": "1",
+    "Timeout": 1777927115,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.ViewMode": {
+    "Value": "0",
+    "Timeout": 1777927550,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.ShowJunkFiles": {
+    "Value": "false",
+    "Timeout": 1777927550,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.HideNonAssets": {
+    "Value": "false",
+    "Timeout": 1777927550,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.ShowRecursiveFiles": {
+    "Value": "false",
+    "Timeout": 1777927550,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.Search": {
+    "Value": "\u0022snot\u0022",
+    "Timeout": 1777927550,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.ActiveTags": {
+    "Value": "\u0022\u0022",
+    "Timeout": 1777927550,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.ExcludedTags": {
+    "Value": "\u0022\u0022",
+    "Timeout": 1777927550,
+    "DeleteAt": 0
+  }
+}
