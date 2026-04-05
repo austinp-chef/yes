@@ -7,6 +7,9 @@
   <Folder Name="/Addons/">
     <Project Path="../../../../../Program Files (x86)/Steam/steamapps/common/sbox/addons/base/code/Base Library.csproj" />
   </Folder>
+  <Folder Name="/Libraries/">
+    <Project Path="Libraries/fish.scc/code/scc.csproj" />
+  </Folder>
   <Folder Name="/Tools/">
     <Project Path="../../../../../Program Files (x86)/Steam/steamapps/common/sbox/addons/tools/Code/Base Editor Library.csproj" />
     <Project Path="../../../../../Program Files (x86)/Steam/steamapps/common/sbox/editor/ActionGraph/Code/actiongraph.csproj" />
