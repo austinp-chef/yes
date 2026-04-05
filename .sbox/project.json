@@ -1,27 +1,27 @@
 {
   "LocalAssetBrowser.History": {
-    "Value": "[\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022@recents\u0022,\u0022@everything\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\editor\\\\ActionGraph\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\\\\animations\u0022,\u0022C:\\\\users\\\\maine\\\\onedrive\\\\documents\\\\github\\\\yes\\\\libraries\\\\ozmium.oz_mcp\\\\Services\\\\Interfaces\u0022,\u0022C:\\\\users\\\\maine\\\\onedrive\\\\documents\\\\github\\\\yes\\\\libraries\\\\ozmium.oz_mcp\\\\Services\\\\Models\u0022,\u0022C:\\\\users\\\\maine\\\\onedrive\\\\documents\\\\github\\\\yes\\\\libraries\\\\ozmium.oz_mcp\\\\Sounds\u0022,\u0022C:\\\\users\\\\maine\\\\onedrive\\\\documents\\\\github\\\\yes\\\\libraries\\\\ozmium.oz_mcp\\\\Sounds\u0022,\u0022C:\\\\users\\\\maine\\\\onedrive\\\\documents\\\\github\\\\yes\\\\libraries\\\\ozmium.oz_mcp\\\\Tools\u0022,\u0022C:\\\\users\\\\maine\\\\onedrive\\\\documents\\\\github\\\\yes\\\\libraries\\\\ozmium.oz_mcp\\\\Assets\u0022,\u0022C:\\\\users\\\\maine\\\\onedrive\\\\documents\\\\github\\\\yes\\\\libraries\\\\ozmium.oz_mcp\\\\Editor\u0022,\u0022C:\\\\users\\\\maine\\\\onedrive\\\\documents\\\\github\\\\yes\\\\libraries\\\\ozmium.oz_mcp\u0022,\u0022C:\\\\users\\\\maine\\\\onedrive\\\\documents\\\\github\\\\yes\\\\libraries\\\\ozmium.oz_mcp\\\\Sounds\u0022]",
-    "Timeout": 1778017258,
+    "Value": "[\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022@recents\u0022,\u0022@everything\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\editor\\\\ActionGraph\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\\\\animations\u0022,\u0022C:\\\\users\\\\maine\\\\onedrive\\\\documents\\\\github\\\\yes\\\\libraries\\\\ozmium.oz_mcp\\\\Services\\\\Interfaces\u0022,\u0022C:\\\\users\\\\maine\\\\onedrive\\\\documents\\\\github\\\\yes\\\\libraries\\\\ozmium.oz_mcp\\\\Services\\\\Models\u0022,\u0022C:\\\\users\\\\maine\\\\onedrive\\\\documents\\\\github\\\\yes\\\\libraries\\\\ozmium.oz_mcp\\\\Sounds\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\\\\default\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\\\\debug\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\\\\default\u0022]",
+    "Timeout": 1778021091,
     "DeleteAt": 0
   },
   "LocalAssetBrowser.HistoryIdx": {
-    "Value": "15",
-    "Timeout": 1778017258,
+    "Value": "12",
+    "Timeout": 1778021091,
     "DeleteAt": 0
   },
   "SceneView.Viewport0.Settings": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022974.5283,-66.68102,212.9563\u0022,\u0022CameraRotation\u0022:\u0022-0.1000029,0.007504866,0.9921688,0.07445878\u0022,\u0022View\u0022:0,\u0022RenderMode\u0022:0,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022EnablePrefabLighting\u0022:true,\u0022ShowSkyIn2D\u0022:true,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:0,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778021199,
+    "Value": "{\u0022CameraPosition\u0022:\u00222615.429,1932.783,1053.455\u0022,\u0022CameraRotation\u0022:\u00220.129583,0.03053539,-0.9646769,0.2273199\u0022,\u0022View\u0022:0,\u0022RenderMode\u0022:1,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022EnablePrefabLighting\u0022:true,\u0022ShowSkyIn2D\u0022:true,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:0,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1778021905,
     "DeleteAt": 0
   },
   "Window.SboxSceneEditor.Dock": {
-    "Value": "{\u0022floatingWindows\u0022:[],\u0022mainWrapper\u0022:{\u0022geometry\u0022:\u0022AdnQywADAAAAAAAAAAAAAAAADWcAAAUrAAAAAAAAAAAAAA1nAAAFKwAAAAAAAAAADXAAAAAAAAAAAAAADWcAAAUr\u0022,\u0022splitter\u0022:{\u0022items\u0022:[{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022SceneTreeWidget\u0022,\u0022name\u0022:\u0022Hierarchy\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022PanelInspectorWidget\u0022,\u0022name\u0022:\u0022UI Panels\u0022}],\u0022type\u0022:\u0022area\u0022},{\u0022items\u0022:[{\u0022items\u0022:[{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022SceneDock\u0022,\u0022name\u0022:\u0022SceneDock:goated zombies.scene\u0022}],\u0022type\u0022:\u0022area\u0022},{\u0022currentIndex\u0022:1,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022MainAssetBrowser\u0022,\u0022name\u0022:\u0022Asset Browser\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022ConsoleWidget\u0022,\u0022name\u0022:\u0022Console\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022MixerDock\u0022,\u0022name\u0022:\u0022Mixer\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022LibraryManagerDock\u0022,\u0022name\u0022:\u0022Library Manager\u0022}],\u0022type\u0022:\u0022area\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAACAAADpQAAAjUA/////wEAAAACAA==\u0022,\u0022type\u0022:\u0022splitter\u0022},{\u0022items\u0022:[{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022Inspector\u0022,\u0022name\u0022:\u0022Inspector\u0022}],\u0022type\u0022:\u0022area\u0022},{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022PerformanceDock\u0022,\u0022name\u0022:\u0022Performance\u0022}],\u0022type\u0022:\u0022area\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAACAAAEuQAAAVEA/////wEAAAACAA==\u0022,\u0022type\u0022:\u0022splitter\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAACAAAGuwAAAdsA/////wEAAAABAA==\u0022,\u0022type\u0022:\u0022splitter\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAACAAABmwAACjQA/////wEAAAABAA==\u0022,\u0022type\u0022:\u0022splitter\u0022}},\u0022toolWindowManagerStateFormat\u0022:1}",
-    "Timeout": 1778017285,
+    "Value": "{\u0022floatingWindows\u0022:[],\u0022mainWrapper\u0022:{\u0022geometry\u0022:\u0022AdnQywADAAAAAAAAAAAAAAAABQ0AAAM3AAAAAAAAAAAAAAUNAAADNwAAAAAAAAAAB4AAAAAAAAAAAAAABQ0AAAM3\u0022,\u0022splitter\u0022:{\u0022items\u0022:[{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022SceneTreeWidget\u0022,\u0022name\u0022:\u0022Hierarchy\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022PanelInspectorWidget\u0022,\u0022name\u0022:\u0022UI Panels\u0022}],\u0022type\u0022:\u0022area\u0022},{\u0022items\u0022:[{\u0022items\u0022:[{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022SceneDock\u0022,\u0022name\u0022:\u0022SceneDock:goated zombies.scene\u0022}],\u0022type\u0022:\u0022area\u0022},{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022MainAssetBrowser\u0022,\u0022name\u0022:\u0022Asset Browser\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022ConsoleWidget\u0022,\u0022name\u0022:\u0022Console\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022MixerDock\u0022,\u0022name\u0022:\u0022Mixer\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022LibraryManagerDock\u0022,\u0022name\u0022:\u0022Library Manager\u0022}],\u0022type\u0022:\u0022area\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAACAAADpQAAAjUA/////wEAAAACAA==\u0022,\u0022type\u0022:\u0022splitter\u0022},{\u0022items\u0022:[{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022Inspector\u0022,\u0022name\u0022:\u0022Inspector\u0022}],\u0022type\u0022:\u0022area\u0022},{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022PerformanceDock\u0022,\u0022name\u0022:\u0022Performance\u0022}],\u0022type\u0022:\u0022area\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAACAAAEuQAAAVEA/////wEAAAACAA==\u0022,\u0022type\u0022:\u0022splitter\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAACAAAGuwAAAdsA/////wEAAAABAA==\u0022,\u0022type\u0022:\u0022splitter\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAACAAABmwAACjQA/////wEAAAABAA==\u0022,\u0022type\u0022:\u0022splitter\u0022}},\u0022toolWindowManagerStateFormat\u0022:1}",
+    "Timeout": 1778021906,
     "DeleteAt": 0
   },
   "goated zombies.scene.Viewport0": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022974.5283,-66.68102,212.9563\u0022,\u0022CameraRotation\u0022:\u0022-0.1000029,0.007504866,0.9921688,0.07445878\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778021199,
+    "Value": "{\u0022CameraPosition\u0022:\u00222615.429,1932.783,1053.455\u0022,\u0022CameraRotation\u0022:\u00220.129583,0.03053539,-0.9646769,0.2273199\u0022,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1778021905,
     "DeleteAt": 0
   },
   ".Viewport0": {
@@ -30,13 +30,13 @@
     "DeleteAt": 0
   },
   "gizmo.settings": {
-    "Value": "{\u0022EditMode\u0022:\u0022position\u0022,\u0022Selection\u0022:true,\u0022ViewMode\u0022:\u00223d\u0022,\u0022GizmosEnabled\u0022:true,\u0022GizmoScale\u0022:1,\u0022GridSpacing\u0022:1,\u0022SnapToGrid\u0022:false,\u0022SnapToAngles\u0022:true,\u0022AngleSpacing\u0022:15,\u0022GlobalSpace\u0022:true,\u0022DebugActionGraphs\u0022:false,\u0022DisabledGizmos\u0022:{}}",
-    "Timeout": 1778017255,
+    "Value": "{\u0022EditMode\u0022:\u0022position\u0022,\u0022Selection\u0022:true,\u0022ViewMode\u0022:\u00223d\u0022,\u0022GizmosEnabled\u0022:true,\u0022GizmoScale\u0022:1,\u0022GridSpacing\u0022:16,\u0022SnapToGrid\u0022:true,\u0022SnapToAngles\u0022:true,\u0022AngleSpacing\u0022:90,\u0022GlobalSpace\u0022:true,\u0022DebugActionGraphs\u0022:false,\u0022DisabledGizmos\u0022:{}}",
+    "Timeout": 1778021906,
     "DeleteAt": 0
   },
   "SceneView.Layout": {
     "Value": "{\u0022Layout\u0022:0,\u0022SplitterState\u0022:[]}",
-    "Timeout": 1778017258,
+    "Timeout": 1778021906,
     "DeleteAt": 0
   },
   "LocalAssetBrowser.Texture.History": {
@@ -55,13 +55,13 @@
     "DeleteAt": 0
   },
   "LocalAssetBrowser.Surface Description.History": {
-    "Value": "[\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022]",
-    "Timeout": 1777929576,
+    "Value": "[\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\shaders\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\textures\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\textures\\\\cubemaps\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\textures\\\\dev\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\textures\\\\dev\\\\simple\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\models\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\shadercache\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\shaders\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\sounds\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\textures\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\editor\\\\ShaderGraph\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\editor\\\\ShaderGraph\\\\Code\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Localization\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Editor\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Code\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\tools\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\tools\\\\colors\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\tools\\\\images\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022@recents\u0022,\u0022@everything\u0022]",
+    "Timeout": 1778021028,
     "DeleteAt": 0
   },
   "LocalAssetBrowser.Surface Description.HistoryIdx": {
-    "Value": "1",
-    "Timeout": 1777929576,
+    "Value": "23",
+    "Timeout": 1778021028,
     "DeleteAt": 0
   },
   "LocalAssetBrowser.Model.History": {
@@ -105,68 +105,68 @@
     "DeleteAt": 0
   },
   "LocalAssetBrowser.Prefab.History": {
-    "Value": "[\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022C:\\\\Users\\\\maine\\\\OneDrive\\\\Documents\\\\GitHub\\\\yes\\\\Assets\u0022]",
-    "Timeout": 1778019576,
+    "Value": "[\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022]",
+    "Timeout": 1778018108,
     "DeleteAt": 0
   },
   "LocalAssetBrowser.Prefab.HistoryIdx": {
     "Value": "1",
-    "Timeout": 1778019576,
+    "Timeout": 1778018108,
     "DeleteAt": 0
   },
   "LocalAssetBrowser.Material.History": {
-    "Value": "[\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\models\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\resource\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\shaders\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\sounds\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\textures\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\textures\\\\cubemaps\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\textures\\\\dev\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\citizen\\\\assets\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\citizen\\\\assets\\\\models\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\citizen\\\\assets\\\\models\\\\citizen_clothes\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\citizen\\\\assets\\\\models\\\\citizen_clothes\\\\full_outfit\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\citizen\\\\assets\\\\models\\\\citizen_clothes\\\\full_outfit\\\\scifi_trooper_armour\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\citizen\\\\assets\\\\models\\\\citizen_clothes\\\\full_outfit\\\\scifi_trooper_armour\\\\Textures\u0022]",
-    "Timeout": 1777961831,
+    "Value": "[\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\materials\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\models\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\resource\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\shaders\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\sounds\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\textures\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\textures\\\\cubemaps\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\\\\textures\\\\dev\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\citizen\\\\assets\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\citizen\\\\assets\\\\models\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\citizen\\\\assets\\\\models\\\\citizen_clothes\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\citizen\\\\assets\\\\models\\\\citizen_clothes\\\\full_outfit\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\citizen\\\\assets\\\\models\\\\citizen_clothes\\\\full_outfit\\\\scifi_trooper_armour\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\citizen\\\\assets\\\\models\\\\citizen_clothes\\\\full_outfit\\\\scifi_trooper_armour\\\\Textures\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Editor\u0022]",
+    "Timeout": 1778019842,
     "DeleteAt": 0
   },
   "LocalAssetBrowser.Material.HistoryIdx": {
-    "Value": "16",
-    "Timeout": 1777961831,
+    "Value": "17",
+    "Timeout": 1778019842,
     "DeleteAt": 0
   },
   "LocalAssetBrowser.Animation Graph.History": {
-    "Value": "[\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022C:\\\\Users\\\\maine\\\\OneDrive\\\\Documents\\\\GitHub\\\\yes\\\\Assets\u0022,\u0022C:\\\\Users\\\\maine\\\\OneDrive\\\\Documents\\\\GitHub\\\\yes\\\\Assets\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox 590830\\\\addons\\\\citizen\\\\assets\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox 590830\\\\addons\\\\citizen\\\\assets\\\\models\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox 590830\\\\addons\\\\citizen\\\\assets\\\\models\\\\citizen_human\u0022,\u0022c:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox 590830\\\\addons\\\\citizen\\\\assets\\\\models\\\\citizen_human\u0022,\u0022C:\\\\Users\\\\maine\\\\OneDrive\\\\Documents\\\\GitHub\\\\yes\\\\Assets\u0022]",
-    "Timeout": 1778019487,
+    "Value": "[\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022]",
+    "Timeout": 1777927115,
     "DeleteAt": 0
   },
   "LocalAssetBrowser.Animation Graph.HistoryIdx": {
-    "Value": "7",
-    "Timeout": 1778019487,
+    "Value": "1",
+    "Timeout": 1777927115,
     "DeleteAt": 0
   },
   "LocalAssetBrowser.ViewMode": {
     "Value": "0",
-    "Timeout": 1778017258,
+    "Timeout": 1778019678,
     "DeleteAt": 0
   },
   "LocalAssetBrowser.ShowJunkFiles": {
     "Value": "false",
-    "Timeout": 1778017258,
+    "Timeout": 1778019678,
     "DeleteAt": 0
   },
   "LocalAssetBrowser.HideNonAssets": {
     "Value": "false",
-    "Timeout": 1778017258,
+    "Timeout": 1778019678,
     "DeleteAt": 0
   },
   "LocalAssetBrowser.ShowRecursiveFiles": {
     "Value": "false",
-    "Timeout": 1778017258,
+    "Timeout": 1778019678,
     "DeleteAt": 0
   },
   "LocalAssetBrowser.Search": {
-    "Value": "\u0022\u0022",
-    "Timeout": 1778017258,
+    "Value": "\u0022metal \u0022",
+    "Timeout": 1778019678,
     "DeleteAt": 0
   },
   "LocalAssetBrowser.ActiveTags": {
     "Value": "\u0022\u0022",
-    "Timeout": 1778017258,
+    "Timeout": 1778019678,
     "DeleteAt": 0
   },
   "LocalAssetBrowser.ExcludedTags": {
     "Value": "\u0022\u0022",
-    "Timeout": 1778017258,
+    "Timeout": 1778019678,
     "DeleteAt": 0
   },
   "expand.00000000-0000-0000-0000-000000000000.CharacterController": {
@@ -184,19 +184,49 @@
     "Timeout": 1778013925,
     "DeleteAt": 0
   },
-  "expand.823f4155-76c4-44c3-b97b-13ef5e138497.Rigidbody": {
-    "Value": "false",
-    "Timeout": 1778019293,
+  "Window.SboxHammer.Dock": {
+    "Value": "{\u0022floatingWindows\u0022:[],\u0022mainWrapper\u0022:{\u0022geometry\u0022:\u0022AdnQywADAAAAAAAAAAAAAAAABgUAAAM9AAAAAAAAAAAAAAYFAAADPQAAAAAAAAAAB4AAAAAAAAAAAAAABgUAAAM9\u0022,\u0022splitter\u0022:{\u0022items\u0022:[{\u0022items\u0022:[{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022\u0022,\u0022name\u0022:\u0022Tool Properties\u0022}],\u0022type\u0022:\u0022area\u0022},{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022\u0022,\u0022name\u0022:\u0022Active Material\u0022}],\u0022type\u0022:\u0022area\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAACAAABaAAAAH8A/////wEAAAACAA==\u0022,\u0022type\u0022:\u0022splitter\u0022},{\u0022items\u0022:[{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022\u0022,\u0022name\u0022:\u0022Map View\u0022}],\u0022type\u0022:\u0022area\u0022},{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022HammerAssetBrowser\u0022,\u0022name\u0022:\u0022Asset Browser\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022HammerCloudBrowser\u0022,\u0022name\u0022:\u0022Cloud Browser\u0022}],\u0022type\u0022:\u0022area\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAACAAADsQAAAgUA/////wEAAAACAA==\u0022,\u0022type\u0022:\u0022splitter\u0022},{\u0022items\u0022:[{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022\u0022,\u0022name\u0022:\u0022Outliner\u0022},{\u0022data\u0022:null,\u0022managedType\u0022:\u0022\u0022,\u0022name\u0022:\u0022Selection Sets\u0022}],\u0022type\u0022:\u0022area\u0022},{\u0022currentIndex\u0022:0,\u0022objects\u0022:[{\u0022data\u0022:null,\u0022managedType\u0022:\u0022\u0022,\u0022name\u0022:\u0022Object Properties\u0022}],\u0022type\u0022:\u0022area\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAACAAAA8AAAAPAA/////wEAAAACAA==\u0022,\u0022type\u0022:\u0022splitter\u0022}],\u0022state\u0022:\u0022AAAA/wAAAAEAAAADAAABYgAABFMAAAFqAP////8BAAAAAQA=\u0022,\u0022type\u0022:\u0022splitter\u0022}},\u0022toolWindowManagerStateFormat\u0022:1}",
+    "Timeout": 1778021907,
     "DeleteAt": 0
   },
-  "LocalAssetBrowser.Render Texture.History": {
-    "Value": "[\u0022C:\\\\Users\\\\maine\\\\OneDrive\\\\Documents\\\\GitHub\\\\yes\\\\Assets\u0022,\u0022C:\\\\Users\\\\maine\\\\OneDrive\\\\Documents\\\\GitHub\\\\yes\\\\Assets\u0022]",
-    "Timeout": 1778019596,
-    "DeleteAt": 0
-  },
-  "LocalAssetBrowser.Render Texture.HistoryIdx": {
+  "LocalAssetBrowser.Material.ViewMode": {
     "Value": "1",
-    "Timeout": 1778019596,
+    "Timeout": 1778019835,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.Material.ShowJunkFiles": {
+    "Value": "false",
+    "Timeout": 1778019835,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.Material.HideNonAssets": {
+    "Value": "false",
+    "Timeout": 1778019835,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.Material.ShowRecursiveFiles": {
+    "Value": "false",
+    "Timeout": 1778019835,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.Surface Description.ViewMode": {
+    "Value": "0",
+    "Timeout": 1778021023,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.Surface Description.ShowJunkFiles": {
+    "Value": "false",
+    "Timeout": 1778021023,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.Surface Description.HideNonAssets": {
+    "Value": "false",
+    "Timeout": 1778021023,
+    "DeleteAt": 0
+  },
+  "LocalAssetBrowser.Surface Description.ShowRecursiveFiles": {
+    "Value": "false",
+    "Timeout": 1778021023,
     "DeleteAt": 0
   }
 }
