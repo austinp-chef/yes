@@ -32,7 +32,7 @@ public sealed class WeaponHud : Component
 			DrawReloadBar( hud, sw, sh );
 	}
 
-	private void DrawCrosshair( HudPainter hud, float sw, float sh )
+	private void DrawCrosshair( Sandbox.Rendering.HudPainter hud, float sw, float sh )
 	{
 		var cx = sw * 0.5f;
 		var cy = sh * 0.5f;
@@ -48,7 +48,7 @@ public sealed class WeaponHud : Component
 		hud.DrawRect( new Rect( cx - 1f, cy - 1f, 2f, 2f ), new Color( 0f, 0.9f, 1f, 0.4f ) );
 	}
 
-	private void DrawAmmoDisplay( HudPainter hud, float sw, float sh )
+	private void DrawAmmoDisplay( Sandbox.Rendering.HudPainter hud, float sw, float sh )
 	{
 		var cyan = new Color( 0f, 0.9f, 1f );
 		var cyanDim = new Color( 0f, 0.4f, 0.5f );
@@ -112,7 +112,7 @@ public sealed class WeaponHud : Component
 		}
 	}
 
-	private void DrawReloadBar( HudPainter hud, float sw, float sh )
+	private void DrawReloadBar( Sandbox.Rendering.HudPainter hud, float sw, float sh )
 	{
 		var cyan = new Color( 0f, 0.9f, 1f );
 		var cyanDim = new Color( 0f, 0.4f, 0.5f );
@@ -141,7 +141,7 @@ public sealed class WeaponHud : Component
 		}
 	}
 
-	private void DrawBorder( HudPainter hud, float x, float y, float w, float h, Color c )
+	private void DrawBorder( Sandbox.Rendering.HudPainter hud, float x, float y, float w, float h, Color c )
 	{
 		hud.DrawRect( new Rect( x, y, w, 1f ), c );
 		hud.DrawRect( new Rect( x, y + h, w, 1f ), c );

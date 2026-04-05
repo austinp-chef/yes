@@ -11,7 +11,7 @@
   },
   "SceneView.Viewport0.Settings": {
     "Value": "{\u0022CameraPosition\u0022:\u0022-272.9131,-577.2634,560.0265\u0022,\u0022CameraRotation\u0022:\u0022-0.240417,0.2636779,0.6294075,0.690304\u0022,\u0022View\u0022:0,\u0022RenderMode\u0022:0,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022EnablePrefabLighting\u0022:true,\u0022ShowSkyIn2D\u0022:true,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:0,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778013771,
+    "Timeout": 1778015504,
     "DeleteAt": 0
   },
   "Window.SboxSceneEditor.Dock": {
@@ -21,7 +21,7 @@
   },
   "goated zombies.scene.Viewport0": {
     "Value": "{\u0022CameraPosition\u0022:\u0022-272.9131,-577.2634,560.0265\u0022,\u0022CameraRotation\u0022:\u0022-0.240417,0.2636779,0.6294075,0.690304\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778013771,
+    "Timeout": 1778015504,
     "DeleteAt": 0
   },
   ".Viewport0": {
@@ -36,7 +36,7 @@
   },
   "SceneView.Layout": {
     "Value": "{\u0022Layout\u0022:0,\u0022SplitterState\u0022:[]}",
-    "Timeout": 1778005751,
+    "Timeout": 1778013926,
     "DeleteAt": 0
   },
   "LocalAssetBrowser.Texture.History": {
@@ -172,6 +172,16 @@
   "expand.00000000-0000-0000-0000-000000000000.CharacterController": {
     "Value": "false",
     "Timeout": 1777929376,
+    "DeleteAt": 0
+  },
+  "goated zombies.scene.Viewport1": {
+    "Value": "{\u0022CameraPosition\u0022:\u00224.251929,86.64675,64.72717\u0022,\u0022CameraRotation\u0022:\u0022-0.5,0.5,0.5,0.5\u0022,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1778013925,
+    "DeleteAt": 0
+  },
+  "SceneView.Viewport1.Settings": {
+    "Value": "{\u0022CameraPosition\u0022:\u00224.251929,86.64675,64.72717\u0022,\u0022CameraRotation\u0022:\u0022-0.5,0.5,0.5,0.5\u0022,\u0022View\u0022:1,\u0022RenderMode\u0022:0,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022EnablePrefabLighting\u0022:true,\u0022ShowSkyIn2D\u0022:false,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:0,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1778013925,
     "DeleteAt": 0
   }
 }
