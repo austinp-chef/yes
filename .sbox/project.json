@@ -10,8 +10,8 @@
     "DeleteAt": 0
   },
   "SceneView.Viewport0.Settings": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022-708.5743,-2541.093,1657.727\u0022,\u0022CameraRotation\u0022:\u0022-0.1779182,0.1750969,0.6901714,0.6792272\u0022,\u0022View\u0022:0,\u0022RenderMode\u0022:0,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022EnablePrefabLighting\u0022:true,\u0022ShowSkyIn2D\u0022:true,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:0,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778012871,
+    "Value": "{\u0022CameraPosition\u0022:\u0022-272.9131,-577.2634,560.0265\u0022,\u0022CameraRotation\u0022:\u0022-0.240417,0.2636779,0.6294075,0.690304\u0022,\u0022View\u0022:0,\u0022RenderMode\u0022:0,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022EnablePrefabLighting\u0022:true,\u0022ShowSkyIn2D\u0022:true,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:0,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1778013771,
     "DeleteAt": 0
   },
   "Window.SboxSceneEditor.Dock": {
@@ -20,8 +20,8 @@
     "DeleteAt": 0
   },
   "goated zombies.scene.Viewport0": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022-708.5743,-2541.093,1657.727\u0022,\u0022CameraRotation\u0022:\u0022-0.1779182,0.1750969,0.6901714,0.6792272\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1778012871,
+    "Value": "{\u0022CameraPosition\u0022:\u0022-272.9131,-577.2634,560.0265\u0022,\u0022CameraRotation\u0022:\u0022-0.240417,0.2636779,0.6294075,0.690304\u0022,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1778013771,
     "DeleteAt": 0
   },
   ".Viewport0": {

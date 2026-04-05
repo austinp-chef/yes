@@ -21,6 +21,16 @@ public sealed class WeaponHolder : Component
 	[Property, Category( "Firing" )] public float RecoilKick { get; set; } = 1.5f;
 	[Property, Category( "Firing" )] public float RecoilRecovery { get; set; } = 10f;
 
+	// --- Ammo ---
+	[Property, Category( "Ammo" )] public int MaxAmmo { get; set; } = 30;
+	[Property, Category( "Ammo" )] public int MaxReserve { get; set; } = 120;
+	[Property, Category( "Ammo" )] public float ReloadTime { get; set; } = 1.8f;
+
+	public int CurrentAmmo { get; private set; }
+	public int ReserveAmmo { get; private set; }
+	public bool IsReloading { get; private set; }
+	public float ReloadProgress { get; private set; }
+
 	// --- View Bob ---
 	[Property, Category( "View Bob" )] public float BobFrequency { get; set; } = 10f;
 	[Property, Category( "View Bob" )] public float BobAmountX { get; set; } = 0.4f;
@@ -57,6 +67,7 @@ public sealed class WeaponHolder : Component
 	private float _currentRecoil;
 	private float _currentTilt;
 	private PlayerController _playerController;
+	private float _reloadStartTime;
 
 	protected override void OnStart()
 	{
@@ -87,9 +98,17 @@ public sealed class WeaponHolder : Component
 		{
 			UpdateWeaponMotion();
 			PositionViewModel();
+			UpdateReload();
 
-			if ( Input.Down( "attack1" ) && Time.Now - _lastFireTime >= FireRate )
+			if ( Input.Pressed( "reload" ) && !IsReloading && CurrentAmmo < MaxAmmo && ReserveAmmo > 0 )
+				StartReload();
+
+			if ( !IsReloading && Input.Down( "attack1" ) && Time.Now - _lastFireTime >= FireRate && CurrentAmmo > 0 )
 				Fire();
+
+			// Auto-reload on empty
+			if ( !IsReloading && CurrentAmmo <= 0 && ReserveAmmo > 0 && Input.Down( "attack1" ) )
+				StartReload();
 		}
 	}
 
@@ -191,6 +210,12 @@ public sealed class WeaponHolder : Component
 		HeldWeapon = weapon;
 		_holding = true;
 
+		// Set ammo
+		CurrentAmmo = MaxAmmo;
+		ReserveAmmo = MaxReserve;
+		IsReloading = false;
+		ReloadProgress = 0f;
+
 		// Reset motion state
 		_currentBob = Vector3.Zero;
 		_currentSway = Vector3.Zero;
@@ -264,10 +289,37 @@ public sealed class WeaponHolder : Component
 
 	// ─── Firing ───
 
+	private void StartReload()
+	{
+		IsReloading = true;
+		_reloadStartTime = Time.Now;
+		ReloadProgress = 0f;
+	}
+
+	private void UpdateReload()
+	{
+		if ( !IsReloading )
+			return;
+
+		ReloadProgress = MathX.Clamp( (Time.Now - _reloadStartTime) / ReloadTime, 0f, 1f );
+
+		if ( ReloadProgress >= 1f )
+		{
+			// Finish reload — move ammo from reserve to magazine
+			var needed = MaxAmmo - CurrentAmmo;
+			var available = Math.Min( needed, ReserveAmmo );
+			CurrentAmmo += available;
+			ReserveAmmo -= available;
+			IsReloading = false;
+			ReloadProgress = 0f;
+		}
+	}
+
 	private void Fire()
 	{
 		_lastFireTime = Time.Now;
 		_currentRecoil += RecoilKick;
+		CurrentAmmo--;
 
 		// Play fire sound
 		Sound.Play( "sounds/laser_shot.sound", CameraObject.WorldPosition );
