@@ -4,16 +4,18 @@
     "*.hlsl": "slang"
   },
   "slang.additionalSearchPaths": [
-    "C:\\program files (x86)\\steam\\steamapps\\common\\sbox\\core\\shaders",
-    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\sbox\\addons\\base\\Assets\\shaders",
-    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\sbox\\addons\\menu\\Assets\\shaders",
-    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\sbox\\addons\\tools\\Assets\\shaders",
-    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\sbox\\editor\\ShaderGraph\\Assets\\shaders",
-    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\sbox\\editor\\ActionGraph\\Assets\\shaders",
-    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\sbox\\editor\\MovieMaker\\Assets\\shaders",
-    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\sbox\\editor\\Hammer\\Assets\\shaders",
-    "C:\\Users\\hocke\\Documents\\s\u0026box projects\\yes\\Assets\\shaders",
-    "C:\\Users\\hocke\\Documents\\s\u0026box projects\\yes\\Libraries\\fish.scc\\Assets\\shaders"
+    "C:\\program files (x86)\\steam\\steamapps\\common\\sbox 590830\\core\\shaders",
+    "C:\\program files (x86)\\steam\\steamapps\\common\\sbox 590830\\addons\\base\\Assets\\shaders",
+    "C:\\program files (x86)\\steam\\steamapps\\common\\sbox 590830\\addons\\menu\\Assets\\shaders",
+    "C:\\program files (x86)\\steam\\steamapps\\common\\sbox 590830\\addons\\tools\\Assets\\shaders",
+    "C:\\program files (x86)\\steam\\steamapps\\common\\sbox 590830\\editor\\ShaderGraph\\Assets\\shaders",
+    "C:\\program files (x86)\\steam\\steamapps\\common\\sbox 590830\\editor\\ActionGraph\\Assets\\shaders",
+    "C:\\program files (x86)\\steam\\steamapps\\common\\sbox 590830\\editor\\MovieMaker\\Assets\\shaders",
+    "C:\\program files (x86)\\steam\\steamapps\\common\\sbox 590830\\editor\\Hammer\\Assets\\shaders",
+    "C:\\Users\\maine\\OneDrive\\Documents\\GitHub\\yes\\Assets\\shaders",
+    "C:\\Users\\maine\\OneDrive\\Documents\\GitHub\\yes\\Libraries\\fish.scc\\Assets\\shaders",
+    "C:\\users\\maine\\onedrive\\documents\\github\\yes\\libraries\\ozmium.oz_mcp\\Assets\\shaders",
+    "C:\\users\\maine\\onedrive\\documents\\github\\yes\\libraries\\notathreat.crosshairbuilder\\Assets\\shaders"
   ],
   "slang.predefinedMacros": [],
   "slang.workspaceFlavor": "vfx"
