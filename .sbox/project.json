@@ -1,17 +1,17 @@
 {
   "LocalAssetBrowser.History": {
-    "Value": "[\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022@recents\u0022,\u0022@everything\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\editor\\\\ActionGraph\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\tools\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\base\u0022,\u0022@everything\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\base\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\editor\\\\ActionGraph\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\tools\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\ProjectSettings\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Localization\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Editor\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Code\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\citizen\\\\assets\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\core\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\editor\\\\ShaderGraph\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\editor\\\\MovieMaker\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\editor\\\\Hammer\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\base\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\addons\\\\tools\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\editor\\\\ActionGraph\u0022]",
-    "Timeout": 1777953047,
+    "Value": "[\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022@recents\u0022,\u0022@everything\u0022,\u0022C:\\\\program files (x86)\\\\steam\\\\steamapps\\\\common\\\\sbox\\\\editor\\\\ActionGraph\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\\\\animations\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\\\\scenes\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\\\\animations\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022@everything\u0022,\u0022@recents\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\\\\scenes\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\\\\animations\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\\\\animations\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\\\\scenes\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\\\\animations\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Code\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Editor\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Localization\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Localization\u0022,\u0022C:\\\\Users\\\\hocke\\\\Documents\\\\s\\u0026box projects\\\\yes\\\\Assets\\\\animations\u0022]",
+    "Timeout": 1777959537,
     "DeleteAt": 0
   },
   "LocalAssetBrowser.HistoryIdx": {
-    "Value": "23",
-    "Timeout": 1777953047,
+    "Value": "26",
+    "Timeout": 1777959537,
     "DeleteAt": 0
   },
   "SceneView.Viewport0.Settings": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022-3050.399,-3120.813,2589.739\u0022,\u0022CameraRotation\u0022:\u0022-0.1403767,0.1855592,0.5867572,0.7756147\u0022,\u0022View\u0022:0,\u0022RenderMode\u0022:0,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022EnablePrefabLighting\u0022:true,\u0022ShowSkyIn2D\u0022:true,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:0,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1777959025,
+    "Value": "{\u0022CameraPosition\u0022:\u0022658.4628,31.03128,57.9939\u0022,\u0022CameraRotation\u0022:\u00220.09245513,0.01267746,-0.9864062,0.1352562\u0022,\u0022View\u0022:0,\u0022RenderMode\u0022:0,\u0022WireframeMode\u0022:false,\u0022EnablePostProcessing\u0022:true,\u0022EnablePrefabLighting\u0022:true,\u0022ShowSkyIn2D\u0022:true,\u0022ShowGrid\u0022:true,\u0022GridOpacity\u0022:0.2,\u0022GridAxis\u0022:0,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1777959569,
     "DeleteAt": 0
   },
   "Window.SboxSceneEditor.Dock": {
@@ -20,8 +20,8 @@
     "DeleteAt": 0
   },
   "goated zombies.scene.Viewport0": {
-    "Value": "{\u0022CameraPosition\u0022:\u0022-3050.399,-3120.813,2589.739\u0022,\u0022CameraRotation\u0022:\u0022-0.1403767,0.1855592,0.5867572,0.7756147\u0022,\u0022CameraOrthoHeight\u0022:1000}",
-    "Timeout": 1777959025,
+    "Value": "{\u0022CameraPosition\u0022:\u0022658.4628,31.03128,57.9939\u0022,\u0022CameraRotation\u0022:\u00220.09245513,0.01267746,-0.9864062,0.1352562\u0022,\u0022CameraOrthoHeight\u0022:1000}",
+    "Timeout": 1777959569,
     "DeleteAt": 0
   },
   ".Viewport0": {
@@ -136,37 +136,37 @@
   },
   "LocalAssetBrowser.ViewMode": {
     "Value": "0",
-    "Timeout": 1777953047,
+    "Timeout": 1777959558,
     "DeleteAt": 0
   },
   "LocalAssetBrowser.ShowJunkFiles": {
     "Value": "false",
-    "Timeout": 1777953047,
+    "Timeout": 1777959558,
     "DeleteAt": 0
   },
   "LocalAssetBrowser.HideNonAssets": {
     "Value": "false",
-    "Timeout": 1777953047,
+    "Timeout": 1777959558,
     "DeleteAt": 0
   },
   "LocalAssetBrowser.ShowRecursiveFiles": {
     "Value": "false",
-    "Timeout": 1777953047,
+    "Timeout": 1777959558,
     "DeleteAt": 0
   },
   "LocalAssetBrowser.Search": {
-    "Value": "\u0022snot\u0022",
-    "Timeout": 1777953047,
+    "Value": "\u0022\u0022",
+    "Timeout": 1777959558,
     "DeleteAt": 0
   },
   "LocalAssetBrowser.ActiveTags": {
     "Value": "\u0022\u0022",
-    "Timeout": 1777953047,
+    "Timeout": 1777959558,
     "DeleteAt": 0
   },
   "LocalAssetBrowser.ExcludedTags": {
     "Value": "\u0022\u0022",
-    "Timeout": 1777953047,
+    "Timeout": 1777959558,
     "DeleteAt": 0
   },
   "expand.00000000-0000-0000-0000-000000000000.CharacterController": {

@@ -1,0 +1,189 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc30:version{8c2d7a91-9c42-4bf0-883a-5a3b1762d4f1} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "LODGroupList"
+				children = 
+				[
+					{
+						_class = "LODGroup"
+						switch_threshold = 0.0
+						meshes = 
+						[
+							"LOD0",
+						]
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 2.0
+						meshes = 
+						[
+							"LOD1",
+						]
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 6.0
+						meshes = 
+						[
+							"LOD2",
+						]
+					},
+				]
+			},
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "DefaultMaterialGroup"
+						remaps = 
+						[
+							{
+								from = "v_trenchknife.vmat"
+								to = "models/weapons/sbox_melee_trenchknife/v_trenchknife.vmat"
+							},
+						]
+						use_global_default = false
+						global_default_material = ""
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "LOD0"
+						children = 
+						[
+							{
+								_class = "RenderMeshMarkup"
+								material_search_path = ""
+								use_expensive_tangents = true
+								high_high_precision_texcoords = false
+								calc_per_vertex_curvature = false
+								prefer_high_density_tris_in_uv_density_calc = false
+							},
+						]
+						filename = "models/weapons/sbox_melee_trenchknife/w_trenchknife.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = true
+							exception_list = 
+							[
+								"w_trenchknife_lod0",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "LOD1"
+						filename = "models/weapons/sbox_melee_trenchknife/w_trenchknife.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = true
+							exception_list = 
+							[
+								"w_trenchknife_lod1",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "LOD2"
+						filename = "models/weapons/sbox_melee_trenchknife/w_trenchknife.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = true
+							exception_list = 
+							[
+								"w_trenchknife_lod2",
+							]
+						}
+					},
+				]
+			},
+			{
+				_class = "PhysicsBodyMarkupList"
+				children = 
+				[
+					{
+						_class = "PhysicsBodyMarkup"
+						target_body = ""
+						mass_override = 0.7
+						inertia_scale = 1.0
+						linear_damping = 0.0
+						angular_damping = 0.0
+						use_mass_center_override = false
+						mass_center_override = [ 0.0, 0.0, 0.0 ]
+						gravity_scale = 1.0
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = ""
+						surface_prop = "metal"
+						collision_tags = "solid"
+						origin = [ 3.761272, -0.007703, 2.450739 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 6.718062, 0.311614, 1.059528 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = ""
+						surface_prop = "metal"
+						collision_tags = "solid"
+						origin = [ -1.862871, 0.001619, 1.640741 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 4.529864, 0.662232, 2.828919 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = ""
+						surface_prop = "metal"
+						collision_tags = "solid"
+						origin = [ 0.336332, -0.004341, 2.806865 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 0.256062, 1.597457, 2.365434 ]
+					},
+				]
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+		base_model_name = ""
+	}
+}

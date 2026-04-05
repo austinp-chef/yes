@@ -1,0 +1,283 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc30:version{8c2d7a91-9c42-4bf0-883a-5a3b1762d4f1} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "LODGroupList"
+				children = 
+				[
+					{
+						_class = "LODGroup"
+						switch_threshold = 0.0
+						meshes = 
+						[
+							"magazine_full_LOD0",
+							"magazine_empty_LOD0",
+						]
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 4.0
+						meshes = 
+						[
+							"magazine_full_LOD1",
+							"magazine_empty_LOD1",
+						]
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 8.0
+						meshes = 
+						[
+							"magazine_full_LOD2",
+							"magazine_empty_LOD2",
+						]
+					},
+				]
+			},
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "DefaultMaterialGroup"
+						remaps = 
+						[
+							{
+								from = "9mm_bullet.vmat"
+								to = "models/weapons/sbox_ammo/9mm_bullet/9mm_bullet.vmat"
+							},
+							{
+								from = "v_mp5_magazine.vmat"
+								to = "models/weapons/sbox_smg_mp5/v_mp5_magazine.vmat"
+							},
+							{
+								from = "w_mp5.vmat"
+								to = "models/weapons/sbox_smg_mp5/w_mp5.vmat"
+							},
+						]
+						use_global_default = false
+						global_default_material = "materials/default.vmat"
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "magazine_full_LOD0"
+						filename = "models/weapons/sbox_smg_mp5/mp5_magazine.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = true
+							exception_list = 
+							[
+								"magazine_full_lod0",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "magazine_full_LOD1"
+						filename = "models/weapons/sbox_smg_mp5/mp5_magazine.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = true
+							exception_list = 
+							[
+								"magazine_full_lod1",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "magazine_full_LOD2"
+						filename = "models/weapons/sbox_smg_mp5/mp5_magazine.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = true
+							exception_list = 
+							[
+								"magazine_full_lod2",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "magazine_empty_LOD0"
+						filename = "models/weapons/sbox_smg_mp5/mp5_magazine.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = true
+							exception_list = 
+							[
+								"magazine_empty_lod0",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "magazine_empty_LOD1"
+						filename = "models/weapons/sbox_smg_mp5/mp5_magazine.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = true
+							exception_list = 
+							[
+								"magazine_empty_lod1",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "magazine_empty_LOD2"
+						filename = "models/weapons/sbox_smg_mp5/mp5_magazine.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = true
+							exception_list = 
+							[
+								"magazine_empty_lod2",
+							]
+						}
+					},
+				]
+			},
+			{
+				_class = "BodyGroupList"
+				children = 
+				[
+					{
+						_class = "BodyGroup"
+						name = "magazine"
+						children = 
+						[
+							{
+								_class = "BodyGroupChoice"
+								name = "full"
+								meshes = 
+								[
+									"magazine_full_LOD0",
+									"magazine_full_LOD1",
+									"magazine_full_LOD2",
+								]
+							},
+							{
+								_class = "BodyGroupChoice"
+								name = "empty"
+								meshes = 
+								[
+									"magazine_empty_LOD0",
+									"magazine_empty_LOD1",
+									"magazine_empty_LOD2",
+								]
+							},
+						]
+						hidden_in_tools = false
+					},
+				]
+			},
+			{
+				_class = "PhysicsBodyMarkupList"
+				children = 
+				[
+					{
+						_class = "PhysicsBodyMarkup"
+						target_body = ""
+						mass_override = 0.5
+						inertia_scale = 1.0
+						linear_damping = 0.0
+						angular_damping = 0.0
+						use_mass_center_override = false
+						mass_center_override = [ 0.0, 0.0, 0.0 ]
+						gravity_scale = 1.0
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = ""
+						surface_prop = "metal"
+						collision_tags = "solid"
+						origin = [ -0.961736, -0.005007, 2.402314 ]
+						angles = [ -10.0, 0.0, 0.0 ]
+						dimensions = [ 1.41736, 1.018887, 3.024328 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = ""
+						surface_prop = "metal"
+						collision_tags = "solid"
+						origin = [ -0.2752, -0.005007, -0.29596 ]
+						angles = [ -19.0, 0.0, 0.0 ]
+						dimensions = [ 1.402721, 1.018887, 2.757959 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = ""
+						surface_prop = "metal"
+						collision_tags = "solid"
+						origin = [ 0.707658, -0.005007, -2.577794 ]
+						angles = [ -28.0, 0.0, 0.0 ]
+						dimensions = [ 1.402384, 1.018887, 2.461154 ]
+					},
+				]
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+		base_model_name = ""
+	}
+}

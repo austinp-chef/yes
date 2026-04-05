@@ -1,0 +1,286 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc30:version{8c2d7a91-9c42-4bf0-883a-5a3b1762d4f1} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "DefaultMaterialGroup"
+						remaps = 
+						[
+							{
+								from = "762_bullet.vmat"
+								to = "models/weapons/sbox_ammo/762x51_bullet/762_bullet.vmat"
+							},
+							{
+								from = "v_m700_magazine.vmat"
+								to = "models/weapons/sbox_sniper_m700/v_m700_magazine.vmat"
+							},
+							{
+								from = "w_m700.vmat"
+								to = "models/weapons/sbox_sniper_m700/w_m700.vmat"
+							},
+						]
+						use_global_default = false
+						global_default_material = "materials/default.vmat"
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "magazine_full_LOD0"
+						filename = "models/weapons/sbox_sniper_m700/m700_magazine.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = true
+							exception_list = 
+							[
+								"M4A1_magazine_full",
+								"m700_magazine_full",
+								"m700_magazine_full_lod0",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "magazine_empty_LOD0"
+						filename = "models/weapons/sbox_sniper_m700/m700_magazine.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = true
+							exception_list = 
+							[
+								"M4A1_magazine_empty",
+								"m700_magazine_empty",
+								"m700_magazine_empty_lod0",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "magazine_full_LOD1"
+						filename = "models/weapons/sbox_sniper_m700/m700_magazine.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = true
+							exception_list = 
+							[
+								"M4A1_magazine_full",
+								"m700_magazine_full",
+								"m700_magazine_full_lod1",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "magazine_empty_LOD1"
+						filename = "models/weapons/sbox_sniper_m700/m700_magazine.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = true
+							exception_list = 
+							[
+								"M4A1_magazine_empty",
+								"m700_magazine_empty",
+								"m700_magazine_empty_lod1",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "magazine_full_LOD2"
+						filename = "models/weapons/sbox_sniper_m700/m700_magazine.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = true
+							exception_list = 
+							[
+								"M4A1_magazine_full",
+								"m700_magazine_full",
+								"m700_magazine_full_lod2",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "magazine_empty_LOD2"
+						filename = "models/weapons/sbox_sniper_m700/m700_magazine.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = true
+							exception_list = 
+							[
+								"M4A1_magazine_empty",
+								"m700_magazine_empty",
+								"m700_magazine_empty_lod2",
+							]
+						}
+					},
+				]
+			},
+			{
+				_class = "BodyGroupList"
+				children = 
+				[
+					{
+						_class = "BodyGroup"
+						name = "magazine"
+						children = 
+						[
+							{
+								_class = "BodyGroupChoice"
+								name = "full"
+								meshes = 
+								[
+									"magazine_full_LOD0",
+									"magazine_full_LOD1",
+									"magazine_full_LOD2",
+								]
+							},
+							{
+								_class = "BodyGroupChoice"
+								name = "empty"
+								meshes = 
+								[
+									"magazine_empty_LOD0",
+									"magazine_empty_LOD1",
+									"magazine_empty_LOD2",
+								]
+							},
+						]
+						hidden_in_tools = false
+					},
+				]
+			},
+			{
+				_class = "LODGroupList"
+				children = 
+				[
+					{
+						_class = "LODGroup"
+						switch_threshold = 0.0
+						meshes = 
+						[
+							"magazine_full_LOD0",
+							"magazine_empty_LOD0",
+						]
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 6.0
+						meshes = 
+						[
+							"magazine_full_LOD1",
+							"magazine_empty_LOD1",
+						]
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 8.0
+						meshes = 
+						[
+							"magazine_full_LOD2",
+							"magazine_empty_LOD2",
+						]
+					},
+				]
+			},
+			{
+				_class = "PhysicsBodyMarkupList"
+				children = 
+				[
+					{
+						_class = "PhysicsBodyMarkup"
+						target_body = ""
+						mass_override = 0.4
+						inertia_scale = 1.0
+						linear_damping = 0.0
+						angular_damping = 0.0
+						use_mass_center_override = false
+						mass_center_override = [ 0.0, 0.0, 0.0 ]
+						gravity_scale = 1.0
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = ""
+						surface_prop = "plastic"
+						collision_tags = "solid"
+						origin = [ -0.000686, -0.000931, 0.116985 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 3.101455, 0.893229, 3.263203 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = ""
+						surface_prop = "plastic"
+						collision_tags = "solid"
+						origin = [ -0.008617, -0.008877, -1.551296 ]
+						angles = [ -3.0, 0.0, 0.0 ]
+						dimensions = [ 3.197026, 0.977386, 0.237523 ]
+					},
+				]
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+		base_model_name = ""
+	}
+}

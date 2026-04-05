@@ -1,0 +1,232 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc30:version{8c2d7a91-9c42-4bf0-883a-5a3b1762d4f1} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "LODGroupList"
+				children = 
+				[
+					{
+						_class = "LODGroup"
+						switch_threshold = 0.0
+						meshes = 
+						[
+							"LOD0",
+						]
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 2.0
+						meshes = 
+						[
+							"LOD1",
+						]
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 7.0
+						meshes = 
+						[
+							"LOD2",
+						]
+					},
+					{
+						_class = "LODGroup"
+						switch_threshold = 10.0
+						meshes = 
+						[
+							"LOD3",
+						]
+					},
+				]
+			},
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "DefaultMaterialGroup"
+						remaps = 
+						[
+							{
+								from = "v_m9bayonet.vmat"
+								to = "models/weapons/sbox_melee_m9bayonet/v_m9bayonet.vmat"
+							},
+						]
+						use_global_default = false
+						global_default_material = "materials/default.vmat"
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "LOD0"
+						children = 
+						[
+							{
+								_class = "RenderMeshMarkup"
+								material_search_path = ""
+								use_expensive_tangents = true
+								high_high_precision_texcoords = false
+								calc_per_vertex_curvature = false
+								prefer_high_density_tris_in_uv_density_calc = false
+							},
+						]
+						filename = "models/weapons/sbox_melee_m9bayonet/w_m9bayonet.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = true
+							exception_list = 
+							[
+								"w_m9bayonet_lod0",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "LOD1"
+						filename = "models/weapons/sbox_melee_m9bayonet/w_m9bayonet.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = true
+							exception_list = 
+							[
+								"w_m9bayonet_lod1",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "LOD2"
+						filename = "models/weapons/sbox_melee_m9bayonet/w_m9bayonet.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = true
+							exception_list = 
+							[
+								"w_m9bayonet_lod2",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						name = "LOD3"
+						filename = "models/weapons/sbox_melee_m9bayonet/w_m9bayonet.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = true
+							exception_list = 
+							[
+								"w_m9bayonet_lod3",
+							]
+						}
+					},
+				]
+			},
+			{
+				_class = "ModelModifierList"
+				children = 
+				[
+					{
+						_class = "ModelModifier_ScaleAndMirror"
+						scale = 0.3937
+						mirror_x = false
+						mirror_y = false
+						mirror_z = false
+						flip_bone_forward = false
+						swap_left_and_right_bones = false
+					},
+				]
+			},
+			{
+				_class = "PhysicsBodyMarkupList"
+				children = 
+				[
+					{
+						_class = "PhysicsBodyMarkup"
+						target_body = ""
+						mass_override = 0.7
+						inertia_scale = 1.0
+						linear_damping = 0.0
+						angular_damping = 0.0
+						use_mass_center_override = false
+						mass_center_override = [ 0.0, 0.0, 0.0 ]
+						gravity_scale = 1.0
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeCylinder"
+						parent_bone = ""
+						surface_prop = "plastic"
+						collision_tags = "solid"
+						radius = 1.563752
+						point0 = [ -15.036943, 0.0, 3.55 ]
+						point1 = [ -2.514768, 0.0, 3.55 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = ""
+						surface_prop = "metal"
+						collision_tags = "solid"
+						origin = [ 6.374354, -0.011034, 3.610488 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 16.996716, 0.660993, 3.440181 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = ""
+						surface_prop = "metal"
+						collision_tags = "solid"
+						origin = [ -2.323234, -0.008739, 4.083625 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 0.538725, 3.092199, 8.03654 ]
+					},
+				]
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+		base_model_name = ""
+	}
+}

@@ -1,0 +1,1584 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc29:version{3cec427c-1b0e-4d48-a90a-0436f33a6041} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						filename = "models/first_person/hand_human_right.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "Prefab"
+						target_file = "models/first_person/prefabs/hand_human_animationlist.vmdl_prefab"
+					},
+					{
+						_class = "Folder"
+						name = "generic"
+						children = 
+						[
+							{
+								_class = "AnimFile"
+								name = "@generic_thumb"
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = "wl_thumb"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "models/hands/dmx/animation/alyx_rhand_generic.dmx"
+								start_frame = 2
+								end_frame = 20
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "@generic_pinky"
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = "wl_pinky"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "models/hands/dmx/animation/alyx_rhand_generic.dmx"
+								start_frame = 2
+								end_frame = 20
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "@generic_ring"
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = "wl_ring"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "models/hands/dmx/animation/alyx_rhand_generic.dmx"
+								start_frame = 2
+								end_frame = 20
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "@generic_middle"
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = "wl_middle"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "models/hands/dmx/animation/alyx_rhand_generic.dmx"
+								start_frame = 2
+								end_frame = 20
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "@generic_index"
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = "wl_index"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "models/hands/dmx/animation/alyx_rhand_generic.dmx"
+								start_frame = 2
+								end_frame = 20
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+						]
+						disabled = true
+					},
+					{
+						_class = "Folder"
+						name = "cough"
+						children = 
+						[
+							{
+								_class = "AnimFile"
+								name = "cough_hand_r_pose"
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "models/hands/dmx/animation/cough_hand_r_pose.dmx"
+								start_frame = -1
+								end_frame = -1
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+						]
+						disabled = true
+					},
+					{
+						_class = "AnimFile"
+						name = "fist"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/first_person/animations/hand_human@fist.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+				]
+				default_root_bone_name = ""
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "vr_controller_root"
+						disabled = true
+						parent_bone = "controller_hand_R1"
+						relative_origin = [ 0.838166, 3.095744, 3.283976 ]
+						relative_angles = [ -45.655354, 78.756699, 173.004715 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "vr_controller_use"
+						disabled = true
+						parent_bone = "hand_R"
+						relative_origin = [ -4.501553, -0.003827, -0.529861 ]
+						relative_angles = [ -38.938557, -169.797791, 87.413025 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "vr_controller_hold"
+						disabled = true
+						parent_bone = "hand_R"
+						relative_origin = [ -2.384742, -0.702756, -0.3549 ]
+						relative_angles = [ 2.011931, -81.424355, 96.032875 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "interact_conform"
+						disabled = true
+						parent_bone = "hand_R"
+						relative_origin = [ -2.587785, -1.109332, -0.717548 ]
+						relative_angles = [ 25.800356, -88.9207, 102.9468 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "vr_controller_forward_point"
+						disabled = true
+						parent_bone = "hand_R"
+						relative_origin = [ -4.844477, -1.064358, -0.617486 ]
+						relative_angles = [ 6.029146, -171.636932, -2.023127 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "vr_controller_grabbity_gun_forward_pull"
+						disabled = true
+						parent_bone = "hand_R"
+						relative_origin = [ -2.384742, -0.702756, -0.3549 ]
+						relative_angles = [ 6.029146, -171.636932, -2.023127 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "fingertip_index"
+						parent_bone = "finger_index_2_R"
+						relative_origin = [ 2.6, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "fingertip_middle"
+						parent_bone = "finger_middle_2_R"
+						relative_origin = [ 2.6, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "fingertip_ring"
+						parent_bone = "finger_ring_2_R"
+						relative_origin = [ 2.4, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "fingertip_pinky"
+						parent_bone = "finger_pinky_2_R"
+						relative_origin = [ 2.3, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "fingertip_thumb"
+						parent_bone = "finger_thumb_2_R"
+						relative_origin = [ 3.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "ui_pointer"
+						parent_bone = "finger_index_2_R"
+						relative_origin = [ 3.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "constraint1"
+						disabled = true
+						parent_bone = "hand_R"
+						relative_origin = [ -2.38474, -0.702756, -0.3549 ]
+						relative_angles = [ 6.02915, -171.636993, -2.02313 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "physics_origin"
+						disabled = true
+						parent_bone = "hand_R"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "vr_hand_origin"
+						parent_bone = "hand_R"
+						relative_origin = [ 8.065014, -0.621517, -2.341894 ]
+						relative_angles = [ -0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "vr_controller_gg_hold"
+						disabled = true
+						parent_bone = "hand_R"
+						relative_origin = [ -7.453234, -0.43775, -0.844964 ]
+						relative_angles = [ 5.829866, -176.659866, -2.542345 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "vr_controller_ui_root"
+						disabled = true
+						parent_bone = "hand_R"
+						relative_origin = [ 6.735069, -0.994324, -2.801464 ]
+						relative_angles = [ -45.655357, 78.756622, 173.004684 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "vr_controller_energy"
+						disabled = true
+						parent_bone = "hand_R"
+						relative_origin = [ -2.58474, -2.35, -0.3549 ]
+						relative_angles = [ 2.011931, -81.424355, 96.032875 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = "hand_R"
+						surface_prop = "player_hand"
+						collision_tags = "solid"
+						radius = 1.75
+						point0 = [ 6.591148, -2.995726, -0.731289 ]
+						point1 = [ 8.489486, 2.176209, -0.259469 ]
+					},
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = "hand_R"
+						surface_prop = "player_hand"
+						collision_tags = "solid"
+						radius = 2.0
+						point0 = [ 4.810682, -2.700393, -0.663452 ]
+						point1 = [ 6.318069, 2.660711, -1.321098 ]
+					},
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = "hand_R"
+						surface_prop = "player_hand"
+						collision_tags = "solid"
+						radius = 2.5
+						point0 = [ 2.236733, -1.974208, -0.218466 ]
+						point1 = [ 2.958174, 2.251428, -1.116623 ]
+					},
+				]
+			},
+			{
+				_class = "PoseParamList"
+				children = 
+				[
+					{
+						_class = "PoseParam"
+						name = "finger_thumb"
+						poseparam_min = 0.0
+						poseparam_max = 1.0
+						poseparam_looping = false
+						poseparam_loop = 0.0
+					},
+					{
+						_class = "PoseParam"
+						name = "finger_pinky"
+						poseparam_min = 0.0
+						poseparam_max = 1.0
+						poseparam_looping = false
+						poseparam_loop = 0.0
+					},
+					{
+						_class = "PoseParam"
+						name = "finger_ring"
+						poseparam_min = 0.0
+						poseparam_max = 1.0
+						poseparam_looping = false
+						poseparam_loop = 0.0
+					},
+					{
+						_class = "PoseParam"
+						name = "finger_middle"
+						poseparam_min = 0.0
+						poseparam_max = 1.0
+						poseparam_looping = false
+						poseparam_loop = 0.0
+					},
+					{
+						_class = "PoseParam"
+						name = "finger_index"
+						poseparam_min = 0.0
+						poseparam_max = 1.0
+						poseparam_looping = false
+						poseparam_loop = 0.0
+					},
+				]
+			},
+			{
+				_class = "WeightListList"
+				children = 
+				[
+					{
+						_class = "WeightList"
+						name = "wl_thumb"
+						default_weight = 0.0
+						weights = 
+						[
+							{
+								bone = "finger_thumb_0_R"
+								weight = 1.0
+							},
+						]
+						master_morph_weight = 1.0
+						morph_weights = [  ]
+					},
+					{
+						_class = "WeightList"
+						name = "wl_pinky"
+						default_weight = 0.0
+						weights = 
+						[
+							{
+								bone = "finger_pinky_meta_R"
+								weight = 1.0
+							},
+						]
+						master_morph_weight = 1.0
+						morph_weights = [  ]
+					},
+					{
+						_class = "WeightList"
+						name = "wl_ring"
+						default_weight = 0.0
+						weights = 
+						[
+							{
+								bone = "finger_ring_meta_R"
+								weight = 1.0
+							},
+						]
+						master_morph_weight = 1.0
+						morph_weights = [  ]
+					},
+					{
+						_class = "WeightList"
+						name = "wl_middle"
+						default_weight = 0.0
+						weights = 
+						[
+							{
+								bone = "finger_middle_meta_R"
+								weight = 1.0
+							},
+						]
+						master_morph_weight = 1.0
+						morph_weights = [  ]
+					},
+					{
+						_class = "WeightList"
+						name = "wl_index"
+						default_weight = 0.0
+						weights = 
+						[
+							{
+								bone = "finger_index_meta_R"
+								weight = 1.0
+							},
+						]
+						master_morph_weight = 1.0
+						morph_weights = [  ]
+					},
+					{
+						_class = "WeightList"
+						name = "wl_fist"
+						default_weight = 0.0
+						weights = 
+						[
+							{
+								bone = "controller_hand_R1"
+								weight = 1.0
+							},
+							{
+								bone = "finger_index_meta_R"
+								weight = 0.0
+							},
+							{
+								bone = "finger_middle_meta_R"
+								weight = 0.0
+							},
+							{
+								bone = "finger_pinky_meta_R"
+								weight = 0.0
+							},
+							{
+								bone = "finger_ring_meta_R"
+								weight = 0.0
+							},
+							{
+								bone = "finger_thumb_0_R"
+								weight = 0.0
+							},
+							{
+								bone = "root"
+								weight = 1.0
+							},
+						]
+						master_morph_weight = 1.0
+						morph_weights = [  ]
+					},
+					{
+						_class = "WeightList"
+						name = "wl_rootoffset"
+						default_weight = 0.0
+						weights = 
+						[
+							{
+								bone = "arm_lower_R"
+								weight = 1.0
+							},
+							{
+								bone = "arm_lower_R_TWIST"
+								weight = 0.0
+							},
+							{
+								bone = "arm_lower_R_TWIST1"
+								weight = 0.0
+							},
+							{
+								bone = "arm_upper_R"
+								weight = 0.0
+							},
+							{
+								bone = "controller_hand_R1"
+								weight = 1.0
+							},
+							{
+								bone = "finger_index_meta_R"
+								weight = 0.0
+							},
+							{
+								bone = "finger_middle_meta_R"
+								weight = 0.0
+							},
+							{
+								bone = "finger_pinky_meta_R"
+								weight = 0.0
+							},
+							{
+								bone = "finger_ring_meta_R"
+								weight = 0.0
+							},
+							{
+								bone = "finger_thumb_0_R"
+								weight = 0.0
+							},
+							{
+								bone = "hand_R"
+								weight = 1.0
+							},
+							{
+								bone = "root"
+								weight = 1.0
+							},
+							{
+								bone = "weapon_hand_R"
+								weight = 0.0
+							},
+						]
+						master_morph_weight = 1.0
+						morph_weights = [  ]
+					},
+					{
+						_class = "WeightList"
+						name = "wl_thumb_IK"
+						default_weight = 0.0
+						weights = 
+						[
+							{
+								bone = "finger_thumb_2_R"
+								weight = 1.0
+							},
+							{
+								bone = "finger_thumb_R_END"
+								weight = 1.0
+							},
+						]
+						master_morph_weight = 1.0
+						morph_weights = [  ]
+					},
+					{
+						_class = "WeightList"
+						name = "wl_index_IK"
+						default_weight = 0.0
+						weights = 
+						[
+							{
+								bone = "finger_index_2_R"
+								weight = 1.0
+							},
+							{
+								bone = "finger_index_R_END"
+								weight = 1.0
+							},
+						]
+						master_morph_weight = 1.0
+						morph_weights = [  ]
+					},
+					{
+						_class = "WeightList"
+						name = "wl_middle_IK"
+						default_weight = 0.0
+						weights = 
+						[
+							{
+								bone = "finger_middle_2_R"
+								weight = 1.0
+							},
+							{
+								bone = "finger_middle_R_END"
+								weight = 1.0
+							},
+						]
+						master_morph_weight = 1.0
+						morph_weights = [  ]
+					},
+					{
+						_class = "WeightList"
+						name = "wl_ring_IK"
+						default_weight = 0.0
+						weights = 
+						[
+							{
+								bone = "finger_ring_2_R"
+								weight = 1.0
+							},
+							{
+								bone = "finger_ring_R_END"
+								weight = 1.0
+							},
+						]
+						master_morph_weight = 1.0
+						morph_weights = [  ]
+					},
+					{
+						_class = "WeightList"
+						name = "wl_pinky_IK"
+						default_weight = 0.0
+						weights = 
+						[
+							{
+								bone = "finger_pinky_2_R"
+								weight = 1.0
+							},
+							{
+								bone = "finger_pinky_L_END"
+								weight = 1.0
+							},
+						]
+						master_morph_weight = 1.0
+						morph_weights = [  ]
+					},
+				]
+			},
+			{
+				_class = "PhysicsBodyMarkupList"
+				children = 
+				[
+					{
+						_class = "PhysicsBodyMarkup"
+						target_body = "hand_R"
+						mass_override = 10.7
+						inertia_scale = 1.0
+						linear_damping = 0.0
+						angular_damping = 0.0
+						use_mass_center_override = false
+						mass_center_override = [ 0.0, 0.0, 0.0 ]
+					},
+				]
+			},
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "Prefab"
+						target_file = "models/first_person/prefabs/v_first_person_arms_defaultmaterialgroup.vmdl_prefab"
+					},
+				]
+			},
+			{
+				_class = "IKData"
+				children = 
+				[
+					{
+						_class = "IKChain"
+						name = "IKChain_Thumb"
+						children = 
+						[
+							{
+								_class = "IKChainJoint"
+								name = "finger_thumb_0_R"
+								children = 
+								[
+									{
+										_class = "IKChainJoint"
+										name = "finger_thumb_1_R"
+										children = 
+										[
+											{
+												_class = "IKChainJoint"
+												name = "finger_thumb_2_R"
+												children = 
+												[
+													{
+														_class = "IKJointConstraint_Hinge"
+														constrained_joint = ""
+														hinge_axis = "Left"
+														min_radians = -0.261799
+														max_radians = 1.745329
+													},
+												]
+												bone = "finger_thumb_2_R"
+											},
+											{
+												_class = "IKJointConstraint_Hinge"
+												constrained_joint = ""
+												hinge_axis = "Left"
+												min_radians = 0.0
+												max_radians = 1.570796
+											},
+										]
+										bone = "finger_thumb_1_R"
+									},
+								]
+								bone = "finger_thumb_0_R"
+							},
+						]
+						m_bDoBonesOrientAlongPositiveX = true
+						"m_DefaultSolverSettings.m_nNumIterations" = 6
+						"m_DefaultSolverSettings.m_SolverType " = "IKSOLVER_CCD"
+						"m_DefaultTargetSettings.m_Bone" = 
+						{
+							m_Name = "finger_thumb_2_R"
+						}
+						"m_DefaultTargetSettings.m_TargetSource" = "Animgraph Parameter"
+						"m_Data.m_DefaultTargetSettings.m_AnimgraphParameterNamePosition" = 
+						{
+							m_id = 4294967295
+						}
+						"m_Data.m_EndEffectorFixedOffsetAttachment" = 
+						{
+							m_Name = "fingertip_thumb"
+						}
+						"m_Data.m_bParentJointRequiresAlignment" = true
+					},
+					{
+						_class = "IKChain"
+						name = "IKChain_Index"
+						children = 
+						[
+							{
+								_class = "IKChainJoint"
+								name = "finger_index_0_R"
+								children = 
+								[
+									{
+										_class = "IKChainJoint"
+										name = "finger_index_1_R"
+										children = 
+										[
+											{
+												_class = "IKChainJoint"
+												name = "finger_index_2_R"
+												children = 
+												[
+													{
+														_class = "IKJointConstraint_Hinge"
+														constrained_joint = ""
+														hinge_axis = "Left"
+														min_radians = -0.261799
+														max_radians = 1.570796
+													},
+												]
+												bone = "finger_index_2_R"
+											},
+											{
+												_class = "IKJointConstraint_Hinge"
+												constrained_joint = ""
+												hinge_axis = "Left"
+												min_radians = 0.0
+												max_radians = 2.268928
+											},
+										]
+										bone = "finger_index_1_R"
+									},
+								]
+								bone = "finger_index_0_R"
+							},
+						]
+						m_bDoBonesOrientAlongPositiveX = true
+						"m_DefaultSolverSettings.m_nNumIterations" = 6
+						"m_DefaultSolverSettings.m_SolverType " = "IKSOLVER_CCD"
+						"m_DefaultTargetSettings.m_Bone" = 
+						{
+							m_Name = "finger_index_2_R"
+						}
+						"m_DefaultTargetSettings.m_TargetSource" = "Animgraph Parameter"
+						"m_Data.m_DefaultTargetSettings.m_AnimgraphParameterNamePosition" = 
+						{
+							m_id = 4294967295
+						}
+						"m_Data.m_EndEffectorFixedOffsetAttachment" = 
+						{
+							m_Name = "fingertip_index"
+						}
+						"m_Data.m_bParentJointRequiresAlignment" = true
+					},
+					{
+						_class = "IKChain"
+						name = "IKChain_Middle"
+						children = 
+						[
+							{
+								_class = "IKChainJoint"
+								name = "finger_middle_0_R"
+								children = 
+								[
+									{
+										_class = "IKChainJoint"
+										name = "finger_middle_1_R"
+										children = 
+										[
+											{
+												_class = "IKChainJoint"
+												name = "finger_middle_2_R"
+												children = 
+												[
+													{
+														_class = "IKJointConstraint_Hinge"
+														constrained_joint = ""
+														hinge_axis = "Left"
+														min_radians = -0.261799
+														max_radians = 2.094395
+													},
+												]
+												bone = "finger_middle_2_R"
+											},
+											{
+												_class = "IKJointConstraint_Hinge"
+												constrained_joint = ""
+												hinge_axis = "Left"
+												min_radians = 0.0
+												max_radians = 2.268928
+											},
+										]
+										bone = "finger_middle_1_R"
+									},
+								]
+								bone = "finger_middle_0_R"
+							},
+						]
+						m_bDoBonesOrientAlongPositiveX = true
+						"m_DefaultSolverSettings.m_nNumIterations" = 6
+						"m_DefaultSolverSettings.m_SolverType " = "IKSOLVER_CCD"
+						"m_DefaultTargetSettings.m_Bone" = 
+						{
+							m_Name = "finger_middle_2_R"
+						}
+						"m_DefaultTargetSettings.m_TargetSource" = "Animgraph Parameter"
+						"m_Data.m_DefaultTargetSettings.m_AnimgraphParameterNamePosition" = 
+						{
+							m_id = 4294967295
+						}
+						"m_Data.m_EndEffectorFixedOffsetAttachment" = 
+						{
+							m_Name = "fingertip_middle"
+						}
+						"m_Data.m_bParentJointRequiresAlignment" = true
+					},
+					{
+						_class = "IKChain"
+						name = "IKChain_Ring"
+						children = 
+						[
+							{
+								_class = "IKChainJoint"
+								name = "finger_ring_0_R"
+								children = 
+								[
+									{
+										_class = "IKChainJoint"
+										name = "finger_ring_1_R"
+										children = 
+										[
+											{
+												_class = "IKChainJoint"
+												name = "finger_ring_2_R"
+												children = 
+												[
+													{
+														_class = "IKJointConstraint_Hinge"
+														constrained_joint = ""
+														hinge_axis = "Left"
+														min_radians = -0.261799
+														max_radians = 2.094395
+													},
+												]
+												bone = "finger_ring_2_R"
+											},
+											{
+												_class = "IKJointConstraint_Hinge"
+												constrained_joint = ""
+												hinge_axis = "Left"
+												min_radians = 0.0
+												max_radians = 1.763526
+											},
+										]
+										bone = "finger_ring_1_R"
+									},
+								]
+								bone = "finger_ring_0_R"
+							},
+						]
+						m_bDoBonesOrientAlongPositiveX = true
+						"m_DefaultSolverSettings.m_nNumIterations" = 6
+						"m_DefaultSolverSettings.m_SolverType " = "IKSOLVER_CCD"
+						"m_DefaultTargetSettings.m_Bone" = 
+						{
+							m_Name = "finger_ring_2_R"
+						}
+						"m_DefaultTargetSettings.m_TargetSource" = "Animgraph Parameter"
+						"m_Data.m_DefaultTargetSettings.m_AnimgraphParameterNamePosition" = 
+						{
+							m_id = 4294967295
+						}
+						"m_Data.m_EndEffectorFixedOffsetAttachment" = 
+						{
+							m_Name = "fingertip_ring"
+						}
+						"m_Data.m_bParentJointRequiresAlignment" = true
+					},
+					{
+						_class = "IKChain"
+						name = "IKChain_Pinky"
+						children = 
+						[
+							{
+								_class = "IKChainJoint"
+								name = "finger_pinky_0_R"
+								children = 
+								[
+									{
+										_class = "IKChainJoint"
+										name = "finger_pinky_1_R"
+										children = 
+										[
+											{
+												_class = "IKChainJoint"
+												name = "finger_pinky_2_R"
+												children = 
+												[
+													{
+														_class = "IKJointConstraint_Hinge"
+														constrained_joint = ""
+														hinge_axis = "Left"
+														min_radians = -0.095182
+														max_radians = 1.781694
+													},
+												]
+												bone = "finger_pinky_2_R"
+											},
+											{
+												_class = "IKJointConstraint_Hinge"
+												constrained_joint = ""
+												hinge_axis = "Left"
+												min_radians = 0.0
+												max_radians = 1.570796
+											},
+										]
+										bone = "finger_pinky_1_R"
+									},
+								]
+								bone = "finger_pinky_0_R"
+							},
+						]
+						m_bDoBonesOrientAlongPositiveX = true
+						"m_DefaultSolverSettings.m_nNumIterations" = 6
+						"m_DefaultSolverSettings.m_SolverType " = "IKSOLVER_CCD"
+						"m_DefaultTargetSettings.m_Bone" = 
+						{
+							m_Name = "finger_pinky_2_R"
+						}
+						"m_DefaultTargetSettings.m_TargetSource" = "Animgraph Parameter"
+						"m_Data.m_DefaultTargetSettings.m_AnimgraphParameterNamePosition" = 
+						{
+							m_id = 4294967295
+						}
+						"m_Data.m_EndEffectorFixedOffsetAttachment" = 
+						{
+							m_Name = "fingertip_pinky"
+						}
+						"m_Data.m_bParentJointRequiresAlignment" = true
+					},
+				]
+			},
+			{
+				_class = "GameDataList"
+				children = 
+				[
+					{
+						_class = "SkeletalInputSettings"
+						children = 
+						[
+							{
+								_class = "Wrist Bone"
+								bone = "hand_R"
+							},
+							{
+								_class = "Wrist Bone"
+								bone = "arm_lower_R"
+							},
+							{
+								_class = "Finger Chain"
+								name = "Finger_Thumb"
+								children = 
+								[
+									{
+										_class = "Finger Source"
+										index = 0
+										weight = 1.0
+									},
+									{
+										_class = "Finger Bone"
+										bone = "finger_thumb_2_R"
+										axis = [ 0.0, 0.0, 1.0 ]
+										minangle = -15.0
+										maxangle = 100.0
+										radius = 0.7
+										capsulepos1 = [ 0.0, 0.0, 0.0 ]
+										capsulepos2 = [ 2.0, 0.0, -0.2 ]
+									},
+									{
+										_class = "Finger Bone"
+										bone = "finger_thumb_1_R"
+										axis = [ 0.0, 0.0, 1.0 ]
+										minangle = 0.0
+										maxangle = 90.0
+										radius = 0.7
+										capsulepos1 = [ 0.0, 0.0, 0.0 ]
+										capsulepos2 = [ 1.5, 0.0, 0.0 ]
+									},
+									{
+										_class = "Finger Bone"
+										bone = "finger_thumb_0_R"
+										axis = [ 0.0, 0.0, 1.0 ]
+										minangle = 0.0
+										maxangle = 90.0
+										radius = 0.7
+										capsulepos1 = [ 0.0, 0.0, 0.0 ]
+										capsulepos2 = [ 4.0, 0.0, 0.0 ]
+									},
+								]
+								tipparentbone = "finger_thumb_2_R"
+								tipoffset = [ -1.199588, -0.146462, -0.032532 ]
+								metacarpalbone = "finger_thumb_0_R"
+								splayaxis = [ 0.0, 1.0, 0.0 ]
+								splaymin = -180.0
+								splaymax = 180.0
+							},
+							{
+								_class = "Finger Chain"
+								name = "Finger_Index"
+								children = 
+								[
+									{
+										_class = "Finger Source"
+										index = 1
+										weight = 1.0
+									},
+									{
+										_class = "Finger Bone"
+										bone = "finger_index_2_R"
+										axis = [ 0.0, 0.0, 1.0 ]
+										minangle = -15.0
+										maxangle = 90.0
+										radius = 0.7
+										capsulepos1 = [ 0.0, 0.0, 0.0 ]
+										capsulepos2 = [ 1.5, 0.0, 0.0 ]
+									},
+									{
+										_class = "Finger Bone"
+										bone = "finger_index_1_R"
+										axis = [ 0.0, 0.0, 1.0 ]
+										minangle = 0.0
+										maxangle = 130.0
+										radius = 0.7
+										capsulepos1 = [ 0.0, 0.0, 0.0 ]
+										capsulepos2 = [ 2.5, 0.0, 0.0 ]
+									},
+									{
+										_class = "Finger Bone"
+										bone = "finger_index_0_R"
+										axis = [ 0.0, 0.0, 1.0 ]
+										minangle = 5.0
+										maxangle = 90.0
+										radius = 0.7
+										capsulepos1 = [ 0.0, 0.0, 0.0 ]
+										capsulepos2 = [ 4.0, 0.0, 0.0 ]
+									},
+								]
+								tipparentbone = "finger_index_2_R"
+								tipoffset = [ -0.963834, -0.006799, 0.026525 ]
+								metacarpalbone = "finger_index_meta_R"
+								splayaxis = [ 0.0, 1.0, 0.0 ]
+								splaymin = -15.0
+								splaymax = 15.0
+							},
+							{
+								_class = "Finger Chain"
+								name = "Finger_Middle"
+								children = 
+								[
+									{
+										_class = "Finger Source"
+										index = 2
+										weight = 1.0
+									},
+									{
+										_class = "Finger Bone"
+										bone = "finger_middle_2_R"
+										axis = [ 0.0, 0.0, 1.0 ]
+										minangle = -15.0
+										maxangle = 120.0
+										radius = 0.7
+										capsulepos1 = [ 0.0, 0.0, 0.0 ]
+										capsulepos2 = [ 1.5, 0.0, 0.0 ]
+									},
+									{
+										_class = "Finger Bone"
+										bone = "finger_middle_1_R"
+										axis = [ 0.0, 0.0, 1.0 ]
+										minangle = 0.0
+										maxangle = 130.0
+										radius = 0.7
+										capsulepos1 = [ 0.0, 0.0, 0.0 ]
+										capsulepos2 = [ 2.5, 0.0, 0.0 ]
+									},
+									{
+										_class = "Finger Bone"
+										bone = "finger_middle_0_R"
+										axis = [ 0.0, 0.0, 1.0 ]
+										minangle = -5.0
+										maxangle = 120.0
+										radius = 0.7
+										capsulepos1 = [ 0.0, 0.0, 0.0 ]
+										capsulepos2 = [ 5.0, 0.0, 0.0 ]
+									},
+								]
+								tipparentbone = "finger_middle_2_R"
+								tipoffset = [ -1.040762, -0.045133, -0.012609 ]
+								metacarpalbone = "finger_middle_meta_R"
+								splayaxis = [ 0.0, 1.0, 0.0 ]
+								splaymin = -15.0
+								splaymax = 15.0
+							},
+							{
+								_class = "Finger Chain"
+								name = "Finger_Ring"
+								children = 
+								[
+									{
+										_class = "Finger Source"
+										index = 3
+										weight = 1.0
+									},
+									{
+										_class = "Finger Bone"
+										bone = "finger_ring_2_R"
+										axis = [ 0.0, 0.0, 1.0 ]
+										minangle = -15.0
+										maxangle = 120.0
+										radius = 0.7
+										capsulepos1 = [ 0.0, 0.0, 0.0 ]
+										capsulepos2 = [ 1.5, 0.0, 0.0 ]
+									},
+									{
+										_class = "Finger Bone"
+										bone = "finger_ring_1_R"
+										axis = [ 0.0, 0.0, 1.0 ]
+										minangle = 0.0
+										maxangle = 130.0
+										radius = 0.7
+										capsulepos1 = [ 0.0, 0.0, 0.0 ]
+										capsulepos2 = [ 2.5, 0.0, 0.0 ]
+									},
+									{
+										_class = "Finger Bone"
+										bone = "finger_ring_0_R"
+										axis = [ 0.0, 0.0, 1.0 ]
+										minangle = -5.0
+										maxangle = 120.0
+										radius = 0.7
+										capsulepos1 = [ 0.0, 0.0, 0.0 ]
+										capsulepos2 = [ 4.0, 0.0, 0.0 ]
+									},
+								]
+								tipparentbone = "finger_ring_2_R"
+								tipoffset = [ -1.057159, -0.06041, -0.012268 ]
+								metacarpalbone = "finger_ring_meta_R"
+								splayaxis = [ 0.0, 1.0, 0.0 ]
+								splaymin = -15.0
+								splaymax = 15.0
+							},
+							{
+								_class = "Finger Chain"
+								name = "Finger_Pinky"
+								children = 
+								[
+									{
+										_class = "Finger Source"
+										index = 4
+										weight = 1.0
+									},
+									{
+										_class = "Finger Bone"
+										bone = "finger_pinky_2_R"
+										axis = [ 0.0, 0.0, 1.0 ]
+										minangle = -5.0
+										maxangle = 120.0
+										radius = 0.7
+										capsulepos1 = [ 0.0, 0.0, 0.0 ]
+										capsulepos2 = [ 1.5, 0.0, 0.0 ]
+									},
+									{
+										_class = "Finger Bone"
+										bone = "finger_pinky_1_R"
+										axis = [ 0.0, 0.0, 1.0 ]
+										minangle = 0.0
+										maxangle = 130.0
+										radius = 0.7
+										capsulepos1 = [ 0.0, 0.0, 0.0 ]
+										capsulepos2 = [ 2.0, 0.0, 0.0 ]
+									},
+									{
+										_class = "Finger Bone"
+										bone = "finger_pinky_0_R"
+										axis = [ 0.0, 0.0, 1.0 ]
+										minangle = -5.0
+										maxangle = 130.0
+										radius = 0.7
+										capsulepos1 = [ 0.0, 0.0, 0.0 ]
+										capsulepos2 = [ 3.0, 0.0, 0.0 ]
+									},
+								]
+								tipparentbone = "finger_pinky_2_R"
+								tipoffset = [ -0.930674, -0.033648, -0.005267 ]
+								metacarpalbone = "finger_pinky_meta_R"
+								splayaxis = [ 0.0, 1.0, 0.0 ]
+								splaymin = -15.0
+								splaymax = 15.0
+							},
+						]
+						handtype = 1
+					},
+				]
+			},
+			{
+				_class = "HitboxSetList"
+				children = 
+				[
+					{
+						_class = "HitboxSet"
+						name = "default"
+						children = 
+						[
+							{
+								_class = "HitboxCapsule"
+								name = "hand_R"
+								parent_bone = "hand_R"
+								surface_property = ""
+								translation_only = false
+								tags = ""
+								radius = 2.0
+								point0 = [ 1.926627, -2.042129, -0.503464 ]
+								point1 = [ 2.471346, 1.769434, -0.568121 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "finger_middle_meta_R"
+								parent_bone = "finger_middle_meta_R"
+								surface_property = ""
+								translation_only = false
+								tags = ""
+								hitbox_mins = [ -1.0, -1.0, -0.5 ]
+								hitbox_maxs = [ 6.0, 1.0, 0.5 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "finger_middle_0_R"
+								parent_bone = "finger_middle_0_R"
+								surface_property = ""
+								translation_only = false
+								tags = ""
+								hitbox_mins = [ -1.0, -1.0, -0.5 ]
+								hitbox_maxs = [ 5.0, 1.0, 0.5 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "finger_middle_1_R"
+								parent_bone = "finger_middle_1_R"
+								surface_property = ""
+								translation_only = false
+								tags = ""
+								hitbox_mins = [ -1.0, -1.0, -0.5 ]
+								hitbox_maxs = [ 2.5, 1.0, 0.5 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "finger_middle_2_R"
+								parent_bone = "finger_middle_2_R"
+								surface_property = ""
+								translation_only = false
+								tags = ""
+								hitbox_mins = [ -1.0, -1.0, -0.5 ]
+								hitbox_maxs = [ 2.5, 1.0, 0.5 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "finger_pinky_meta_R"
+								parent_bone = "finger_pinky_meta_R"
+								surface_property = ""
+								translation_only = false
+								tags = ""
+								hitbox_mins = [ -1.0, -1.0, -0.5 ]
+								hitbox_maxs = [ 6.0, 1.0, 0.5 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "finger_pinky_0_R"
+								parent_bone = "finger_pinky_0_R"
+								surface_property = ""
+								translation_only = false
+								tags = ""
+								hitbox_mins = [ -1.0, -1.0, -0.5 ]
+								hitbox_maxs = [ 5.0, 1.0, 0.5 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "finger_pinky_1_R"
+								parent_bone = "finger_pinky_1_R"
+								surface_property = ""
+								translation_only = false
+								tags = ""
+								hitbox_mins = [ -1.0, -1.0, -0.5 ]
+								hitbox_maxs = [ 2.0, 1.0, 0.5 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "finger_pinky_2_R"
+								parent_bone = "finger_pinky_2_R"
+								surface_property = ""
+								translation_only = false
+								tags = ""
+								hitbox_mins = [ -1.0, -1.0, -0.5 ]
+								hitbox_maxs = [ 2.5, 1.0, 0.5 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "finger_index_meta_R"
+								parent_bone = "finger_index_meta_R"
+								surface_property = ""
+								translation_only = false
+								tags = ""
+								hitbox_mins = [ -1.0, -1.0, -0.5 ]
+								hitbox_maxs = [ 6.0, 1.0, 0.5 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "finger_index_0_R"
+								parent_bone = "finger_index_0_R"
+								surface_property = ""
+								translation_only = false
+								tags = ""
+								hitbox_mins = [ -1.0, -1.0, -0.5 ]
+								hitbox_maxs = [ 5.0, 1.0, 0.5 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "finger_index_1_R"
+								parent_bone = "finger_index_1_R"
+								surface_property = ""
+								translation_only = false
+								tags = ""
+								hitbox_mins = [ -1.0, -1.0, -0.5 ]
+								hitbox_maxs = [ 2.5, 1.0, 0.5 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "finger_index_2_R"
+								parent_bone = "finger_index_2_R"
+								surface_property = ""
+								translation_only = false
+								tags = ""
+								hitbox_mins = [ -1.0, -1.0, -0.5 ]
+								hitbox_maxs = [ 2.5, 1.0, 0.5 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "finger_thumb_0_R"
+								parent_bone = "finger_thumb_0_R"
+								surface_property = ""
+								translation_only = false
+								tags = ""
+								hitbox_mins = [ -1.0, -1.0, -1.0 ]
+								hitbox_maxs = [ 4.5, 1.0, 0.6 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "finger_thumb_1_R"
+								parent_bone = "finger_thumb_1_R"
+								surface_property = ""
+								translation_only = false
+								tags = ""
+								hitbox_mins = [ -1.0, -1.0, -0.5 ]
+								hitbox_maxs = [ 3.0, 1.0, 0.5 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "finger_thumb_2_R"
+								parent_bone = "finger_thumb_2_R"
+								surface_property = ""
+								translation_only = false
+								tags = ""
+								hitbox_mins = [ -1.0, -1.0, -0.5 ]
+								hitbox_maxs = [ 3.0, 1.0, 0.5 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "finger_ring_meta_R"
+								parent_bone = "finger_ring_meta_R"
+								surface_property = ""
+								translation_only = false
+								tags = ""
+								hitbox_mins = [ -1.0, -1.0, -0.5 ]
+								hitbox_maxs = [ 6.0, 1.0, 0.5 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "finger_ring_0_R"
+								parent_bone = "finger_ring_0_R"
+								surface_property = ""
+								translation_only = false
+								tags = ""
+								hitbox_mins = [ -1.0, -1.0, -0.5 ]
+								hitbox_maxs = [ 5.0, 1.0, 0.5 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "finger_ring_1_R"
+								parent_bone = "finger_ring_1_R"
+								surface_property = ""
+								translation_only = false
+								tags = ""
+								hitbox_mins = [ -1.0, -1.0, -0.5 ]
+								hitbox_maxs = [ 2.5, 1.0, 0.5 ]
+							},
+							{
+								_class = "Hitbox"
+								name = "finger_ring_2_R"
+								parent_bone = "finger_ring_2_R"
+								surface_property = ""
+								translation_only = false
+								tags = ""
+								hitbox_mins = [ -1.0, -1.0, -0.5 ]
+								hitbox_maxs = [ 2.5, 1.0, 0.5 ]
+							},
+						]
+					},
+				]
+			},
+			{
+				_class = "BoneMarkupList"
+				bone_cull_type = "None"
+			},
+			{
+				_class = "ModelModifierList"
+				children = 
+				[
+					{
+						_class = "ModelModifier_ScaleAndMirror"
+						scale = 0.3937
+						mirror_x = false
+						mirror_y = false
+						mirror_z = false
+						flip_bone_forward = false
+						swap_left_and_right_bones = false
+					},
+				]
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = "models/first_person/hand_human.vanmgrph"
+		base_model_name = ""
+	}
+}

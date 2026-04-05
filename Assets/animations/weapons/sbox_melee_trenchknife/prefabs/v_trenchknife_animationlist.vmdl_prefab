@@ -1,0 +1,763 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc29:version{3cec427c-1b0e-4d48-a90a-0436f33a6041} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "IdlePose"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/weapons/sbox_melee_trenchknife/animations/v_trenchknife@IdlePose.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 0
+						reverse = false
+						anim_hold_list = 
+						[
+							{
+								frame = 0
+								frame_count = 30
+							},
+						]
+					},
+					{
+						_class = "AnimFile"
+						name = "IdlePose_M9B"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/weapons/sbox_melee_m9bayonet/animations/v_m9bayonet@IdlePose.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 0
+						reverse = false
+						anim_hold_list = 
+						[
+							{
+								frame = 0
+								frame_count = 30
+							},
+						]
+					},
+					{
+						_class = "AnimFile"
+						name = "IdlePose_M9B_delta"
+						children = 
+						[
+							{
+								_class = "AnimSubtract"
+								anim_name = "IdlePose"
+								frame = 0
+							},
+						]
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/weapons/sbox_melee_m9bayonet/animations/v_m9bayonet@IdlePose.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 0
+						reverse = false
+						anim_hold_list = 
+						[
+							{
+								frame = 0
+								frame_count = 30
+							},
+						]
+					},
+					{
+						_class = "AnimFile"
+						name = "Deploy"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/weapons/sbox_melee_trenchknife/animations/v_trenchknife@Deploy.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = 45.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Deploy_delta"
+						note = "This isn\'t explicited but the Deploy was indeed animated against the trench knife and therefore must be subtracted against its idlepose specifically"
+						children = 
+						[
+							{
+								_class = "AnimSubtract"
+								anim_name = "IdlePose"
+								frame = 0
+							},
+						]
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/weapons/sbox_melee_trenchknife/animations/v_trenchknife@Deploy.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = 45.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "LowerWeapon_Pose"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/weapons/sbox_melee_trenchknife/animations/v_trenchknife@LowerWeapon_Pose.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "LowerWeapon_Pose_delta"
+						children = 
+						[
+							{
+								_class = "AnimSubtract"
+								anim_name = "IdlePose"
+								frame = 0
+							},
+						]
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/weapons/sbox_melee_trenchknife/animations/v_trenchknife@LowerWeapon_Pose.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Sprint_Pose"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/weapons/sbox_melee_trenchknife/animations/v_trenchknife@Sprint_Pose.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Sprint_Pose_delta"
+						children = 
+						[
+							{
+								_class = "AnimSubtract"
+								anim_name = "IdlePose"
+								frame = 0
+							},
+						]
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/weapons/sbox_melee_trenchknife/animations/v_trenchknife@Sprint_Pose.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Sprint_Pose_M9B"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/weapons/sbox_melee_m9bayonet/animations/v_m9bayonet@Sprint_Pose.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Sprint_Pose_M9B_delta"
+						children = 
+						[
+							{
+								_class = "AnimSubtract"
+								anim_name = "IdlePose"
+								frame = 0
+							},
+						]
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/weapons/sbox_melee_m9bayonet/animations/v_m9bayonet@Sprint_Pose.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Sprint"
+						note = "Animated at 60 fps. Original shared sprint framerate is set to 72 to try and match to the footsteps naively hence why it\'s set to that number here.\n"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/weapons/sbox_melee_trenchknife/animations/v_trenchknife@Sprint.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = 72.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Sprint_delta"
+						note = "Animated at 60 fps\n"
+						children = 
+						[
+							{
+								_class = "AnimSubtract"
+								anim_name = "Sprint_Pose"
+								frame = 0
+							},
+						]
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/weapons/sbox_melee_trenchknife/animations/v_trenchknife@Sprint.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = 60.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Airborne_Pose"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/weapons/sbox_melee_trenchknife/animations/v_trenchknife@Airborne_Pose.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Airborne_Pose_delta"
+						children = 
+						[
+							{
+								_class = "AnimSubtract"
+								anim_name = "IdlePose"
+								frame = 0
+							},
+						]
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/weapons/sbox_melee_trenchknife/animations/v_trenchknife@Airborne_Pose.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "Folder"
+						name = "Attack"
+						children = 
+						[
+							{
+								_class = "AnimFile"
+								name = "Attack_01a"
+								note = "Animated at 60 fps\n"
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.06
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "models/weapons/sbox_melee_trenchknife/animations/v_trenchknife@Attack_01a.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = 60.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "Attack_01b"
+								note = "Animated at 60 fps\n"
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.06
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "models/weapons/sbox_melee_trenchknife/animations/v_trenchknife@Attack_01b.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = 60.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "Attack_02"
+								note = "Animated at 60 fps\n"
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.06
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "models/weapons/sbox_melee_trenchknife/animations/v_trenchknife@Attack_02.fbx"
+								start_frame = -1
+								end_frame = -1
+								framerate = 60.0
+								take = 0
+								reverse = false
+							},
+						]
+					},
+				]
+				default_root_bone_name = ""
+			},
+			{
+				_class = "Folder"
+				name = "Backstab"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "Backstab_Entry"
+						note = "Animated at 60 fps"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/weapons/sbox_melee_trenchknife/animations/v_trenchknife@Backstab_Entry.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = 70.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Backstab_Entry_M9B"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/weapons/sbox_melee_m9bayonet/animations/v_m9bayonet@Backstab_Entry.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = 50.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Backstab_Exit"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/weapons/sbox_melee_trenchknife/animations/v_trenchknife@backstab_exit.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = 33.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Backstab_Exit_M9B"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/weapons/sbox_melee_m9bayonet/animations/v_m9bayonet@Backstab_Exit.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = 33.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Backstab_Attack"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.06
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/weapons/sbox_melee_trenchknife/animations/v_trenchknife@Backstab_Attack.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = 69.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Backstab_Attack_01_M9B"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/weapons/sbox_melee_m9bayonet/animations/v_m9bayonet@Backstab_Attack_01.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = 69.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Backstab_Attack_02_M9B"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/weapons/sbox_melee_m9bayonet/animations/v_m9bayonet@Backstab_Attack_02.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = 69.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Backstab_Attack_03_M9B"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/weapons/sbox_melee_m9bayonet/animations/v_m9bayonet@Backstab_Attack_03.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = 69.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Backstab_Attack_Miss"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/weapons/sbox_melee_trenchknife/animations/v_trenchknife@Backstab_Attack_Miss.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = 60.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Backstab_Attack_Miss_M9B"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/weapons/sbox_melee_m9bayonet/animations/v_m9bayonet@Backstab_Attack_Miss.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = 50.0
+						take = 0
+						reverse = false
+					},
+				]
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+		base_model_name = ""
+	}
+}

@@ -1,0 +1,1699 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc29:version{3cec427c-1b0e-4d48-a90a-0436f33a6041} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimBindPose"
+						name = "bindPose"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						frame_count = 1
+						frame_rate = 30
+					},
+					{
+						_class = "AnimFile"
+						name = "point"
+						activity_name = "ACT_SIGNAL1"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/first_person/animations/hand_human@point.fbx"
+						start_frame = 0
+						end_frame = 0
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "Folder"
+						name = "cylinder"
+						children = 
+						[
+							{
+								_class = "EmptyAnim"
+								name = "cylinder_ik_pose"
+								children = 
+								[
+									{
+										_class = "AnimBlendLayer"
+										anim_name = "@cylinder_thumb_pose"
+										spline = false
+										xfade = false
+										no_blend = false
+										local_space = false
+										start_frame = -1
+										peak_frame = -1
+										tail_frame = -1
+										end_frame = -1
+									},
+									{
+										_class = "AnimBlendLayer"
+										anim_name = "@cylinder_pinky_pose"
+										spline = false
+										xfade = false
+										no_blend = false
+										local_space = false
+										start_frame = -1
+										peak_frame = -1
+										tail_frame = -1
+										end_frame = -1
+									},
+									{
+										_class = "AnimBlendLayer"
+										anim_name = "@cylinder_ring_pose"
+										spline = false
+										xfade = false
+										no_blend = false
+										local_space = false
+										start_frame = -1
+										peak_frame = -1
+										tail_frame = -1
+										end_frame = -1
+									},
+									{
+										_class = "AnimBlendLayer"
+										anim_name = "@cylinder_middle_pose"
+										spline = false
+										xfade = false
+										no_blend = false
+										local_space = false
+										start_frame = -1
+										peak_frame = -1
+										tail_frame = -1
+										end_frame = -1
+									},
+									{
+										_class = "AnimBlendLayer"
+										anim_name = "@cylinder_index_pose"
+										spline = false
+										xfade = false
+										no_blend = false
+										local_space = false
+										start_frame = -1
+										peak_frame = -1
+										tail_frame = -1
+										end_frame = -1
+									},
+									{
+										_class = "ActivityModifier"
+										activity_name = "ACT_NEUTRAL_REF_POSE"
+										activity_weight = 1
+									},
+								]
+								activity_name = "ACT_CYLINDER"
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.0
+								fade_out_time = 0.8
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								frame_count = 1
+								frame_rate = 30
+							},
+							{
+								_class = "EmptyAnim"
+								name = "cylinder_idle"
+								children = 
+								[
+									{
+										_class = "AnimBlendLayer"
+										anim_name = "@cylinder_thumb"
+										spline = false
+										xfade = false
+										no_blend = false
+										local_space = false
+										start_frame = -1
+										peak_frame = -1
+										tail_frame = -1
+										end_frame = -1
+									},
+									{
+										_class = "AnimBlendLayer"
+										anim_name = "@cylinder_pinky"
+										spline = false
+										xfade = false
+										no_blend = false
+										local_space = false
+										start_frame = -1
+										peak_frame = -1
+										tail_frame = -1
+										end_frame = -1
+									},
+									{
+										_class = "AnimBlendLayer"
+										anim_name = "@cylinder_ring"
+										spline = false
+										xfade = false
+										no_blend = false
+										local_space = false
+										start_frame = -1
+										peak_frame = -1
+										tail_frame = -1
+										end_frame = -1
+									},
+									{
+										_class = "AnimBlendLayer"
+										anim_name = "@cylinder_middle"
+										spline = false
+										xfade = false
+										no_blend = false
+										local_space = false
+										start_frame = -1
+										peak_frame = -1
+										tail_frame = -1
+										end_frame = -1
+									},
+									{
+										_class = "AnimBlendLayer"
+										anim_name = "@cylinder_index"
+										spline = false
+										xfade = false
+										no_blend = false
+										local_space = false
+										start_frame = -1
+										peak_frame = -1
+										tail_frame = -1
+										end_frame = -1
+									},
+								]
+								activity_name = "ACT_CYLINDER"
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.0
+								fade_out_time = 0.0
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								frame_count = 1
+								frame_rate = 30
+							},
+							{
+								_class = "AnimFile"
+								name = "@cylinder_thumb_pose"
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = "wl_thumb"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "models/first_person/animations/hand_human@cylinder.fbx"
+								start_frame = -1
+								end_frame = 0
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "@cylinder_index_pose"
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = "wl_index"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "models/first_person/animations/hand_human@cylinder.fbx"
+								start_frame = 0
+								end_frame = 0
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "@cylinder_middle_pose"
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = "wl_middle"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "models/first_person/animations/hand_human@cylinder.fbx"
+								start_frame = 0
+								end_frame = 0
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "@cylinder_ring_pose"
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = "wl_ring"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "models/first_person/animations/hand_human@cylinder.fbx"
+								start_frame = 0
+								end_frame = 0
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "@cylinder_pinky_pose"
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = "wl_pinky"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "models/first_person/animations/hand_human@cylinder.fbx"
+								start_frame = 0
+								end_frame = 0
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "@cylinder_thumb"
+								children = 
+								[
+									{
+										_class = "AnimCycleOverride"
+										cycle_type = "Pose To Cycle"
+										pose_param_name = "finger_thumb"
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = "wl_thumb"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "models/first_person/animations/hand_human@cylinder.fbx"
+								start_frame = -1
+								end_frame = 19
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "@cylinder_index"
+								children = 
+								[
+									{
+										_class = "AnimCycleOverride"
+										cycle_type = "Pose To Cycle"
+										pose_param_name = "finger_index"
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = "wl_index"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "models/first_person/animations/hand_human@cylinder.fbx"
+								start_frame = 0
+								end_frame = 19
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "@cylinder_middle"
+								children = 
+								[
+									{
+										_class = "AnimCycleOverride"
+										cycle_type = "Pose To Cycle"
+										pose_param_name = "finger_middle"
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = "wl_middle"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "models/first_person/animations/hand_human@cylinder.fbx"
+								start_frame = 0
+								end_frame = 19
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "@cylinder_ring"
+								children = 
+								[
+									{
+										_class = "AnimCycleOverride"
+										cycle_type = "Pose To Cycle"
+										pose_param_name = "finger_ring"
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = "wl_ring"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "models/first_person/animations/hand_human@cylinder.fbx"
+								start_frame = 0
+								end_frame = 19
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "@cylinder_pinky"
+								children = 
+								[
+									{
+										_class = "AnimCycleOverride"
+										cycle_type = "Pose To Cycle"
+										pose_param_name = "finger_pinky"
+									},
+								]
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = "wl_pinky"
+								fade_in_time = 0.2
+								fade_out_time = 0.2
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "models/first_person/animations/hand_human@cylinder.fbx"
+								start_frame = 0
+								end_frame = 19
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+							{
+								_class = "AnimFile"
+								name = "@cylinder_curl"
+								activity_name = ""
+								activity_weight = 1
+								weight_list_name = ""
+								fade_in_time = 0.0
+								fade_out_time = 0.8
+								looping = false
+								delta = false
+								worldSpace = false
+								hidden = false
+								anim_markup_ordered = false
+								disable_compression = false
+								disable_interpolation = false
+								enable_scale = false
+								source_filename = "models/first_person/animations/hand_human@cylinder.fbx"
+								start_frame = -1
+								end_frame = 19
+								framerate = -1.0
+								take = 0
+								reverse = false
+							},
+						]
+					},
+				]
+				default_root_bone_name = ""
+			},
+			{
+				_class = "Folder"
+				name = "fist"
+				children = 
+				[
+					{
+						_class = "EmptyAnim"
+						name = "fist_ik_pose"
+						children = 
+						[
+							{
+								_class = "AnimBlendLayer"
+								anim_name = "@thumb_pose"
+								spline = false
+								xfade = false
+								no_blend = false
+								local_space = false
+								start_frame = -1
+								peak_frame = -1
+								tail_frame = -1
+								end_frame = -1
+							},
+							{
+								_class = "AnimBlendLayer"
+								anim_name = "@index_pose"
+								spline = false
+								xfade = false
+								no_blend = false
+								local_space = false
+								start_frame = -1
+								peak_frame = -1
+								tail_frame = -1
+								end_frame = -1
+							},
+							{
+								_class = "AnimBlendLayer"
+								anim_name = "@middle_pose"
+								spline = false
+								xfade = false
+								no_blend = false
+								local_space = false
+								start_frame = -1
+								peak_frame = -1
+								tail_frame = -1
+								end_frame = -1
+							},
+							{
+								_class = "AnimBlendLayer"
+								anim_name = "@ring_pose"
+								spline = false
+								xfade = false
+								no_blend = false
+								local_space = false
+								start_frame = -1
+								peak_frame = -1
+								tail_frame = -1
+								end_frame = -1
+							},
+							{
+								_class = "AnimBlendLayer"
+								anim_name = "@pinky_pose"
+								spline = false
+								xfade = false
+								no_blend = false
+								local_space = false
+								start_frame = -1
+								peak_frame = -1
+								tail_frame = -1
+								end_frame = -1
+							},
+						]
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.0
+						fade_out_time = 0.8
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						frame_count = 1
+						frame_rate = 30
+					},
+					{
+						_class = "EmptyAnim"
+						name = "idle"
+						children = 
+						[
+							{
+								_class = "AnimBlendLayer"
+								anim_name = "@thumb"
+								spline = false
+								xfade = false
+								no_blend = false
+								local_space = false
+								start_frame = -1
+								peak_frame = -1
+								tail_frame = -1
+								end_frame = -1
+							},
+							{
+								_class = "AnimBlendLayer"
+								anim_name = "@index"
+								spline = false
+								xfade = false
+								no_blend = false
+								local_space = false
+								start_frame = -1
+								peak_frame = -1
+								tail_frame = -1
+								end_frame = -1
+							},
+							{
+								_class = "AnimBlendLayer"
+								anim_name = "@middle"
+								spline = false
+								xfade = false
+								no_blend = false
+								local_space = false
+								start_frame = -1
+								peak_frame = -1
+								tail_frame = -1
+								end_frame = -1
+							},
+							{
+								_class = "AnimBlendLayer"
+								anim_name = "@ring"
+								spline = false
+								xfade = false
+								no_blend = false
+								local_space = false
+								start_frame = -1
+								peak_frame = -1
+								tail_frame = -1
+								end_frame = -1
+							},
+							{
+								_class = "AnimBlendLayer"
+								anim_name = "@pinky"
+								spline = false
+								xfade = false
+								no_blend = false
+								local_space = false
+								start_frame = -1
+								peak_frame = -1
+								tail_frame = -1
+								end_frame = -1
+							},
+						]
+						activity_name = "ACT_IDLE"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.0
+						fade_out_time = 0.0
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						frame_count = 1
+						frame_rate = 30
+					},
+					{
+						_class = "AnimFile"
+						name = "@thumb_pose"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "wl_thumb"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/first_person/animations/hand_human@fist.fbx"
+						start_frame = 8
+						end_frame = 8
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "@index_pose"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "wl_index"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/first_person/animations/hand_human@fist.fbx"
+						start_frame = 12
+						end_frame = 12
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "@middle_pose"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "wl_middle"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/first_person/animations/hand_human@fist.fbx"
+						start_frame = 8
+						end_frame = 8
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "@ring_pose"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "wl_ring"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/first_person/animations/hand_human@fist.fbx"
+						start_frame = 8
+						end_frame = 8
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "@pinky_pose"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "wl_pinky"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/first_person/animations/hand_human@fist.fbx"
+						start_frame = 8
+						end_frame = 8
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "@fist"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "wl_fist"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/first_person/animations/hand_human@fist.fbx"
+						start_frame = 0
+						end_frame = 80
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "@fist_thumb_open_00"
+						disabled = true
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "wl_thumb"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/hands/dmx/animation/alyx_rhand_clench_from_reach_thumb.dmx"
+						start_frame = 0
+						end_frame = 0
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "@fist_thumb_open_50"
+						disabled = true
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "wl_thumb"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/hands/dmx/animation/alyx_rhand_clench_from_reach_thumb.dmx"
+						start_frame = 1
+						end_frame = 1
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "@fist_thumb_open_100"
+						disabled = true
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "wl_thumb"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/hands/dmx/animation/alyx_rhand_clench_from_reach_thumb.dmx"
+						start_frame = 2
+						end_frame = 2
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "@fist_thumb_mid_00"
+						disabled = true
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "wl_thumb"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/hands/dmx/animation/alyx_rhand_clench_from_reach_thumb.dmx"
+						start_frame = 3
+						end_frame = 3
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "@fist_thumb_mid_50"
+						disabled = true
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "wl_thumb"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/hands/dmx/animation/alyx_rhand_clench_from_reach_thumb.dmx"
+						start_frame = 4
+						end_frame = 4
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "@fist_thumb_mid_100"
+						disabled = true
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "wl_thumb"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/hands/dmx/animation/alyx_rhand_clench_from_reach_thumb.dmx"
+						start_frame = 5
+						end_frame = 5
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "@fist_thumb_closed_00"
+						disabled = true
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "wl_thumb"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/hands/dmx/animation/alyx_rhand_clench_from_reach_thumb.dmx"
+						start_frame = 6
+						end_frame = 6
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "@fist_thumb_closed_50"
+						disabled = true
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "wl_thumb"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/hands/dmx/animation/alyx_rhand_clench_from_reach_thumb.dmx"
+						start_frame = 7
+						end_frame = 7
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "@fist_thumb_closed_100"
+						disabled = true
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "wl_thumb"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/hands/dmx/animation/alyx_rhand_clench_from_reach_thumb.dmx"
+						start_frame = 8
+						end_frame = 8
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "@thumb"
+						children = 
+						[
+							{
+								_class = "AnimCycleOverride"
+								cycle_type = "Pose To Cycle"
+								pose_param_name = "finger_thumb"
+							},
+						]
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "wl_thumb"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/first_person/animations/hand_human@fist.fbx"
+						start_frame = 0
+						end_frame = 80
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "@index"
+						children = 
+						[
+							{
+								_class = "AnimCycleOverride"
+								cycle_type = "Pose To Cycle"
+								pose_param_name = "finger_index"
+							},
+						]
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "wl_index"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/first_person/animations/hand_human@fist.fbx"
+						start_frame = 0
+						end_frame = 80
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "@middle"
+						children = 
+						[
+							{
+								_class = "AnimCycleOverride"
+								cycle_type = "Pose To Cycle"
+								pose_param_name = "finger_middle"
+							},
+						]
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "wl_middle"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/first_person/animations/hand_human@fist.fbx"
+						start_frame = 0
+						end_frame = 80
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "@ring"
+						children = 
+						[
+							{
+								_class = "AnimCycleOverride"
+								cycle_type = "Pose To Cycle"
+								pose_param_name = "finger_ring"
+							},
+						]
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "wl_ring"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/first_person/animations/hand_human@fist.fbx"
+						start_frame = 0
+						end_frame = 80
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "@pinky"
+						children = 
+						[
+							{
+								_class = "AnimCycleOverride"
+								cycle_type = "Pose To Cycle"
+								pose_param_name = "finger_pinky"
+							},
+						]
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "wl_pinky"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/first_person/animations/hand_human@fist.fbx"
+						start_frame = 0
+						end_frame = 80
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "@fist_curl"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.0
+						fade_out_time = 0.8
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/first_person/animations/hand_human@fist.fbx"
+						start_frame = 0
+						end_frame = 80
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+				]
+			},
+			{
+				_class = "Folder"
+				name = "grab"
+				children = 
+				[
+					{
+						_class = "EmptyAnim"
+						name = "grab_ik_pose"
+						children = 
+						[
+							{
+								_class = "AnimBlendLayer"
+								anim_name = "@grab_thumb_pose"
+								spline = false
+								xfade = false
+								no_blend = false
+								local_space = false
+								start_frame = -1
+								peak_frame = -1
+								tail_frame = -1
+								end_frame = -1
+							},
+							{
+								_class = "AnimBlendLayer"
+								anim_name = "@grab_index_pose"
+								spline = false
+								xfade = false
+								no_blend = false
+								local_space = false
+								start_frame = -1
+								peak_frame = -1
+								tail_frame = -1
+								end_frame = -1
+							},
+							{
+								_class = "AnimBlendLayer"
+								anim_name = "@grab_middle_pose"
+								spline = false
+								xfade = false
+								no_blend = false
+								local_space = false
+								start_frame = -1
+								peak_frame = -1
+								tail_frame = -1
+								end_frame = -1
+							},
+							{
+								_class = "AnimBlendLayer"
+								anim_name = "@grab_ring_pose"
+								spline = false
+								xfade = false
+								no_blend = false
+								local_space = false
+								start_frame = -1
+								peak_frame = -1
+								tail_frame = -1
+								end_frame = -1
+							},
+							{
+								_class = "AnimBlendLayer"
+								anim_name = "@grab_pinky_pose"
+								spline = false
+								xfade = false
+								no_blend = false
+								local_space = false
+								start_frame = -1
+								peak_frame = -1
+								tail_frame = -1
+								end_frame = -1
+							},
+						]
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.0
+						fade_out_time = 0.8
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						frame_count = 1
+						frame_rate = 30
+					},
+					{
+						_class = "EmptyAnim"
+						name = "grab"
+						children = 
+						[
+							{
+								_class = "AnimBlendLayer"
+								anim_name = "@grab_thumb"
+								spline = false
+								xfade = false
+								no_blend = false
+								local_space = false
+								start_frame = -1
+								peak_frame = -1
+								tail_frame = -1
+								end_frame = -1
+							},
+							{
+								_class = "AnimBlendLayer"
+								anim_name = "@grab_index"
+								spline = false
+								xfade = false
+								no_blend = false
+								local_space = false
+								start_frame = -1
+								peak_frame = -1
+								tail_frame = -1
+								end_frame = -1
+							},
+							{
+								_class = "AnimBlendLayer"
+								anim_name = "@grab_middle"
+								spline = false
+								xfade = false
+								no_blend = false
+								local_space = false
+								start_frame = -1
+								peak_frame = -1
+								tail_frame = -1
+								end_frame = -1
+							},
+							{
+								_class = "AnimBlendLayer"
+								anim_name = "@grab_ring"
+								spline = false
+								xfade = false
+								no_blend = false
+								local_space = false
+								start_frame = -1
+								peak_frame = -1
+								tail_frame = -1
+								end_frame = -1
+							},
+							{
+								_class = "AnimBlendLayer"
+								anim_name = "@grab_pinky"
+								spline = false
+								xfade = false
+								no_blend = false
+								local_space = false
+								start_frame = -1
+								peak_frame = -1
+								tail_frame = -1
+								end_frame = -1
+							},
+						]
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.0
+						fade_out_time = 0.0
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						frame_count = 1
+						frame_rate = 30
+					},
+					{
+						_class = "AnimFile"
+						name = "@grab_thumb"
+						children = 
+						[
+							{
+								_class = "AnimCycleOverride"
+								cycle_type = "Pose To Cycle"
+								pose_param_name = "finger_thumb"
+							},
+						]
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "wl_thumb"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/first_person/animations/hand_human@grab.fbx"
+						start_frame = 0
+						end_frame = 20
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "@grab_index"
+						children = 
+						[
+							{
+								_class = "AnimCycleOverride"
+								cycle_type = "Pose To Cycle"
+								pose_param_name = "finger_index"
+							},
+						]
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "wl_index"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/first_person/animations/hand_human@grab.fbx"
+						start_frame = 0
+						end_frame = 20
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "@grab_middle"
+						children = 
+						[
+							{
+								_class = "AnimCycleOverride"
+								cycle_type = "Pose To Cycle"
+								pose_param_name = "finger_middle"
+							},
+						]
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "wl_middle"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/first_person/animations/hand_human@grab.fbx"
+						start_frame = 0
+						end_frame = 20
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "@grab_ring"
+						children = 
+						[
+							{
+								_class = "AnimCycleOverride"
+								cycle_type = "Pose To Cycle"
+								pose_param_name = "finger_ring"
+							},
+						]
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "wl_ring"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/first_person/animations/hand_human@grab.fbx"
+						start_frame = 0
+						end_frame = 20
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "@grab_pinky"
+						children = 
+						[
+							{
+								_class = "AnimCycleOverride"
+								cycle_type = "Pose To Cycle"
+								pose_param_name = "finger_pinky"
+							},
+						]
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "wl_pinky"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/first_person/animations/hand_human@grab.fbx"
+						start_frame = 0
+						end_frame = 20
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "@grab_thumb_pose"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "wl_thumb"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/first_person/animations/hand_human@grab.fbx"
+						start_frame = 2
+						end_frame = 2
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "@grab_index_pose"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "wl_index"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/first_person/animations/hand_human@grab.fbx"
+						start_frame = 2
+						end_frame = 2
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "@grab_middle_pose"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "wl_middle"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/first_person/animations/hand_human@grab.fbx"
+						start_frame = 2
+						end_frame = 2
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "@grab_ring_pose"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "wl_ring"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/first_person/animations/hand_human@grab.fbx"
+						start_frame = 2
+						end_frame = 2
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "@grab_pinky_pose"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "wl_pinky"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/first_person/animations/hand_human@grab.fbx"
+						start_frame = 2
+						end_frame = 2
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "@grab_curl"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.0
+						fade_out_time = 0.8
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						disable_interpolation = false
+						enable_scale = false
+						source_filename = "models/first_person/animations/hand_human@grab.fbx"
+						start_frame = -1
+						end_frame = 20
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+				]
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+		base_model_name = ""
+	}
+}
