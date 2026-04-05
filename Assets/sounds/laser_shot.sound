@@ -1,0 +1,14 @@
+{
+  "UI": false,
+  "Volume": "1.00",
+  "Pitch": "1.00",
+  "Decibels": 70,
+  "SelectionMode": "Random",
+  "Sounds": [
+    "sounds/laser_shot.wav"
+  ],
+  "Occlusion": true,
+  "AirAbsorption": true,
+  "MaximumDistance": 1000,
+  "DistanceAttenuation": true
+}
