@@ -2,7 +2,8 @@ using System;
 
 /// <summary>
 /// A laser bolt that flies forward and destroys on hit or timeout.
-/// Blue bolt with point light glow and fading trail.
+/// Blue bolt with point light glow and trail.
+/// Spawns a blue particle explosion on impact and damages zombies.
 /// </summary>
 public sealed class LaserProjectile : Component
 {
@@ -24,38 +25,32 @@ public sealed class LaserProjectile : Component
 
 		try
 		{
-			// Blue tint on bolt
 			var renderer = GameObject.GetComponent<ModelRenderer>();
 			if ( renderer is not null )
 				renderer.Tint = new Color( 0.3f, 0.6f, 1.0f );
 
-			// Blue glow light
 			var light = GameObject.Components.Create<PointLight>();
 			light.LightColor = new Color( 0.3f, 0.6f, 1.0f );
 			light.Radius = 200f;
 
-			// Short trail with fade
 			var trail = GameObject.Components.Create<TrailRenderer>();
 			trail.LifeTime = 0.08f;
 			trail.CastShadows = false;
+			trail.Opaque = false;
 
-			// Width: starts at 2, tapers to 0
 			trail.Width = new Curve(
 				new Curve.Frame( 0f, 2f ),
 				new Curve.Frame( 0.5f, 1.2f ),
 				new Curve.Frame( 1f, 0f )
 			);
 
-			// Color: bright blue front, fades to transparent
 			trail.Color = new Gradient(
 				new Gradient.ColorFrame( 0f, new Color( 0.4f, 0.7f, 1.0f, 1.0f ) ),
 				new Gradient.ColorFrame( 0.3f, new Color( 0.3f, 0.5f, 1.0f, 0.6f ) ),
 				new Gradient.ColorFrame( 1f, new Color( 0.2f, 0.3f, 0.8f, 0.0f ) )
 			);
-
-			trail.Opaque = false;
 		}
-		catch ( System.Exception e )
+		catch ( Exception e )
 		{
 			Log.Error( $"Projectile VFX error: {e.Message}" );
 		}
@@ -80,11 +75,52 @@ public sealed class LaserProjectile : Component
 
 		if ( tr.Hit )
 		{
-			GameObject.WorldPosition = tr.HitPosition;
-			GameObject.Destroy();
+			OnHit( tr.HitPosition, tr.Normal, tr.GameObject );
 			return;
 		}
 
 		GameObject.WorldPosition = endPos;
+	}
+
+	private void OnHit( Vector3 hitPos, Vector3 hitNormal, GameObject hitObject )
+	{
+		// Damage zombie if hit
+		if ( hitObject is not null )
+		{
+			var health = hitObject.GetComponent<ZombieHealth>();
+			if ( health is null && hitObject.Parent is not null )
+				health = hitObject.Parent.GetComponent<ZombieHealth>();
+
+			if ( health is not null )
+				health.TakeDamage( Damage );
+		}
+
+		// Spawn blue impact particle burst
+		SpawnImpactVFX( hitPos, hitNormal );
+
+		// Destroy the bolt
+		GameObject.WorldPosition = hitPos;
+		GameObject.Destroy();
+	}
+
+	private void SpawnImpactVFX( Vector3 pos, Vector3 normal )
+	{
+		try
+		{
+			var vfx = new GameObject( true, "LaserImpact" );
+			vfx.WorldPosition = pos;
+
+			// Blue flash light
+			var light = vfx.Components.Create<PointLight>();
+			light.LightColor = new Color( 0.3f, 0.6f, 1.0f );
+			light.Radius = 200f;
+
+			// Spark shower — ImpactFlash spawns and animates the sparks
+			vfx.Components.Create<ImpactFlash>();
+		}
+		catch ( Exception e )
+		{
+			Log.Error( $"Impact VFX error: {e.Message}" );
+		}
 	}
 }

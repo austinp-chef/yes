@@ -72,6 +72,26 @@
 - [Custom Editors](#page-custom-editors)
 - [Editor Apps](#page-editor-apps)
 
+**Mintlify Docs (Facepunch/sbox-public):**
+- [Installation (Mintlify)](#page-mintlify-installation)
+- [Your First Project](#page-mintlify-first-project)
+- [Building from Source](#page-mintlify-building-from-source)
+- [Scenes and GameObjects (Mintlify)](#page-mintlify-scenes-and-gameobjects)
+- [Components (Mintlify)](#page-mintlify-components)
+- [Component Lifecycle (Mintlify)](#page-mintlify-component-lifecycle)
+- [Prefabs and Resources (Mintlify)](#page-mintlify-prefabs-and-resources)
+- [Networking (Mintlify)](#page-mintlify-networking)
+- [Physics (Mintlify)](#page-mintlify-physics)
+- [Input System (Mintlify)](#page-mintlify-input)
+- [Rendering (Mintlify)](#page-mintlify-rendering)
+- [UI System (Mintlify)](#page-mintlify-ui)
+- [Action Graphs (Mintlify)](#page-mintlify-action-graphs)
+- [Hot Reload](#page-mintlify-hot-reload)
+- [Attributes and Code Generation](#page-mintlify-attributes-codegen)
+- [Events (Mintlify)](#page-mintlify-events)
+- [Contributing to s&box](#page-mintlify-contributing)
+- [Contribution Guidelines](#page-mintlify-contribution-guidelines)
+
 ---
 
 ## Page: First Steps {#page-first-steps}
@@ -2850,3 +2870,1227 @@ public class MyEditorApp : Window
 ```
 
 Once created, the application becomes accessible through the App sidebar and the main Apps menu within the editor.
+
+---
+
+# Mintlify Documentation (Facepunch/sbox-public)
+
+> Fetched from mintlify.com/Facepunch/sbox-public via Jina Reader, April 2026.
+> These pages come from the open-source s&box engine repository docs and contain additional/updated content not present in the sbox.game developer docs above.
+
+---
+
+## Page: Installation (Mintlify) {#page-mintlify-installation}
+> Source: https://www.mintlify.com/Facepunch/sbox-public/getting-started/installation
+
+### Steam Installation (Recommended)
+
+Steam is the recommended path for anyone who wants to create games. The process involves three steps:
+
+1. **Request access** via sbox.game/give-me-that
+2. **Install from Steam** by locating s&box in your library and clicking Install
+3. **Launch the editor** by clicking Play; on first launch, you'll set your project working directory
+
+You can launch directly into specific projects using a launch argument:
+
+```
+sbox.exe +game facepunch.sandbox
+```
+
+### Building from Source
+
+Building from source is intended for contributors who want to modify or extend the engine itself.
+
+**Prerequisites:**
+- Git
+- Visual Studio 2022 or later with .NET desktop development workload
+- .NET 10 SDK
+
+**Build steps:**
+
+1. Clone the repository:
+```bash
+git clone https://github.com/Facepunch/sbox-public.git
+```
+
+2. Run `Bootstrap.bat` from the repository root to compile the engine, build shaders, and package content
+
+3. Execute the resulting binary in the `game/` folder
+
+The Steam version is easier to set up and stays up to date automatically, making it preferable for game developers over source builds.
+
+---
+
+## Page: Your First Project {#page-mintlify-first-project}
+> Source: https://www.mintlify.com/Facepunch/sbox-public/getting-started/first-project
+
+**Prerequisites:** A working s&box installation from Steam or built from source.
+
+### Create a Project and Scene
+
+1. Launch s&box to access the project browser
+2. Select "New Project" and choose "Empty Game" template, naming it (e.g., `mygame.shooter`)
+3. Right-click in the asset browser and create a new Scene file called `main.scene`
+4. Open the scene and add a GameObject via the Scene panel, renaming it to "Spinner"
+
+### Write a Component
+
+```csharp
+using Sandbox;
+
+public sealed class Spinner : Component
+{
+    /// <summary>
+    /// Degrees per second to rotate around the Z axis.
+    /// </summary>
+    [Property] public float Speed { get; set; } = 90f;
+
+    protected override void OnAwake()
+    {
+        // Called once when the component is first activated.
+        Log.Info( $"Spinner awake on {GameObject.Name}" );
+    }
+
+    protected override void OnUpdate()
+    {
+        // Called every frame while the component is enabled.
+        // Time.Delta is the elapsed time in seconds since the last frame.
+        Transform.Rotation *= Rotation.FromAxis( Vector3.Up, Speed * Time.Delta );
+    }
+}
+```
+
+The `[Property]` attribute exposes values as editable fields in the editor inspector. Multiplying per-frame changes by `Time.Delta` maintains framerate independence.
+
+### Component Lifecycle Reference
+
+| Method | When it runs |
+|--------|-------------|
+| `OnAwake` | Once, on initial activation |
+| `OnStart` | Once, before first update |
+| `OnEnabled` | Each activation |
+| `OnUpdate` | Every frame (enabled) |
+| `OnFixedUpdate` | Fixed physics interval |
+| `OnPreRender` | Before rendering |
+| `OnDisabled` | Each deactivation |
+| `OnDestroy` | On destruction |
+| `OnValidate` | After deserialization/property changes |
+
+---
+
+## Page: Building from Source {#page-mintlify-building-from-source}
+> Source: https://www.mintlify.com/Facepunch/sbox-public/getting-started/building-from-source
+
+Building from source is intended for contributors who want to modify or extend the engine itself.
+
+### Prerequisites
+
+- **Git** -- for cloning the repository
+- **Visual Studio 2022 or later** -- with .NET desktop development workload (Visual Studio 2022 is the minimum version; earlier versions do not support the `.slnx` solution format)
+- **.NET 10 SDK** -- to compile the engine
+
+### Build Process
+
+The bootstrap script (`Bootstrap.bat`) executes three sequential steps:
+
+1. **Developer Configuration Build** -- Compiles C# engine assemblies
+2. **Shader Compilation** -- Processes HLSL/GLSL shader files
+3. **Content Packaging** -- Prepares engine content assets
+
+Allow several minutes for the first run. Subsequent builds are faster because incremental outputs are cached.
+
+### Repository Structure
+
+| Directory | Purpose |
+|-----------|---------|
+| `engine/` | C# source code and the solution file |
+| `game/` | Compiled output and engine content |
+| `game/bin/` | Native binaries under the s&box EULA |
+
+**Important:** The native binaries in `game/bin/` are not covered by the MIT license. They are distributed under the s&box EULA.
+
+---
+
+## Page: Scenes and GameObjects (Mintlify) {#page-mintlify-scenes-and-gameobjects}
+> Source: https://www.mintlify.com/Facepunch/sbox-public/concepts/scenes-and-gameobjects
+
+### Scene Structure
+
+A Scene is the root container for everything that exists in your game at runtime. Scenes inherit from GameObject, making them both the hierarchy's root node and a special container managing the physics world, render world, object directory, and frame timing.
+
+```csharp
+Scene active = Game.ActiveScene;
+var scene = new Scene();
+scene.Destroy();
+```
+
+#### Key Scene Properties
+
+| Property | Purpose |
+|----------|---------|
+| `Game.ActiveScene` | Currently active scene |
+| `Scene.PhysicsWorld` | Physics simulation |
+| `Scene.SceneWorld` | Render world |
+| `Scene.Directory` | Fast object lookup |
+| `Scene.TimeScale` | Delta time multiplier |
+
+#### Finding Objects by Tag
+
+```csharp
+foreach ( var enemy in Scene.FindAllWithTag( "enemy" ) )
+{
+    Log.Info( enemy.Name );
+}
+```
+
+### GameObject Fundamentals
+
+GameObjects are hierarchy nodes containing transform data, enabled status, and tags. Behavior derives from attached Components.
+
+#### Construction
+
+```csharp
+var go = new GameObject( "Player" );
+var go2 = new GameObject( false, "Disabled Prop" );
+var child = new GameObject( parentGo, true, "Child" );
+```
+
+#### Hierarchy Management
+
+```csharp
+child.SetParent( newParent, keepWorldPosition: true );
+
+foreach ( var c in go.Children )
+{
+    Log.Info( c.Name );
+}
+
+foreach ( var obj in go.GetAllObjects( enabled: true ) )
+{
+    Log.Info( obj.Name );
+}
+```
+
+#### Enabled vs. Active States
+
+Enabled is what you set. Active is whether the object is actually running (considers parent hierarchy).
+
+```csharp
+go.Enabled = false;
+bool alive = go.Active;
+```
+
+#### Tags System
+
+```csharp
+go.Tags.Add( "enemy" );
+bool isEnemy = go.Tags.Has( "enemy" );
+bool isBoss = go.Tags.HasAll( new[] { "enemy", "boss" } );
+```
+
+#### GameObjectFlags
+
+```csharp
+go.Flags = GameObjectFlags.DontDestroyOnLoad;
+go.Flags |= GameObjectFlags.Hidden;
+go.Flags |= GameObjectFlags.NotNetworked;
+go.Flags |= GameObjectFlags.EditorOnly;
+go.Flags |= GameObjectFlags.Absolute;
+```
+
+#### Destruction
+
+```csharp
+go.Destroy();
+
+if ( go.IsValid() )
+{
+    go.Destroy();
+}
+```
+
+### Practical Example
+
+```csharp
+using var scope = Game.ActiveScene.Push();
+
+var container = new GameObject( "Enemies" );
+container.Tags.Add( "group" );
+
+for ( int i = 0; i < 5; i++ )
+{
+    var enemy = new GameObject( container, true, $"Enemy {i}" );
+    enemy.Transform.LocalPosition = Vector3.Forward * i * 100f;
+    enemy.Tags.Add( "enemy" );
+    enemy.AddComponent<EnemyComponent>();
+}
+```
+
+---
+
+## Page: Components (Mintlify) {#page-mintlify-components}
+> Source: https://www.mintlify.com/Facepunch/sbox-public/concepts/components
+
+Every piece of behavior in s&box is implemented as a Component -- a C# class inheriting from `Component` that attaches to a `GameObject`. This architecture separates container (GameObject) from logic (Component), eliminating the need for deep inheritance hierarchies.
+
+### Creating Components
+
+```csharp
+public sealed class HealthComponent : Component
+{
+    [Property] public float MaxHealth { get; set; } = 100f;
+    [Property] public float CurrentHealth { get; private set; }
+
+    protected override void OnAwake()
+    {
+        CurrentHealth = MaxHealth;
+    }
+
+    protected override void OnUpdate()
+    {
+        if ( CurrentHealth <= 0f )
+        {
+            Log.Info( $"{GameObject.Name} died." );
+            GameObject.Destroy();
+        }
+    }
+
+    public void TakeDamage( float amount )
+    {
+        CurrentHealth = Math.Max( 0f, CurrentHealth - amount );
+    }
+}
+```
+
+### The [Property] Attribute
+
+`[Property]` exposes a field or auto-property to the editor inspector and the serializer, allowing non-destructive editing and persistence.
+
+### Built-in Component Properties
+
+| Property | Type | Purpose |
+|----------|------|---------|
+| `GameObject` | GameObject | Parent container |
+| `Scene` | Scene | Scene reference |
+| `Transform` | GameTransform | Position/rotation data |
+| `Components` | ComponentList | Sibling component access |
+| `Enabled` | bool | Component activity state |
+| `Active` | bool | Combined enabled + hierarchy state |
+| `Tags` | ITagSet | Tagged reference system |
+
+### Adding Components
+
+```csharp
+var health = go.AddComponent<HealthComponent>();
+var movement = go.AddComponent<MovementComponent>();
+movement.Speed = 350f;
+
+var health2 = go.GetOrAddComponent<HealthComponent>();
+```
+
+### Querying Components
+
+**On same GameObject:**
+
+```csharp
+var health = go.GetComponent<HealthComponent>();
+var health2 = go.GetComponent<HealthComponent>( includeDisabled: true );
+IEnumerable<HealthComponent> all = go.GetComponents<HealthComponent>();
+```
+
+**In hierarchy:**
+
+```csharp
+var health = go.GetComponentInChildren<HealthComponent>();
+IEnumerable<HealthComponent> all = go.GetComponentsInChildren<HealthComponent>();
+var manager = go.GetComponentInParent<GameManager>();
+IEnumerable<GameManager> managers = go.GetComponentsInParent<GameManager>();
+```
+
+**Across scene:**
+
+```csharp
+foreach ( var enemy in Scene.GetAllComponents<EnemyComponent>() )
+{
+    enemy.Alert();
+}
+```
+
+### Lifecycle Management
+
+```csharp
+myComponent.Destroy();
+DestroyGameObject();
+myComponent.Enabled = false;
+myComponent.Enabled = true;
+```
+
+### Complete Example: HealthPickup
+
+```csharp
+using Sandbox;
+
+public sealed class HealthPickup : Component
+{
+    [Property] public float HealAmount { get; set; } = 25f;
+    [Property] public float SpinSpeed  { get; set; } = 90f;
+
+    protected override void OnUpdate()
+    {
+        Transform.LocalRotation *= Rotation.FromYaw( SpinSpeed * Time.Delta );
+    }
+
+    public void OnPickedUp( GameObject picker )
+    {
+        var health = picker.GetComponent<HealthComponent>();
+        if ( health is null ) return;
+
+        health.TakeDamage( -HealAmount );
+        GameObject.Destroy();
+    }
+}
+```
+
+---
+
+## Page: Component Lifecycle (Mintlify) {#page-mintlify-component-lifecycle}
+> Source: https://www.mintlify.com/Facepunch/sbox-public/concepts/component-lifecycle
+
+### Primary Lifecycle Callbacks
+
+- **OnAwake** -- Runs once when a component first becomes active. Ideal for initialization tasks like caching references before the component enables.
+- **OnEnabled** -- Triggers every time the component transitions from inactive to active, including after OnAwake on initial enable and when re-enabling previously disabled components.
+- **OnStart** -- Executes once immediately before the first OnUpdate or OnFixedUpdate call. Allows setup that depends on other scene components having already completed their initialization.
+- **OnUpdate** -- Runs every frame while active. Does not execute on dedicated servers by default unless the component implements specific interfaces.
+- **OnFixedUpdate** -- Fires at fixed intervals synchronized with the physics tick rate. Ensures deterministic behavior for physics-based operations.
+- **OnPreRender** -- Occurs once per frame before scene rendering. Useful for updating visual state or mesh data.
+- **OnDisabled** -- Activates whenever the component transitions from active to inactive. Appropriate for cleanup like unsubscribing from events.
+- **OnDestroy** -- Fires once when the component is permanently removed. Final cleanup opportunity.
+
+### Additional Callbacks
+
+- **OnValidate** -- Activates after JSON deserialization or property changes in the editor. Allows value clamping and state validation.
+- **OnRefresh** -- Responds to network snapshot updates with authoritative data.
+- **OnParentChanged** -- Fires when the GameObject's parent changes in the hierarchy.
+- **OnTagsChanged** -- Fires when the GameObject's tags are modified.
+
+### Execution Control
+
+Components respect "ShouldExecute" rules preventing execution in:
+- Prefab cache scenes
+- Null scenes
+- Editor preview scenes (without `ExecuteInEditor`)
+- Dedicated servers (with `DontExecuteOnServer`)
+
+---
+
+## Page: Prefabs and Resources (Mintlify) {#page-mintlify-prefabs-and-resources}
+> Source: https://www.mintlify.com/Facepunch/sbox-public/concepts/prefabs-and-resources
+
+### Prefabs
+
+Prefabs are `.prefab` files storing complete GameObject hierarchies with components and nested references. Create them by right-clicking a GameObject and selecting "Save as prefab."
+
+#### Loading Prefabs
+
+```csharp
+// Load the cached prefab scene (read-only, do not modify)
+var prefabGo = GameObject.GetPrefab( "prefabs/enemies/grunt.prefab" );
+```
+
+#### Instantiating Prefabs
+
+```csharp
+var spawnPoint = Transform.World;
+
+// Instantiate the prefab at a world transform
+var enemy = SceneUtility.Instantiate(
+    ResourceLibrary.Get<PrefabFile>( "prefabs/enemies/grunt.prefab" ),
+    spawnPoint
+);
+```
+
+Alternatively, clone from the cached prefab root:
+
+```csharp
+var prefabRoot = GameObject.GetPrefab( "prefabs/enemies/grunt.prefab" );
+var instance   = prefabRoot.Clone( Transform.World );
+instance.Parent = Game.ActiveScene;
+```
+
+#### Prefab State Properties
+
+```csharp
+bool isInstance     = go.IsPrefabInstance;      // part of a prefab instance
+bool isRoot         = go.IsPrefabInstanceRoot;   // root object of the instance
+string sourceFile   = go.PrefabInstanceSource;   // path to the .prefab file
+```
+
+#### Breaking and Updating Links
+
+```csharp
+// Disconnect from the prefab source (becomes a regular GameObject)
+go.BreakFromPrefab();
+
+// Pull the latest values from the prefab source file
+go.UpdateFromPrefab();
+```
+
+`BreakFromPrefab()` is irreversible at runtime.
+
+### Resources
+
+Every disk-based asset is represented by a `Resource` in C#. Two base classes exist:
+
+- **`Resource`**: Base for native engine resources (Model, Material, Texture, SoundFile)
+- **`GameResource`**: Base for JSON-serialized custom C# assets
+
+#### Resource Base Class
+
+```csharp
+Resource r = Material.Load( "materials/dev/white.vmat" );
+
+string path = r.ResourcePath;   // "materials/dev/white.vmat"
+string name = r.ResourceName;   // "white"
+bool   ok   = r.IsValid;        // false if unloaded
+```
+
+#### Loading Native Resources
+
+```csharp
+Model      model   = Model.Load( "models/citizen/citizen.vmdl" );
+Material   mat     = Material.Load( "materials/custom/hero.vmat" );
+SoundFile  sfx     = SoundFile.Load( "sounds/weapons/shotgun_fire.vsnd" );
+```
+
+#### Custom GameResource Types
+
+```csharp
+using Sandbox;
+
+[GameResource( "Item Definition", "item", "Defines a collectible item", Icon = "backpack" )]
+public sealed class ItemDefinition : GameResource
+{
+    [Property] public string DisplayName { get; set; }
+    [Property] public string Description { get; set; }
+    [Property] public Model  PickupModel  { get; set; }
+    [Property] public float  HealAmount   { get; set; }
+
+    protected override void PostLoad()
+    {
+        Log.Info( $"Loaded item: {DisplayName}" );
+    }
+
+    protected override void PostReload()
+    {
+        Log.Info( $"Reloaded item: {DisplayName}" );
+    }
+}
+```
+
+#### Loading Custom Resources
+
+```csharp
+var item = ResourceLibrary.Get<ItemDefinition>( "data/items/medkit.item" );
+
+if ( item is not null )
+{
+    Log.Info( item.DisplayName );
+}
+```
+
+### Referencing Resources from Components
+
+#### Direct Property References
+
+```csharp
+public sealed class WeaponComponent : Component
+{
+    [Property] public Model       WeaponModel  { get; set; }
+    [Property] public SoundFile   FireSound    { get; set; }
+    [Property] public Material    TracerMat    { get; set; }
+    [Property] public ItemDefinition ItemData  { get; set; }
+}
+```
+
+#### FileReference<T> for Deferred Loading
+
+```csharp
+public sealed class SpawnPoint : Component
+{
+    [Property] public FileReference<PrefabFile> SpawnablePrefab { get; set; }
+
+    protected override void OnUpdate()
+    {
+        if ( Input.Pressed( "attack1" ) )
+        {
+            var prefab = SpawnablePrefab.GetAsset();
+            if ( prefab is not null )
+                SceneUtility.Instantiate( prefab, Transform.World );
+        }
+    }
+}
+```
+
+### Built-in Resource Types
+
+| Type | Extension | Description |
+|------|-----------|-------------|
+| `Model` | `.vmdl` | 3D mesh and skeleton |
+| `Material` | `.vmat` | Surface shading parameters |
+| `Texture` | `.vtex` | 2D image data |
+| `Shader` | `.vfx` | GPU shader program |
+| `SoundFile` | `.vsnd` | Sound asset with playback settings |
+| `AnimationGraph` | `.vanmgrph` | Character animation state machine |
+| `SceneFile` | `.scene` | Full scene for loading or merging |
+| `PrefabFile` | `.prefab` | Serialized GameObject hierarchy |
+
+### Resource Lifecycle
+
+```csharp
+protected override void PostLoad()
+{
+    // Build derived runtime data from serialized properties
+    _damageRange = new RangeInt( MinDamage, MaxDamage );
+}
+
+protected override void PostReload()
+{
+    // Invalidate caches when the file changes
+    _damageRange = new RangeInt( MinDamage, MaxDamage );
+}
+```
+
+| Method | Purpose |
+|--------|---------|
+| `PostLoad()` | Fires after initial disk load |
+| `PostReload()` | Fires after hot-reload in editor |
+| `OnDestroy()` | Fires when unloaded from library |
+
+---
+
+## Page: Networking (Mintlify) {#page-mintlify-networking}
+> Source: https://www.mintlify.com/Facepunch/sbox-public/systems/networking
+
+S&box networking uses a host-authoritative model built on Steam's networking stack.
+
+### NetworkMode
+
+Controls how objects participate in networking:
+
+| Mode | Behavior |
+|------|----------|
+| `Never` | Default, no networking |
+| `Object` | Networked with owner and sync properties |
+| `Snapshot` | Scene snapshot with position/rotation only |
+
+### Property Synchronization
+
+Mark properties with `[Sync]` to automatically replicate values from the owner to all other clients every network tick. The `[HostSync]` variant restricts writes to the host only. `SyncFlags.Query` allows polling getters each tick rather than relying on setter calls.
+
+### Remote Procedure Calls (RPCs)
+
+Four RPC decorators handle different distribution patterns:
+
+- `[Rpc.Broadcast]` -- Executes on every connected client, including the host
+- `[Rpc.Owner]` -- Runs only on the owning client
+- `[Rpc.Host]` -- Executes exclusively on the host
+- `Rpc.Caller` -- Identifies who invoked the method
+
+`FilterInclude` and `FilterExclude` scopes restrict RPC delivery.
+
+### Ownership
+
+Objects support single-connection ownership. `NetworkOrphaned` policies determine behavior when owners disconnect:
+
+- `Destroy` -- Destroy the object
+- `ClearOwner` -- Remove ownership
+- `Host` -- Transfer to host
+- `Random` -- Assign to random client
+
+### Best Practices
+
+- Set NetworkMode to `Object`
+- Mark replicated properties with `[Sync]`
+- Check `IsProxy` before running owner-only logic
+- Use appropriate RPC types for events versus authoritative requests
+
+---
+
+## Page: Physics (Mintlify) {#page-mintlify-physics}
+> Source: https://www.mintlify.com/Facepunch/sbox-public/systems/physics
+
+S&box implements physics through a scene-level `PhysicsWorld` accessed via `Scene.PhysicsWorld`. Dynamic objects require a `Rigidbody` component paired with collider components.
+
+### Trace Operations
+
+Traces sweep shapes through the physics environment and report collisions. The builder pattern enables composing custom queries.
+
+**Ray Trace:**
+
+```csharp
+var tr = Scene.PhysicsWorld.Trace
+    .Ray( WorldPosition, WorldPosition + WorldRotation.Forward * 1000f )
+    .Run();
+```
+
+**Other Trace Types:**
+
+```csharp
+// Sphere sweep
+Scene.PhysicsWorld.Trace.Sphere( radius, from, to )
+
+// Box sweep
+Scene.PhysicsWorld.Trace.Box( extents, from, to )
+
+// Capsule sweep
+Scene.PhysicsWorld.Trace.Capsule( capsule, from, to )
+
+// Multiple hits
+.RunAll()   // instead of .Run()
+```
+
+**Filtering Options:**
+
+| Method | Purpose |
+|--------|---------|
+| `IgnoreStatic()` | Exclude static bodies |
+| `IgnoreDynamic()` | Exclude dynamic bodies |
+| `HitTriggers()` | Include trigger volumes |
+
+### Rigidbody Component
+
+Attach `Rigidbody` to enable physics simulation on GameObjects. Requires at least one collider component.
+
+**Velocity and Forces:**
+
+```csharp
+rb.Velocity = Vector3.Up * 500f;
+rb.AngularVelocity = new Vector3( 0, 0, 90f );
+rb.ApplyForce( direction * strength );       // Continuous force
+rb.ApplyImpulse( direction * strength );     // Instant impulse
+rb.ApplyTorque( axis * strength );           // Rotational force
+```
+
+**Physics Properties:**
+
+```csharp
+rb.MassOverride = 50f;
+rb.LinearDamping = 0.5f;
+rb.AngularDamping = 0.5f;
+rb.Gravity = true;
+rb.GravityScale = 1.0f;
+```
+
+### Collision Detection
+
+Implement the `ICollisionListener` interface to receive collision events:
+
+```csharp
+public sealed class DamageOnCollision : Component, Component.ICollisionListener
+{
+    void ICollisionListener.OnCollisionStart( Collision collision )
+    {
+        // Access collision.Contact.NormalSpeed, .Point, .Normal
+    }
+
+    void ICollisionListener.OnCollisionUpdate( Collision collision )
+    {
+        // Ongoing contact
+    }
+
+    void ICollisionListener.OnCollisionEnd( CollisionStop stop )
+    {
+        // Contact ended
+    }
+}
+```
+
+---
+
+## Page: Input System (Mintlify) {#page-mintlify-input}
+> Source: https://www.mintlify.com/Facepunch/sbox-public/systems/input
+
+The `Input` static class provides player input handling through named action strings rather than raw keycodes, allowing rebindable controls.
+
+### Core Query Methods
+
+Three primary methods check action states each frame:
+
+- **`Input.Down( "action" )`** -- Returns true continuously while held
+- **`Input.Pressed( "action" )`** -- Returns true only on initial press frame
+- **`Input.Released( "action" )`** -- Returns true only on release frame
+
+### Analog Input Types
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `Input.AnalogMove` | `Vector3` | Normalized directional input from Forward/Backward/Left/Right actions |
+| `Input.AnalogLook` | `Angles` | Mouse delta and gamepad right stick, pre-scaled by sensitivity |
+| `Input.MouseDelta` | `Vector2` | Raw pixel movement |
+| `Input.MouseWheel` | `Vector2` | Scroll wheel input |
+| `Input.MouseCursorVisible` | `bool` | Whether the cursor is currently visible (UI state) |
+
+### Programmatic Control
+
+```csharp
+Input.SetAction( "jump", true );     // Force an action on
+Input.Clear( "jump" );               // Clear a specific action
+Input.ReleaseActions();              // Release all actions
+```
+
+### Default Action Bindings
+
+Built-in movement, action, inventory, and miscellaneous categories with keyboard and gamepad defaults (e.g., Jump maps to Space/A-button, Attack1 to Mouse1/Right trigger).
+
+### Custom Configuration
+
+Actions are defined in **Edit > Project Settings > Input** with fields for Name, KeyboardCode, GamepadCode, GroupName, and Title, or programmatically via C# `InputAction` objects.
+
+### Input Contexts
+
+Separate contexts allow different systems (menus vs. gameplay) to consume input independently without interference.
+
+---
+
+## Page: Rendering (Mintlify) {#page-mintlify-rendering}
+> Source: https://www.mintlify.com/Facepunch/sbox-public/systems/rendering
+
+The s&box rendering system is built on Source 2's pipeline.
+
+### Core Architecture
+
+The engine processes frames through a layered pipeline that you can hook into via `OnPreRender` overrides or custom `Renderer` components.
+
+### Camera Control
+
+The `CameraComponent` manages the viewport -- position, rotation, field of view, and clipping planes. You can render a camera's output into a `Texture` for use in materials, minimaps, security cameras, etc.
+
+### Graphics API
+
+The `Graphics` class operates exclusively within rendering blocks and provides:
+
+- **State queries** for camera data, viewport information, and current render layer
+- **Frame texture sampling** to grab color or depth buffers mid-pass
+- **Render target redirection** for off-screen rendering
+- **Lighting setup** for custom renderers
+
+### RenderAttributes System
+
+A typed key-value store that bridges C# and shaders. Set values in C# using `Set()`, `SetCombo()`, and `SetData()`, then access them in HLSL shaders through the `Attribute()` annotation.
+
+### Shader Development
+
+Custom `.shader` files use Source 2's HLSL dialect. The framework includes helper functions for vertex and pixel processing, texture sampling, and static shader combinations for performance optimization.
+
+### Post-Processing
+
+Attach a `PostProcessComponent` to your camera's GameObject to apply full-screen effects. Access frame data via `Graphics.GrabFrameTexture()` for effects like vignetting or motion blur.
+
+---
+
+## Page: UI System (Mintlify) {#page-mintlify-ui}
+> Source: https://www.mintlify.com/Facepunch/sbox-public/systems/ui
+
+The s&box UI framework uses an HTML/CSS panel model where developers write layouts in Razor files and style with SCSS. The system features a custom GPU-accelerated renderer that does not require a browser.
+
+### Root Container Types
+
+| Container | Purpose |
+|-----------|---------|
+| `ScreenPanel` | 2D overlays for HUDs and menus |
+| `WorldPanel` | Anchors UI elements to 3D world coordinates |
+
+### ScreenPanel Configuration
+
+- Opacity (0-1 range)
+- Uniform scaling
+- Automatic resolution scaling
+- Z-index for layering
+- Optional target camera selection
+
+**ScaleStrategy options:**
+- `ConsistentHeight` -- Assumes 1080p height for consistent physical sizing
+- `FollowDesktopScaling` -- Respects OS display scale preferences
+
+### WorldPanel Features
+
+Renders UI in 3D space with configurable canvas size, render scale, camera-facing rotation, alignment pivots, and interaction range settings.
+
+### PanelComponent Development
+
+All custom UI extends `PanelComponent` and pairs with corresponding Razor markup files. Control re-rendering through `BuildHash()` method overrides, which trigger updates when return values change. Lifecycle includes `OnTreeFirstBuilt()` and `OnTreeBuilt()` callbacks.
+
+### Styling and Interactivity
+
+CSS styling supports flexbox layout with SCSS nesting and variables. Mouse interaction methods handle down, up, move, over, out, and wheel events. Razor markup supports conditionals, loops, style binding, and event handlers.
+
+---
+
+## Page: Action Graphs (Mintlify) {#page-mintlify-action-graphs}
+> Source: https://www.mintlify.com/Facepunch/sbox-public/scripting/action-graphs
+
+Action graphs are s&box's visual scripting system. They let you wire together logic nodes to create gameplay behaviour without writing C# code.
+
+### ActionGraphResource
+
+The engine class backing `.action` files. Load at runtime:
+
+```csharp
+var resource = ResourceLibrary.Get<ActionGraphResource>( "path/to/mygraph.action" );
+ActionGraph graph = resource.Graph;
+```
+
+### ActionsInvoker
+
+Bridges graphs with component lifecycle by executing action delegates at appropriate moments:
+
+```csharp
+public sealed class ActionsInvoker : Component
+{
+    [Property] public Action OnEnabledAction { get; set; }
+    [Property] public Action OnUpdateAction { get; set; }
+    [Property] public Action OnFixedUpdateAction { get; set; }
+    [Property] public Action OnDisabledAction { get; set; }
+    [Property] public Action OnDestroyAction { get; set; }
+}
+```
+
+### Built-in Node Categories
+
+- **Scene nodes** -- Manage scene graph and asset interactions (instantiation, cloning, finding objects)
+- **Collection nodes** -- Handle generic data structures (arrays, lists, dictionaries)
+- **Utility/operator nodes** -- Perform type testing, conversion, and string formatting
+- **Scene event nodes** -- Dispatch events to components implementing `ISceneEvent<T>`
+
+### Custom Node Registration
+
+Register custom nodes using the `[ActionGraphNode]` attribute on static methods:
+
+```csharp
+[ActionGraphNode]
+[Pure]
+[Title( "My Custom Node" )]
+[Category( "Custom" )]
+[Icon( "star" )]
+public static float MyCustomNode( float a, float b )
+{
+    return a + b;
+}
+```
+
+---
+
+## Page: Hot Reload {#page-mintlify-hot-reload}
+> Source: https://www.mintlify.com/Facepunch/sbox-public/scripting/hotload
+
+You can tweak component behaviour, fix bugs, and iterate on gameplay without breaking out of play mode.
+
+### Two Reload Paths
+
+**IL Hot Reload (Fast Path):**
+When only method bodies or property accessors change without adding new types or fields, the engine uses IL patching. The engine patches only those method bodies in-place, leaving all existing object instances untouched.
+
+**Full Assembly Reload:**
+Substantial changes trigger a complete reload involving:
+
+1. Assembly recompilation
+2. Old assembly unregistration
+3. Reference updates via `IInstanceUpgrader` implementations
+4. Event system re-registration
+
+### Instance Upgrading
+
+The `Hotload` class manages upgrades by tracking watched assemblies and instances:
+
+```csharp
+var hotload = new Hotload( addDefaultUpgraders: true );
+hotload.WatchAssembly<MyComponent>();
+hotload.WatchInstance( myObject );
+hotload.ReplacingAssembly( oldAssembly, newAssembly );
+hotload.UpdateReferences();
+```
+
+### Best Practices
+
+Using `[Property]` fields ensures values persist across reloads since the editor serializes and restores their values automatically.
+
+### Key Limitations
+
+Changes that alter memory layout or assembly structure trigger full reloads:
+- Adding/removing fields
+- Modifying field types
+- Changing struct definitions
+
+Static fields are not automatically reset during a full reload, potentially causing unexpected behavior.
+
+---
+
+## Page: Attributes and Code Generation {#page-mintlify-attributes-codegen}
+> Source: https://www.mintlify.com/Facepunch/sbox-public/scripting/attributes-and-codegen
+
+S&box utilizes C# attributes to communicate intent to both the engine and editor. The `Sandbox.Generator` Roslyn source generator processes these attributes at compile time, enabling networking, console variable, and other cross-cutting behaviours.
+
+### Editor Attributes
+
+#### [Property]
+
+Displays fields and properties in the Inspector panel. The editor uses it to determine what to show, serialize, and hot-reload.
+
+```csharp
+public class Projectile : Component
+{
+    [Property] public float Speed { get; set; } = 500f;
+    [Property] public float Damage { get; set; } = 10f;
+
+    [Property( "display_name" )]
+    public string DisplayName { get; set; }
+}
+```
+
+**Related display attributes:**
+- `[KeyProperty]` -- Represents the whole object in a collapsed row
+- `[InlineEditor]` -- Expands the property inline rather than in a popup
+- `[Advanced]` -- Hides unless Advanced mode is enabled
+
+### Networking Attributes
+
+#### [Sync]
+
+Replicates a component property from its owner to all other clients. The generator wraps property accessors with `__sync_GetValue` and `__sync_SetValue` intercepts.
+
+```csharp
+public class Player : Component
+{
+    [Sync] public int Health { get; set; } = 100;
+
+    [Sync( SyncFlags.FromHost )]
+    public float GameTime { get; set; }
+}
+```
+
+#### RPC Attributes
+
+```csharp
+public class Weapon : Component
+{
+    [Rpc.Broadcast]
+    public void PlayFireEffect()
+    {
+        // Runs everywhere
+    }
+
+    [Rpc.Host]
+    public void RequestAmmoRefill( int amount )
+    {
+        // Only runs on host
+    }
+
+    [Rpc.Owner]
+    public void ReceiveHitConfirm()
+    {
+        // Only runs on the owning client
+    }
+}
+```
+
+### Console Attributes
+
+#### [ConVar]
+
+Exposes static properties as console variables:
+
+```csharp
+public static class GameSettings
+{
+    [ConVar( "sv_gravity", Help = "World gravity scale" )]
+    public static float Gravity { get; set; } = 1.0f;
+
+    [ConVar( Saved = true )]
+    public static float MusicVolume { get; set; } = 0.8f;
+
+    [ConVar( flags: ConVarFlags.Replicated )]
+    public static int MaxPlayers { get; set; } = 16;
+}
+```
+
+**ConVarFlags:** `Saved`, `Replicated`, `Cheat`, `UserInfo`, `Hidden`, `ChangeNotice`, `Protected`, `Server`, `Admin`, `GameSetting`.
+
+#### [ConCmd]
+
+Marks static methods as console commands:
+
+```csharp
+public static class AdminCommands
+{
+    [ConCmd( "kill_all", flags: ConVarFlags.Server | ConVarFlags.Admin )]
+    public static void KillAll()
+    {
+        foreach ( var player in Game.ActiveScene.GetAllComponents<Player>() )
+            player.Kill();
+    }
+}
+```
+
+### Custom Code-Generated Attributes
+
+#### [CodeGenerator]
+
+Meta-attribute instructing the source generator what transformations to perform:
+
+```csharp
+[AttributeUsage( AttributeTargets.Class, AllowMultiple = true )]
+public class CodeGeneratorAttribute : Attribute
+{
+    public CodeGeneratorFlags Type { get; init; }
+    public string CallbackName { get; init; }
+    public int Priority { get; init; } = 0;
+}
+```
+
+#### CodeGeneratorFlags
+
+```csharp
+[Flags]
+public enum CodeGeneratorFlags
+{
+    WrapPropertyGet = 1,   // Intercept property getter
+    WrapPropertySet = 2,   // Intercept property setter
+    WrapMethod      = 4,   // Intercept method calls
+    Static          = 8,   // Apply to static targets
+    Instance        = 16   // Apply to instance targets
+}
+```
+
+#### Creating Custom Attributes -- Full Example
+
+**Step 1: Define the attribute**
+
+```csharp
+[AttributeUsage( AttributeTargets.Method )]
+[CodeGenerator( CodeGeneratorFlags.Instance | CodeGeneratorFlags.WrapMethod, "MyMod.Profiler.OnEnter" )]
+public class ProfiledAttribute : Attribute { }
+```
+
+**Step 2: Provide the callback**
+
+```csharp
+public static class Profiler
+{
+    public static void OnEnter( object target, string methodName, Action inner )
+    {
+        var sw = System.Diagnostics.Stopwatch.StartNew();
+        inner();
+        Log.Info( $"{methodName} took {sw.ElapsedMilliseconds}ms" );
+    }
+}
+```
+
+**Step 3: Apply the attribute**
+
+```csharp
+public class ExpensiveComponent : Component
+{
+    [Profiled]
+    public void DoExpensiveWork() { ... }
+}
+```
+
+---
+
+## Page: Events (Mintlify) {#page-mintlify-events}
+> Source: https://www.mintlify.com/Facepunch/sbox-public/scripting/events
+
+Two complementary event patterns exist for subscribing to engine events during gameplay.
+
+### Attribute-Based Events
+
+Methods decorated with `[EventAttribute]` subclasses subscribe to named events. The engine calls all matching methods when that event fires.
+
+The `Priority` property determines execution order, with lower numbers running first (default is 0). Built-in events include editor frames, hot reloads, and streamer chat interactions.
+
+### Interface-Based Scene Events
+
+Objects can implement lifecycle interfaces to receive callbacks at specific points:
+
+- `ISceneLoadingEvents` -- Scene load/unload
+- `ISceneStartup` -- Scene initialization
+- `IScenePhysicsEvents` -- Physics step callbacks
+- `ISceneCollisionEvents` -- Per-frame collision callbacks (`OnCollisionStart`, `OnCollisionStop`, `OnCollisionUpdate`)
+
+### GameObjectSystem
+
+Base class for per-scene singleton systems. Automatically created for every scene and disposed when it ends. Systems use the `Listen()` method to hook into specific tick stages:
+
+- `StartUpdate`
+- `FinishUpdate`
+- `PhysicsStep`
+
+### Manual Registration
+
+Plain C# objects requiring event subscriptions must explicitly manage registration:
+
+```csharp
+// In constructor
+Event.Register( this );
+
+// In destructor / disposal
+Event.Unregister( this );
+```
+
+---
+
+## Page: Contributing to s&box {#page-mintlify-contributing}
+> Source: https://www.mintlify.com/Facepunch/sbox-public/contributing/overview
+
+This repository contains the s&box engine source. Contributions here affect the engine itself -- things like the scene system, physics, networking, and scripting infrastructure.
+
+### Contribution Methods
+
+1. **Bug Reports** -- Open an issue on GitHub. Be thorough with steps to reproduce, what you expected, and what happened.
+2. **Feature Requests** -- Propose ideas by opening an issue that explains the value and necessity before beginning implementation work.
+3. **Code Fixes** -- Address bugs or implement approved feature proposals, referencing the related issue in your pull request.
+4. **Unit Tests** -- Testing contributions are accepted alongside bug fixes and new features when applicable.
+
+### Security Vulnerabilities
+
+Do not report security issues publicly. Submit them privately through facepunch.com/security.
+
+### Before Starting Work
+
+- Verify the issue hasn't already been reported
+- Ensure new features have an accepted proposal issue first
+- Review the contribution guidelines for code standards and commit requirements
+
+Bug reports for games or addons should go to their respective authors, not the engine repository.
+
+---
+
+## Page: Contribution Guidelines {#page-mintlify-contribution-guidelines}
+> Source: https://www.mintlify.com/Facepunch/sbox-public/contributing/guidelines
+
+### Bug Reporting Requirements
+
+- Do not report bugs in games or addons; contact project authors directly
+- Include everything relevant: platform, reproduction steps, expected behaviour, and actual behaviour
+- Search existing issues beforehand and provide minimal reproduction steps
+- Linux/Proton compatibility issues should go to the Proton compatibility tracker, not the main repository
+
+### Feature Request Process
+
+- Explain the problem solved and prior attempts
+- New features need a proposal issue and community discussion before implementation begins
+- Do not start coding before the idea is accepted
+
+### Code Standards
+
+- The project uses `.editorconfig` for automatic formatting rules
+- `dotnet format` is available for command-line formatting
+- Never mix functional changes with unrelated reformatting -- these must be in separate commits
+
+### Commit and PR Best Practices
+
+- Group related changes with a concise subject line that describes what the commit does
+- Maintain focused scope in pull requests; avoid bundled unrelated changes
+- Squash commits to maintain readable history
+- Single-bug fixes should typically result in one final commit

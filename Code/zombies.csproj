@@ -39,6 +39,7 @@
 	<ItemGroup>
 		<ProjectReference Include="../Libraries/fish.scc/code/scc.csproj" />
 		<ProjectReference Include="../../../../../../../Program Files (x86)/Steam/steamapps/common/sbox 590830/addons/base/code/Base Library.csproj" />
+		<ProjectReference Include="../Libraries/nolankicks.opiumpostprocess/Code/opiumpostprocess.csproj" />
 		<ProjectReference Include="../Libraries/notathreat.crosshairbuilder/Code/crosshairbuilder.csproj" />
 	</ItemGroup>
 
