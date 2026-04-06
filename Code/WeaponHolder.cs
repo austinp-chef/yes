@@ -1,14 +1,11 @@
 using System;
 
 /// <summary>
-/// Full FPS weapon system. Attach to the Player Controller.
-/// E to pick up / drop. Left click to fire.
-///
-/// Features:
-/// - Smooth weapon sway following mouse movement
-/// - View bob when walking/running
-/// - Recoil kick + recovery on fire
-/// - Weapon tilt on strafe
+/// FPS inventory + weapon system. Attach to the Player Controller.
+/// - E to pick up items into hotbar slots
+/// - 1-5 or scroll to switch slots
+/// - Left click to fire (ranged) or swing (melee)
+/// - Q to drop current item
 /// </summary>
 public sealed class WeaponHolder : Component
 {
@@ -26,11 +23,6 @@ public sealed class WeaponHolder : Component
 	[Property, Category( "Ammo" )] public int MaxReserve { get; set; } = 120;
 	[Property, Category( "Ammo" )] public float ReloadTime { get; set; } = 1.8f;
 
-	public int CurrentAmmo { get; private set; }
-	public int ReserveAmmo { get; private set; }
-	public bool IsReloading { get; private set; }
-	public float ReloadProgress { get; private set; }
-
 	// --- View Bob ---
 	[Property, Category( "View Bob" )] public float BobFrequency { get; set; } = 10f;
 	[Property, Category( "View Bob" )] public float BobAmountX { get; set; } = 0.4f;
@@ -44,30 +36,44 @@ public sealed class WeaponHolder : Component
 	// --- FPS Position ---
 	[Property, Category( "Position" )] public Vector3 HoldPosition { get; set; } = new Vector3( 20f, 8f, -6f );
 	[Property, Category( "Position" )] public Angles HoldAngles { get; set; } = new Angles( 15f, 0f, 0f );
-
-	// --- Barrel ---
-	/// <summary>
-	/// Barrel tip offset from camera (forward, right, down).
-	/// The laser spawns here and angles toward the crosshair.
-	/// </summary>
 	[Property, Category( "Position" )] public Vector3 BarrelOffset { get; set; } = new Vector3( 35f, 6f, -5f );
 
-	public WeaponPickup HeldWeapon { get; private set; }
+	// --- Melee ---
+	[Property, Category( "Melee" )] public float MeleeRate { get; set; } = 0.5f;
+	[Property, Category( "Melee" )] public float MeleeSwingKick { get; set; } = 3f;
 
+	// ── Inventory ──
+	public const int SlotCount = 5;
+	public WeaponPickup[] Inventory { get; private set; } = new WeaponPickup[SlotCount];
+	public int SelectedSlot { get; set; } = 0;
+	public WeaponPickup HeldWeapon => Inventory[SelectedSlot];
+
+	// ── Ammo state ──
+	public int CurrentAmmo { get; private set; }
+	public int ReserveAmmo { get; private set; }
+	public bool IsReloading { get; private set; }
+	public float ReloadProgress { get; private set; }
+
+	// ── Private ──
 	private float _originalZNear;
-	private bool _holding;
 	private GameObject _viewModel;
 	private GameObject _meshChild;
 	private float _lastFireTime;
+	private float _lastMeleeTime;
+	private float _reloadStartTime;
 
-	// Animation state
+	// Melee swing animation
+	private float _swingTime = -1f;
+	private const float SwingDuration = 0.35f;
+	private bool _swingHasHit;
+
+	// Motion state
 	private float _bobTimer;
 	private Vector3 _currentSway;
 	private Vector3 _currentBob;
 	private float _currentRecoil;
 	private float _currentTilt;
 	private PlayerController _playerController;
-	private float _reloadStartTime;
 
 	protected override void OnStart()
 	{
@@ -77,110 +83,72 @@ public sealed class WeaponHolder : Component
 			if ( cam is not null )
 				CameraObject = cam.GameObject;
 		}
-
 		_playerController = GameObject.GetComponent<PlayerController>();
 	}
 
 	protected override void OnUpdate()
 	{
-		if ( IsProxy )
-			return;
+		if ( IsProxy ) return;
 
-		if ( Input.Pressed( "use" ) )
-		{
-			if ( _holding )
-				Drop();
-			else
-				TryPickup();
-		}
+		HandleSlotInput();
+		HandlePickupDrop();
 
-		if ( _holding && _viewModel is not null && _viewModel.IsValid )
+		if ( HeldWeapon is not null && _viewModel is not null && _viewModel.IsValid )
 		{
 			UpdateWeaponMotion();
 			PositionViewModel();
 			UpdateReload();
+			UpdateSwingAnimation();
 
-			if ( Input.Pressed( "reload" ) && !IsReloading && CurrentAmmo < MaxAmmo && ReserveAmmo > 0 )
-				StartReload();
-
-			if ( !IsReloading && Input.Down( "attack1" ) && Time.Now - _lastFireTime >= FireRate && CurrentAmmo > 0 )
-				Fire();
-
-			// Auto-reload on empty
-			if ( !IsReloading && CurrentAmmo <= 0 && ReserveAmmo > 0 && Input.Down( "attack1" ) )
-				StartReload();
+			if ( Input.Down( "attack1" ) )
+				HandleAttack();
 		}
 	}
 
-	// ─── Motion Systems ───
+	// ─── Slot Input ───
 
-	private void UpdateWeaponMotion()
+	private void HandleSlotInput()
 	{
-		var dt = Time.Delta;
-		var velocity = _playerController is not null ? _playerController.Velocity : Vector3.Zero;
-		var isGrounded = _playerController is not null && _playerController.IsOnGround;
-		var speed = velocity.WithZ( 0 ).Length;
+		var prevSlot = SelectedSlot;
 
-		// ── View Bob ──
-		// Sinusoidal bob when moving on ground
-		if ( isGrounded && speed > 10f )
-		{
-			var bobScale = MathF.Min( speed / 300f, 1f );
-			_bobTimer += dt * BobFrequency * bobScale;
+		if ( Input.Pressed( "Slot1" ) ) SelectedSlot = 0;
+		if ( Input.Pressed( "Slot2" ) ) SelectedSlot = 1;
+		if ( Input.Pressed( "Slot3" ) ) SelectedSlot = 2;
+		if ( Input.Pressed( "Slot4" ) ) SelectedSlot = 3;
+		if ( Input.Pressed( "Slot5" ) ) SelectedSlot = 4;
+		if ( Input.Pressed( "SlotNext" ) ) SelectedSlot = (SelectedSlot + 1) % SlotCount;
+		if ( Input.Pressed( "SlotPrev" ) ) SelectedSlot = (SelectedSlot - 1 + SlotCount) % SlotCount;
 
-			_currentBob.x = MathF.Sin( _bobTimer ) * BobAmountX * bobScale;
-			_currentBob.y = MathF.Cos( _bobTimer * 2f ) * BobAmountY * bobScale;
-		}
-		else
-		{
-			// Smoothly return to center when not moving
-			_currentBob = Vector3.Lerp( _currentBob, Vector3.Zero, dt * 6f );
-			_bobTimer = 0f;
-		}
-
-		// ── Mouse Sway ──
-		// Weapon lags behind mouse movement
-		var mouseDelta = Input.MouseDelta;
-		var targetSway = new Vector3( 0f, -mouseDelta.x * SwayAmount, mouseDelta.y * SwayAmount );
-		_currentSway = Vector3.Lerp( _currentSway, targetSway, dt * SwaySmooth );
-
-		// ── Strafe Tilt ──
-		// Slight roll when strafing
-		var localVel = CameraObject.WorldRotation.Inverse * velocity;
-		var targetTilt = -(localVel.y / 300f) * TiltAmount;
-		_currentTilt = MathX.Lerp( _currentTilt, targetTilt, dt * 6f );
-
-		// ── Recoil Recovery ──
-		_currentRecoil = MathX.Lerp( _currentRecoil, 0f, dt * RecoilRecovery );
+		if ( prevSlot != SelectedSlot )
+			OnSlotChanged( prevSlot );
 	}
 
-	private void PositionViewModel()
+	private void OnSlotChanged( int prevSlot )
 	{
-		// Pivot sits near the camera at HoldPosition — rotation is intuitive
-		var finalPos = HoldPosition;
-		finalPos.y += _currentBob.x + _currentSway.y;
-		finalPos.z += _currentBob.y + _currentSway.z;
-		finalPos.x -= _currentRecoil;
+		// Destroy current viewmodel
+		DestroyViewModel();
+		IsReloading = false;
 
-		_viewModel.LocalPosition = finalPos;
-
-		// Rotation: model rotation + hold angles + recoil + strafe tilt
-		var modelRot = new Angles( HeldWeapon.ModelRotation.x, HeldWeapon.ModelRotation.y, HeldWeapon.ModelRotation.z );
-		var recoilAngles = new Angles( -_currentRecoil * 2f, 0f, _currentTilt );
-		var combinedAngles = modelRot + HoldAngles + recoilAngles;
-		_viewModel.LocalRotation = combinedAngles.ToRotation();
-
-		// Update mesh child offset every frame so inspector changes apply live
-		if ( _meshChild is not null && _meshChild.IsValid )
-			_meshChild.LocalPosition = -HeldWeapon.MeshOriginOffset;
+		// Create new viewmodel if slot has an item
+		if ( HeldWeapon is not null )
+			CreateViewModel( HeldWeapon );
 	}
 
 	// ─── Pickup / Drop ───
 
+	private void HandlePickupDrop()
+	{
+		if ( Input.Pressed( "use" ) )
+			TryPickup();
+
+		// Q to drop
+		if ( Input.Pressed( "Slot0" ) && HeldWeapon is not null )
+			DropCurrent();
+	}
+
 	private void TryPickup()
 	{
-		if ( CameraObject is null )
-			return;
+		if ( CameraObject is null ) return;
 
 		var eyePos = CameraObject.WorldPosition;
 		var eyeEnd = eyePos + CameraObject.WorldRotation.Forward * PickupRange;
@@ -188,94 +156,58 @@ public sealed class WeaponHolder : Component
 		var tr = Scene.Trace
 			.Ray( eyePos, eyeEnd )
 			.WithoutTags( "player" )
+			.HitTriggers()
 			.Run();
 
-		if ( !tr.Hit || tr.GameObject is null )
-			return;
+		if ( !tr.Hit || tr.GameObject is null ) return;
 
 		var pickup = tr.GameObject.GetComponent<WeaponPickup>();
 		if ( pickup is null && tr.GameObject.Parent is not null )
 			pickup = tr.GameObject.Parent.GetComponent<WeaponPickup>();
-		if ( pickup is null )
-			return;
+		if ( pickup is null ) return;
 
-		Pickup( pickup );
-	}
-
-	public void Pickup( WeaponPickup weapon )
-	{
-		if ( _holding )
-			Drop();
-
-		HeldWeapon = weapon;
-		_holding = true;
-
-		// Set ammo
-		CurrentAmmo = MaxAmmo;
-		ReserveAmmo = MaxReserve;
-		IsReloading = false;
-		ReloadProgress = 0f;
-
-		// Reset motion state
-		_currentBob = Vector3.Zero;
-		_currentSway = Vector3.Zero;
-		_currentRecoil = 0f;
-		_currentTilt = 0f;
-		_bobTimer = 0f;
-
-		// Hide world weapon
-		weapon.GameObject.Enabled = false;
-
-		// Create viewmodel with two-level hierarchy:
-		// _viewModel (pivot) → meshChild (offset renderer)
-		// This way rotation happens around the pivot near the camera,
-		// not around the distant mesh origin
-		var model = Model.Load( weapon.WorldModelPath );
-
-		_viewModel = new GameObject( true, "ViewModel" );
-		_viewModel.SetParent( CameraObject );
-
-		_meshChild = new GameObject( true, "ViewModelMesh" );
-		_meshChild.SetParent( _viewModel );
-
-		// Push the mesh child to compensate for origin offset
-		_meshChild.LocalPosition = -weapon.MeshOriginOffset;
-		_meshChild.LocalRotation = Rotation.Identity;
-
-		var renderer = _meshChild.Components.Create<ModelRenderer>();
-		renderer.Model = model;
-		renderer.RenderType = Sandbox.ModelRenderer.ShadowRenderType.Off;
-
-		// Lower ZNear
-		var cam = CameraObject.GetComponent<CameraComponent>();
-		if ( cam is not null )
+		// Find slot — prefer item's preferred slot, fall back to first empty
+		var slot = pickup.PreferredSlot;
+		if ( slot < 0 || slot >= SlotCount || Inventory[slot] is not null )
 		{
-			_originalZNear = cam.ZNear;
-			cam.ZNear = 0.5f;
+			slot = -1;
+			for ( int i = 0; i < SlotCount; i++ )
+			{
+				if ( Inventory[i] is null ) { slot = i; break; }
+			}
+		}
+		if ( slot < 0 ) return; // No empty slot
+
+		// Store in inventory
+		Inventory[slot] = pickup;
+		pickup.GameObject.Enabled = false;
+
+		// Set ammo for ranged weapons
+		if ( pickup.Type == WeaponPickup.WeaponType.Ranged )
+		{
+			CurrentAmmo = MaxAmmo;
+			ReserveAmmo = MaxReserve;
 		}
 
-		PositionViewModel();
-		Log.Info( $"Picked up {weapon.WeaponName}" );
+		// Switch to the picked up slot
+		var prevSlot = SelectedSlot;
+		SelectedSlot = slot;
+		if ( prevSlot != slot )
+			DestroyViewModel();
+		CreateViewModel( pickup );
+
+		Log.Info( $"Picked up {pickup.WeaponName} in slot {slot + 1}" );
 	}
 
-	public void Drop()
+	public void DropCurrent()
 	{
-		if ( HeldWeapon is null )
-			return;
+		if ( HeldWeapon is null ) return;
 
 		var weapon = HeldWeapon;
-		HeldWeapon = null;
-		_holding = false;
+		Inventory[SelectedSlot] = null;
 
-		if ( _viewModel is not null && _viewModel.IsValid )
-		{
-			_viewModel.Destroy();
-			_viewModel = null;
-		}
-
-		var cam = CameraObject.GetComponent<CameraComponent>();
-		if ( cam is not null )
-			cam.ZNear = _originalZNear;
+		DestroyViewModel();
+		IsReloading = false;
 
 		weapon.GameObject.Enabled = true;
 		weapon.GameObject.WorldPosition = CameraObject.WorldPosition + CameraObject.WorldRotation.Forward * 60f;
@@ -287,31 +219,130 @@ public sealed class WeaponHolder : Component
 		Log.Info( $"Dropped {weapon.WeaponName}" );
 	}
 
-	// ─── Firing ───
+	// ─── ViewModel ───
 
-	private void StartReload()
+	private void CreateViewModel( WeaponPickup weapon )
 	{
-		IsReloading = true;
-		_reloadStartTime = Time.Now;
-		ReloadProgress = 0f;
+		DestroyViewModel();
+
+		_currentBob = Vector3.Zero;
+		_currentSway = Vector3.Zero;
+		_currentRecoil = 0f;
+		_currentTilt = 0f;
+		_bobTimer = 0f;
+
+		var model = Model.Load( weapon.WorldModelPath );
+		_viewModel = new GameObject( true, "ViewModel" );
+		_viewModel.SetParent( CameraObject );
+
+		_meshChild = new GameObject( true, "ViewModelMesh" );
+		_meshChild.SetParent( _viewModel );
+		_meshChild.LocalPosition = -weapon.MeshOriginOffset;
+
+		var renderer = _meshChild.Components.Create<ModelRenderer>();
+		renderer.Model = model;
+		renderer.RenderType = Sandbox.ModelRenderer.ShadowRenderType.Off;
+
+		var cam = CameraObject.GetComponent<CameraComponent>();
+		if ( cam is not null )
+		{
+			_originalZNear = cam.ZNear;
+			cam.ZNear = 0.5f;
+		}
 	}
 
-	private void UpdateReload()
+	private void DestroyViewModel()
 	{
-		if ( !IsReloading )
-			return;
-
-		ReloadProgress = MathX.Clamp( (Time.Now - _reloadStartTime) / ReloadTime, 0f, 1f );
-
-		if ( ReloadProgress >= 1f )
+		if ( _viewModel is not null && _viewModel.IsValid )
 		{
-			// Finish reload — move ammo from reserve to magazine
-			var needed = MaxAmmo - CurrentAmmo;
-			var available = Math.Min( needed, ReserveAmmo );
-			CurrentAmmo += available;
-			ReserveAmmo -= available;
-			IsReloading = false;
-			ReloadProgress = 0f;
+			_viewModel.Destroy();
+			_viewModel = null;
+			_meshChild = null;
+		}
+
+		var cam = CameraObject?.GetComponent<CameraComponent>();
+		if ( cam is not null )
+			cam.ZNear = _originalZNear;
+	}
+
+	// ─── Motion ───
+
+	private void UpdateWeaponMotion()
+	{
+		var dt = Time.Delta;
+		var velocity = _playerController is not null ? _playerController.Velocity : Vector3.Zero;
+		var isGrounded = _playerController is not null && _playerController.IsOnGround;
+		var speed = velocity.WithZ( 0 ).Length;
+
+		// View bob
+		if ( isGrounded && speed > 10f )
+		{
+			var bobScale = MathF.Min( speed / 300f, 1f );
+			_bobTimer += dt * BobFrequency * bobScale;
+			_currentBob.x = MathF.Sin( _bobTimer ) * BobAmountX * bobScale;
+			_currentBob.y = MathF.Cos( _bobTimer * 2f ) * BobAmountY * bobScale;
+		}
+		else
+		{
+			_currentBob = Vector3.Lerp( _currentBob, Vector3.Zero, dt * 6f );
+			_bobTimer = 0f;
+		}
+
+		// Mouse sway
+		var mouseDelta = Input.MouseDelta;
+		var targetSway = new Vector3( 0f, -mouseDelta.x * SwayAmount, mouseDelta.y * SwayAmount );
+		_currentSway = Vector3.Lerp( _currentSway, targetSway, dt * SwaySmooth );
+
+		// Strafe tilt
+		var localVel = CameraObject.WorldRotation.Inverse * velocity;
+		var targetTilt = -(localVel.y / 300f) * TiltAmount;
+		_currentTilt = MathX.Lerp( _currentTilt, targetTilt, dt * 6f );
+
+		// Recoil recovery
+		_currentRecoil = MathX.Lerp( _currentRecoil, 0f, dt * RecoilRecovery );
+	}
+
+	private void PositionViewModel()
+	{
+		var finalPos = HoldPosition;
+		finalPos.y += _currentBob.x + _currentSway.y;
+		finalPos.z += _currentBob.y + _currentSway.z;
+		finalPos.x -= _currentRecoil;
+
+		_viewModel.LocalPosition = finalPos;
+
+		var modelRot = new Angles( HeldWeapon.ModelRotation.x, HeldWeapon.ModelRotation.y, HeldWeapon.ModelRotation.z );
+		var recoilAngles = new Angles( -_currentRecoil * 2f, 0f, _currentTilt );
+		_viewModel.LocalRotation = (modelRot + HoldAngles + recoilAngles).ToRotation();
+
+		if ( _meshChild is not null && _meshChild.IsValid )
+			_meshChild.LocalPosition = -HeldWeapon.MeshOriginOffset;
+	}
+
+	// ─── Attack ───
+
+	private void HandleAttack()
+	{
+		if ( IsReloading ) return;
+
+		if ( HeldWeapon.Type == WeaponPickup.WeaponType.Ranged )
+		{
+			if ( Time.Now - _lastFireTime >= FireRate && CurrentAmmo > 0 )
+				Fire();
+			else if ( CurrentAmmo <= 0 && ReserveAmmo > 0 )
+				StartReload();
+		}
+		else if ( HeldWeapon.Type == WeaponPickup.WeaponType.Hitscan )
+		{
+			if ( Time.Now - _lastFireTime >= FireRate && CurrentAmmo > 0 )
+				FireHitscan();
+			else if ( CurrentAmmo <= 0 && ReserveAmmo > 0 )
+				StartReload();
+		}
+		else if ( HeldWeapon.Type == WeaponPickup.WeaponType.Melee )
+		{
+			if ( Time.Now - _lastMeleeTime >= MeleeRate )
+				MeleeSwing();
 		}
 	}
 
@@ -321,32 +352,27 @@ public sealed class WeaponHolder : Component
 		_currentRecoil += RecoilKick;
 		CurrentAmmo--;
 
-		// Play fire sound
 		Sound.Play( "sounds/laser_shot.sound", CameraObject.WorldPosition );
 
 		var camPos = CameraObject.WorldPosition;
 		var camRot = CameraObject.WorldRotation;
 
-		// 1. Find where the crosshair is pointing (center screen ray)
 		var crosshairEnd = camPos + camRot.Forward * 10000f;
 		var aimTrace = Scene.Trace
 			.Ray( camPos, crosshairEnd )
 			.WithoutTags( "player", "projectile" )
+			.HitTriggers()
 			.Run();
 
-		// Target point: either the hit point or far ahead
 		var targetPoint = aimTrace.Hit ? aimTrace.HitPosition : crosshairEnd;
 
-		// 2. Barrel position in world space
 		var barrelPos = camPos
 			+ camRot.Forward * BarrelOffset.x
 			+ camRot.Right * BarrelOffset.y
 			+ camRot.Up * BarrelOffset.z;
 
-		// 3. Direction from barrel to crosshair target (the slight angle)
 		var direction = (targetPoint - barrelPos).Normal;
 
-		// Create laser bolt
 		var bolt = new GameObject( true, "LaserBolt" );
 		bolt.Tags.Add( "projectile" );
 		bolt.WorldPosition = barrelPos;
@@ -359,5 +385,261 @@ public sealed class WeaponHolder : Component
 
 		var projectile = bolt.Components.Create<LaserProjectile>();
 		projectile.SetDirection( direction );
+	}
+
+	private void FireHitscan()
+	{
+		_lastFireTime = Time.Now;
+		_currentRecoil += RecoilKick * 0.6f;
+		CurrentAmmo--;
+
+		Sound.Play( "sounds/laser_shot.sound", CameraObject.WorldPosition );
+
+		var camPos = CameraObject.WorldPosition;
+		var camRot = CameraObject.WorldRotation;
+
+		// Barrel position
+		var barrelPos = camPos
+			+ camRot.Forward * BarrelOffset.x
+			+ camRot.Right * BarrelOffset.y
+			+ camRot.Up * BarrelOffset.z;
+
+		// Hitscan trace from camera center
+		var hitEnd = camPos + camRot.Forward * 10000f;
+		var tr = Scene.Trace
+			.Ray( camPos, hitEnd )
+			.WithoutTags( "player", "projectile" )
+			.HitTriggers()
+			.Run();
+
+		var endPoint = tr.Hit ? tr.HitPosition : hitEnd;
+
+		// Damage
+		if ( tr.Hit && tr.GameObject is not null )
+		{
+			var health = tr.GameObject.GetComponent<ZombieHealth>();
+			if ( health is null && tr.GameObject.Parent is not null )
+				health = tr.GameObject.Parent.GetComponent<ZombieHealth>();
+
+			if ( health is not null )
+				health.TakeDamage( HeldWeapon.HitscanDamage );
+		}
+
+		// Tracer line from barrel to hit
+		SpawnTracer( barrelPos, endPoint );
+
+		// Impact spark at hit point
+		if ( tr.Hit )
+			SpawnHitscanImpact( tr.HitPosition );
+	}
+
+	private void SpawnTracer( Vector3 start, Vector3 end )
+	{
+		try
+		{
+			var tracerObj = new GameObject( true, "Tracer" );
+			tracerObj.Tags.Add( "projectile" );
+			tracerObj.WorldPosition = start;
+
+			// Thin stretched box from start to end
+			var dir = (end - start);
+			var dist = dir.Length;
+			dir = dir.Normal;
+
+			tracerObj.WorldRotation = Rotation.LookAt( dir );
+			tracerObj.LocalScale = new Vector3( dist, 0.3f, 0.3f );
+
+			var renderer = tracerObj.Components.Create<ModelRenderer>();
+			renderer.Model = Model.Load( "models/dev/box.vmdl" );
+			renderer.Tint = new Color( 1f, 0.9f, 0.5f, 0.8f );
+			renderer.RenderType = Sandbox.ModelRenderer.ShadowRenderType.Off;
+
+			// Flash light at barrel
+			var light = tracerObj.Components.Create<PointLight>();
+			light.LightColor = new Color( 1f, 0.8f, 0.4f );
+			light.Radius = 120f;
+
+			// Auto-destroy
+			var flash = tracerObj.Components.Create<ImpactFlash>();
+			flash.Duration = 0.08f;
+			flash.SparkCount = 0;
+		}
+		catch { }
+	}
+
+	private void SpawnHitscanImpact( Vector3 pos )
+	{
+		try
+		{
+			var vfx = new GameObject( true, "HitscanImpact" );
+			vfx.WorldPosition = pos;
+
+			var light = vfx.Components.Create<PointLight>();
+			light.LightColor = new Color( 1f, 0.7f, 0.3f );
+			light.Radius = 100f;
+
+			var flash = vfx.Components.Create<ImpactFlash>();
+			flash.SparkCount = 5;
+			flash.SparkSpeed = 200f;
+		}
+		catch { }
+	}
+
+	private void MeleeSwing()
+	{
+		_lastMeleeTime = Time.Now;
+		_swingTime = Time.Now;
+		_swingHasHit = false;
+
+		// Delay the hit detection slightly into the swing arc
+		// The trace happens at the peak of the swing in UpdateSwingAnimation
+	}
+
+	private void UpdateSwingAnimation()
+	{
+		if ( _swingTime < 0f ) return;
+
+		var elapsed = Time.Now - _swingTime;
+		var t = elapsed / SwingDuration;
+
+		if ( t >= 1f )
+		{
+			_swingTime = -1f;
+			return;
+		}
+
+		// Swing arc: wind up, swing through, follow through
+		// t: 0 = start, 0.3 = wound back, 0.5 = impact, 1.0 = follow through
+		float swingPitch;
+		float swingYaw;
+		float swingForward;
+
+		if ( t < 0.2f )
+		{
+			// Wind up — pull back and to the right
+			var wind = t / 0.2f;
+			swingPitch = -20f * wind;
+			swingYaw = 15f * wind;
+			swingForward = -3f * wind;
+		}
+		else if ( t < 0.5f )
+		{
+			// Swing through — fast arc from right to left
+			var swing = (t - 0.2f) / 0.3f;
+			swingPitch = -20f + 60f * swing;
+			swingYaw = 15f - 40f * swing;
+			swingForward = -3f + 6f * swing;
+		}
+		else
+		{
+			// Follow through — decelerate
+			var follow = (t - 0.5f) / 0.5f;
+			swingPitch = 40f * (1f - follow);
+			swingYaw = -25f * (1f - follow);
+			swingForward = 3f * (1f - follow);
+		}
+
+		// Apply swing on top of normal position
+		_currentRecoil -= swingForward * 0.3f;
+
+		if ( _viewModel is not null && _viewModel.IsValid )
+		{
+			var basePos = _viewModel.LocalPosition;
+			_viewModel.LocalPosition = basePos + new Vector3( swingForward, swingYaw * 0.1f, swingPitch * 0.05f );
+
+			var modelRot = new Angles( HeldWeapon.ModelRotation.x, HeldWeapon.ModelRotation.y, HeldWeapon.ModelRotation.z );
+			var swingAngles = new Angles( swingPitch, swingYaw, swingYaw * 0.5f );
+			var recoilAngles = new Angles( -_currentRecoil * 2f, 0f, _currentTilt );
+			_viewModel.LocalRotation = (modelRot + HoldAngles + recoilAngles + swingAngles).ToRotation();
+		}
+
+		// Hit detection at the peak of the swing
+		if ( t >= 0.35f && t <= 0.55f && !_swingHasHit )
+		{
+			_swingHasHit = true;
+			DoMeleeHit();
+		}
+	}
+
+	private void DoMeleeHit()
+	{
+		var camPos = CameraObject.WorldPosition;
+		var camRot = CameraObject.WorldRotation;
+		var reach = HeldWeapon.MeleeRange;
+
+		var tr = Scene.Trace
+			.Ray( camPos, camPos + camRot.Forward * reach )
+			.WithoutTags( "player" )
+			.HitTriggers()
+			.Run();
+
+		if ( tr.Hit && tr.GameObject is not null )
+		{
+			var health = tr.GameObject.GetComponent<ZombieHealth>();
+			if ( health is null && tr.GameObject.Parent is not null )
+				health = tr.GameObject.Parent.GetComponent<ZombieHealth>();
+
+			if ( health is not null )
+			{
+				health.TakeDamage( HeldWeapon.MeleeDamage );
+				Log.Info( $"Melee hit {tr.GameObject.Name} for {HeldWeapon.MeleeDamage} damage!" );
+			}
+
+			SpawnMeleeImpact( tr.HitPosition );
+		}
+	}
+
+	private void SpawnMeleeImpact( Vector3 pos )
+	{
+		try
+		{
+			var vfx = new GameObject( true, "MeleeImpact" );
+			vfx.WorldPosition = pos;
+
+			var light = vfx.Components.Create<PointLight>();
+			light.LightColor = new Color( 1f, 0.7f, 0.3f );
+			light.Radius = 100f;
+
+			vfx.Components.Create<ImpactFlash>();
+		}
+		catch { }
+	}
+
+	// ─── Reload ───
+
+	private void StartReload()
+	{
+		if ( HeldWeapon?.Type != WeaponPickup.WeaponType.Ranged ) return;
+		IsReloading = true;
+		_reloadStartTime = Time.Now;
+		ReloadProgress = 0f;
+	}
+
+	private void UpdateReload()
+	{
+		if ( !IsReloading ) return;
+
+		ReloadProgress = MathX.Clamp( (Time.Now - _reloadStartTime) / ReloadTime, 0f, 1f );
+
+		if ( ReloadProgress >= 1f )
+		{
+			var needed = MaxAmmo - CurrentAmmo;
+			var available = Math.Min( needed, ReserveAmmo );
+			CurrentAmmo += available;
+			ReserveAmmo -= available;
+			IsReloading = false;
+			ReloadProgress = 0f;
+		}
+	}
+
+	// Called by HUD
+	public bool HasItemInSlot( int slot )
+	{
+		return slot >= 0 && slot < SlotCount && Inventory[slot] is not null;
+	}
+
+	public bool IsSlotMelee( int slot )
+	{
+		return HasItemInSlot( slot ) && Inventory[slot].Type == WeaponPickup.WeaponType.Melee;
 	}
 }

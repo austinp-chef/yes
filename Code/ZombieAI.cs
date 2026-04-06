@@ -32,10 +32,13 @@ public sealed class ZombieAI : Component
 		_spawnPos = GameObject.WorldPosition;
 		_renderer = Components.Get<SkinnedModelRenderer>( FindMode.EverythingInSelfAndDescendants );
 
-		if ( _renderer is not null )
-			_renderer.Tint = new Color( 0.45f, 0.65f, 0.35f );
+		// Make collider a trigger so zombies don't push the player
+		var collider = GameObject.GetComponent<CapsuleCollider>();
+		if ( collider is not null )
+			collider.IsTrigger = true;
 
-		Log.Warning( $"ZombieAI: started at {_spawnPos}, renderer={_renderer is not null}" );
+		// Set up zombie appearance — bonemerge zombie head onto citizen body
+		SetupZombieLook();
 	}
 
 	protected override void OnFixedUpdate()
@@ -131,5 +134,25 @@ public sealed class ZombieAI : Component
 				return obj;
 		}
 		return null;
+	}
+
+	private void SetupZombieLook()
+	{
+		if ( _renderer is null ) return;
+
+		// Hide the citizen's default head — body group "Head" set to 1 (hidden)
+		// The citizen model body groups bitmask: we try common group names
+		_renderer.SetBodyGroup( "head", 1 );
+
+		// Tint body slightly green/pale
+		_renderer.Tint = new Color( 0.55f, 0.7f, 0.45f );
+
+		// Create child with zombie head bonemerged onto the citizen body
+		var headObj = new GameObject( true, "ZombieHead" );
+		headObj.SetParent( GameObject );
+
+		var headRenderer = headObj.Components.Create<SkinnedModelRenderer>();
+		headRenderer.Model = Model.Load( "models/citizen/heads/head_zombie_01/models/head_zombie_01.vmdl" );
+		headRenderer.BoneMergeTarget = _renderer;
 	}
 }

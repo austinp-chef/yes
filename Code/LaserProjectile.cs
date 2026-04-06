@@ -71,6 +71,7 @@ public sealed class LaserProjectile : Component
 		var tr = Scene.Trace
 			.Ray( startPos, endPos )
 			.WithoutTags( "player", "projectile" )
+			.HitTriggers()
 			.Run();
 
 		if ( tr.Hit )
