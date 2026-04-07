@@ -1,20 +1,47 @@
 /// <summary>
-/// Marks an object as a pickupable weapon. Attach to any weapon prop.
+/// Marks an object as a pickupable item. Attach to any prop.
+/// Supports both ranged (laser gun) and melee (crowbar) weapons.
 /// </summary>
 public sealed class WeaponPickup : Component
 {
+	public enum WeaponType { Ranged, Melee, Hitscan, Throwable }
+
 	[Property] public string WeaponName { get; set; } = "Weapon";
 	[Property] public string WorldModelPath { get; set; } = "scenes/lasergun.vmdl";
+	[Property] public WeaponType Type { get; set; } = WeaponType.Ranged;
 
 	/// <summary>
-	/// The model mesh origin offset — baked into the model file.
+	/// The model mesh origin offset — used to center the viewmodel.
 	/// </summary>
-	[Property] public Vector3 MeshOriginOffset { get; set; } = new Vector3( -255f, -131f, 4.6f );
+	[Property] public Vector3 MeshOriginOffset { get; set; } = new Vector3( 0f, 0f, 0f );
 
 	/// <summary>
-	/// Extra rotation applied to the viewmodel (pitch, yaw, roll).
-	/// Stored as Vector3 so it can be set in the inspector and via MCP.
-	/// X = pitch, Y = yaw, Z = roll.
+	/// Rotation applied to the viewmodel (pitch, yaw, roll as Vector3).
 	/// </summary>
-	[Property] public Vector3 ModelRotation { get; set; } = new Vector3( 17.8f, -17f, -4f );
+	[Property] public Vector3 ModelRotation { get; set; } = new Vector3( 0f, 0f, 0f );
+
+	/// <summary>
+	/// Melee damage per swing.
+	/// </summary>
+	[Property] public float MeleeDamage { get; set; } = 100f;
+
+	/// <summary>
+	/// Melee reach distance.
+	/// </summary>
+	[Property] public float MeleeRange { get; set; } = 80f;
+
+	/// <summary>
+	/// Tint color for the viewmodel. White = no tint.
+	/// </summary>
+	[Property] public Color ModelTint { get; set; } = Color.White;
+
+	/// <summary>
+	/// Hitscan damage per shot.
+	/// </summary>
+	[Property] public float HitscanDamage { get; set; } = 12f;
+
+	/// <summary>
+	/// Which hotbar slot this item prefers (0-4).
+	/// </summary>
+	[Property] public int PreferredSlot { get; set; } = 0;
 }

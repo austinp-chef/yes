@@ -46,6 +46,7 @@
 		<ProjectReference Include="../../../../../../../Program Files (x86)/Steam/steamapps/common/sbox 590830/editor/ActionGraph/Code/actiongraph.csproj" />
 		<ProjectReference Include="../../../../../../../Program Files (x86)/Steam/steamapps/common/sbox 590830/editor/Hammer/Code/hammer.csproj" />
 		<ProjectReference Include="../../../../../../../Program Files (x86)/Steam/steamapps/common/sbox 590830/addons/tools/Code/Base Editor Library.csproj" />
+		<ProjectReference Include="../Libraries/meesles.sandgit/Editor/sandgit.editor.csproj" />
 		<ProjectReference Include="../../../../../../../Program Files (x86)/Steam/steamapps/common/sbox 590830/editor/MovieMaker/Code/moviemaker.csproj" />
 		<ProjectReference Include="../Libraries/notathreat.crosshairbuilder/Editor/crosshairbuilder.editor.csproj" />
 		<ProjectReference Include="../Libraries/ozmium.oz_mcp/Editor/oz_mcp.editor.csproj" />

@@ -9,6 +9,8 @@
   </Folder>
   <Folder Name="/Libraries/">
     <Project Path="Libraries/fish.scc/code/scc.csproj" />
+    <Project Path="Libraries/meesles.sandgit/Editor/sandgit.editor.csproj" />
+    <Project Path="Libraries/meesles.sandgit/UnitTests/sandgit.unittest.csproj" />
     <Project Path="Libraries/nolankicks.opiumpostprocess/Code/opiumpostprocess.csproj" />
     <Project Path="Libraries/nolankicks.opiumpostprocess/UnitTests/opiumpostprocess.unittest.csproj" />
     <Project Path="Libraries/notathreat.crosshairbuilder/Code/crosshairbuilder.csproj" />
