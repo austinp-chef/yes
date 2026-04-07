@@ -27,20 +27,23 @@ public sealed class LaserProjectile : Component
 		{
 			var renderer = GameObject.GetComponent<ModelRenderer>();
 			if ( renderer is not null )
-				renderer.Tint = new Color( 0.3f, 0.6f, 1.0f );
+			{
+				renderer.Tint = new Color( 0.2f, 0.5f, 1.0f, 0.4f );
+				renderer.RenderType = Sandbox.ModelRenderer.ShadowRenderType.Off;
+			}
 
 			var light = GameObject.Components.Create<PointLight>();
 			light.LightColor = new Color( 0.3f, 0.6f, 1.0f );
-			light.Radius = 200f;
+			light.Radius = 100f;
 
 			var trail = GameObject.Components.Create<TrailRenderer>();
-			trail.LifeTime = 0.08f;
+			trail.LifeTime = 0.06f;
 			trail.CastShadows = false;
 			trail.Opaque = false;
 
 			trail.Width = new Curve(
-				new Curve.Frame( 0f, 2f ),
-				new Curve.Frame( 0.5f, 1.2f ),
+				new Curve.Frame( 0f, 1.4f ),
+				new Curve.Frame( 0.5f, 0.84f ),
 				new Curve.Frame( 1f, 0f )
 			);
 
@@ -71,6 +74,7 @@ public sealed class LaserProjectile : Component
 		var tr = Scene.Trace
 			.Ray( startPos, endPos )
 			.WithoutTags( "player", "projectile" )
+			.HitTriggers()
 			.Run();
 
 		if ( tr.Hit )
@@ -80,6 +84,10 @@ public sealed class LaserProjectile : Component
 		}
 
 		GameObject.WorldPosition = endPos;
+
+		// Motion blur — elongated thin beam
+		var stretch = Speed * Time.Delta * 0.08f;
+		GameObject.LocalScale = new Vector3( stretch, 0.03f, 0.03f );
 	}
 
 	private void OnHit( Vector3 hitPos, Vector3 hitNormal, GameObject hitObject )
@@ -92,7 +100,7 @@ public sealed class LaserProjectile : Component
 				health = hitObject.Parent.GetComponent<ZombieHealth>();
 
 			if ( health is not null )
-				health.TakeDamage( Damage );
+				health.TakeDamage( Damage, _direction );
 		}
 
 		// Spawn blue impact particle burst

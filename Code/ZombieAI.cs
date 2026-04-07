@@ -32,10 +32,13 @@ public sealed class ZombieAI : Component
 		_spawnPos = GameObject.WorldPosition;
 		_renderer = Components.Get<SkinnedModelRenderer>( FindMode.EverythingInSelfAndDescendants );
 
-		if ( _renderer is not null )
-			_renderer.Tint = new Color( 0.45f, 0.65f, 0.35f );
+		// Make collider a trigger so zombies don't push the player
+		var collider = GameObject.GetComponent<CapsuleCollider>();
+		if ( collider is not null )
+			collider.IsTrigger = true;
 
-		Log.Warning( $"ZombieAI: started at {_spawnPos}, renderer={_renderer is not null}" );
+		// Set up zombie appearance — bonemerge zombie head onto citizen body
+		SetupZombieLook();
 	}
 
 	protected override void OnFixedUpdate()
@@ -131,5 +134,13 @@ public sealed class ZombieAI : Component
 				return obj;
 		}
 		return null;
+	}
+
+	private void SetupZombieLook()
+	{
+		if ( _renderer is null ) return;
+
+		// Green zombie tint
+		_renderer.Tint = new Color( 0.45f, 0.65f, 0.35f );
 	}
 }

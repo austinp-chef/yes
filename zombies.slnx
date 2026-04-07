@@ -5,10 +5,12 @@
   <Project Path="Code/zombies.csproj" />
   <Project Path="Editor/zombies.editor.csproj" />
   <Folder Name="/Addons/">
-    <Project Path="../../../../../../Program Files (x86)/Steam/steamapps/common/sbox 590830/addons/base/code/Base Library.csproj" />
+    <Project Path="../../../../../Program Files (x86)/Steam/steamapps/common/sbox 590830/addons/base/code/Base Library.csproj" />
   </Folder>
   <Folder Name="/Libraries/">
     <Project Path="Libraries/fish.scc/code/scc.csproj" />
+    <Project Path="Libraries/meesles.sandgit/Editor/sandgit.editor.csproj" />
+    <Project Path="Libraries/meesles.sandgit/UnitTests/sandgit.unittest.csproj" />
     <Project Path="Libraries/nolankicks.opiumpostprocess/Code/opiumpostprocess.csproj" />
     <Project Path="Libraries/nolankicks.opiumpostprocess/UnitTests/opiumpostprocess.unittest.csproj" />
     <Project Path="Libraries/notathreat.crosshairbuilder/Code/crosshairbuilder.csproj" />
@@ -17,10 +19,10 @@
     <Project Path="Libraries/ozmium.oz_mcp/Editor/oz_mcp.editor.csproj" />
   </Folder>
   <Folder Name="/Tools/">
-    <Project Path="../../../../../../Program Files (x86)/Steam/steamapps/common/sbox 590830/addons/tools/Code/Base Editor Library.csproj" />
-    <Project Path="../../../../../../Program Files (x86)/Steam/steamapps/common/sbox 590830/editor/ActionGraph/Code/actiongraph.csproj" />
-    <Project Path="../../../../../../Program Files (x86)/Steam/steamapps/common/sbox 590830/editor/Hammer/Code/hammer.csproj" />
-    <Project Path="../../../../../../Program Files (x86)/Steam/steamapps/common/sbox 590830/editor/MovieMaker/Code/moviemaker.csproj" />
-    <Project Path="../../../../../../Program Files (x86)/Steam/steamapps/common/sbox 590830/editor/ShaderGraph/Code/shadergraph.csproj" />
+    <Project Path="../../../../../Program Files (x86)/Steam/steamapps/common/sbox 590830/addons/tools/Code/Base Editor Library.csproj" />
+    <Project Path="../../../../../Program Files (x86)/Steam/steamapps/common/sbox 590830/editor/ActionGraph/Code/actiongraph.csproj" />
+    <Project Path="../../../../../Program Files (x86)/Steam/steamapps/common/sbox 590830/editor/Hammer/Code/hammer.csproj" />
+    <Project Path="../../../../../Program Files (x86)/Steam/steamapps/common/sbox 590830/editor/MovieMaker/Code/moviemaker.csproj" />
+    <Project Path="../../../../../Program Files (x86)/Steam/steamapps/common/sbox 590830/editor/ShaderGraph/Code/shadergraph.csproj" />
   </Folder>
 </Solution>

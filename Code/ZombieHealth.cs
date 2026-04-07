@@ -24,13 +24,24 @@ public sealed class ZombieHealth : Component
 		}
 	}
 
-	public void TakeDamage( float damage )
+	[Property] public float KnockbackForce { get; set; } = 60f;
+
+	public void TakeDamage( float damage, Vector3 hitDirection = default )
 	{
 		if ( IsDead )
 			return;
 
 		CurrentHealth -= damage;
-		Log.Info( $"Zombie took {damage} damage, health: {CurrentHealth}/{MaxHealth}" );
+
+		// Knockback — flatten to horizontal so it doesn't push into the ground
+		if ( hitDirection.Length > 0.1f )
+		{
+			var flatDir = hitDirection.WithZ( 0 ).Normal;
+			var currentPos = GameObject.WorldPosition;
+			var newPos = currentPos + flatDir * KnockbackForce;
+			newPos.z = currentPos.z; // keep same height
+			GameObject.WorldPosition = newPos;
+		}
 
 		if ( CurrentHealth <= 0f )
 			Die();
